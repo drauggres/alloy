@@ -27,13 +27,13 @@ module.exports = function(widgetId) {
 
 	// functions
 	this.createController = function(name, args) {
-		return new (require('/alloy/widgets/' + widgetId + '/controllers/' + name))(args);
+		return new (require('/widgets/' + widgetId + '/controllers/' + name))(args);
 	};
 	this.createCollection = function(name, args) {
-		return new (require('/alloy/widgets/' + widgetId + '/models/' + ucfirst(name)).Collection)(args);
+		return new (require('/widgets/' + widgetId + '/models/' + ucfirst(name)).Collection)(args);
 	};
 	this.createModel = function(name, args) {
-		return new (require('/alloy/widgets/' + widgetId + '/models/' + ucfirst(name)).Model)(args);
+		return new (require('/widgets/' + widgetId + '/models/' + ucfirst(name)).Model)(args);
 	};
 	this.createWidget = Alloy.createWidget; // just to be complete
 	this.Collections.instance = function(name) {

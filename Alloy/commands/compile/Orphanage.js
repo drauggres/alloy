@@ -85,8 +85,8 @@ Orphanage.prototype.removeAll = function(opts) {
 Orphanage.prototype.removeAdapters = function(opts) {
 	opts = _.clone(opts || {});
 	var paths = [
-		path.join('alloy', 'sync'),
-		path.join(titaniumFolder, 'alloy', 'sync')
+		path.join('sync'),
+		path.join(titaniumFolder, 'sync')
 	];
 
 	_.each(paths, function(p) {
@@ -109,8 +109,8 @@ Orphanage.prototype.removeAdapters = function(opts) {
 Orphanage.prototype.removeControllers = function(opts) {
 	opts = _.clone(opts || {});
 	remove(_.extend(opts, {
-		folder: CONST.DIR.CONTROLLER,
-		types: ['CONTROLLER', 'VIEW'],
+		folder: CONST.DIR.JS_CONTROLLER,
+		types: ['JS_CONTROLLER', 'VIEW'],
 		exceptions: ['BaseController.js']
 	}));
 };
@@ -119,7 +119,7 @@ Orphanage.prototype.removeModels = function(opts) {
 	opts = _.clone(opts || {});
 	remove(_.extend(opts, {
 		folder: CONST.DIR.MODEL,
-		types: 'MODEL'
+		types: 'JS_MODEL'
 	}));
 };
 
@@ -127,7 +127,7 @@ Orphanage.prototype.removeStyles = function(opts) {
 	opts = _.clone(opts || {});
 	remove(_.extend(opts, {
 		folder: CONST.DIR.STYLE,
-		types: ['CONTROLLER', 'VIEW']
+		types: ['JS_CONTROLLER', 'VIEW']
 	}));
 };
 
@@ -170,8 +170,15 @@ Orphanage.prototype.removeAssets = function() {
 	var exceptions = [
 		'app.js',
 		'alloy.js',
-		'alloy',
-		'alloy/*'
+		'controllers',
+		'controllers/*',
+		'styles',
+		'styles/*',
+		'sync',
+		'sync/*',
+		'constants.js',
+		'widget.js',
+		'CFG.js'
 	];
 
 	// check the current platform as well

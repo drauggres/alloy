@@ -142,7 +142,9 @@ exports.getAndValidateProjectPaths = function(argPath, opts) {
 	var paths = {
 		project: projectPath,
 		app: path.join(projectPath, 'app'),
-		indexBase: path.join(CONST.DIR.CONTROLLER, CONST.NAME_DEFAULT + '.' + CONST.FILE_EXT.CONTROLLER)
+		gen: path.join(projectPath, 'app', 'gen'),
+		appTs: path.join(projectPath, 'app', 'app' + '.' + CONST.FILE_EXT.TS_CONTROLLER),
+		indexBase: path.join(CONST.DIR.JS_CONTROLLER, CONST.NAME_DEFAULT + '.' + CONST.FILE_EXT.JS_CONTROLLER)
 	};
 	paths.index = path.join(paths.app, paths.indexBase);
 	paths.assets = path.join(paths.app, 'assets');
@@ -156,7 +158,7 @@ exports.getAndValidateProjectPaths = function(argPath, opts) {
 		exports.die('Invalid Titanium project path (no tiapp.xml) at "' + paths.project + '"');
 	} else if (!fs.existsSync(paths.app)) {
 		exports.die('Alloy "app" directory does not exist at "' + paths.app + '"');
-	} else if (!fs.existsSync(paths.index) && (opts.command !== CONST.COMMANDS.GENERATE)) {
+	} else if (!fs.existsSync(paths.appTs) && !fs.existsSync(paths.index) && (opts.command !== CONST.COMMANDS.GENERATE)) {
 		exports.die('Alloy "app" directory has no "' + paths.indexBase + '" file at "' + paths.index + '".');
 	}
 

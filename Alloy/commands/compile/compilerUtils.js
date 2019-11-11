@@ -27,6 +27,7 @@ var alloyRoot = path.join(__dirname, '..', '..'),
 ////////// constants //////////
 ///////////////////////////////
 var RESERVED_ATTRIBUTES = [
+		'customToolbar',
 		'platform',
 		'formFactor',
 		'if',
@@ -38,6 +39,7 @@ var RESERVED_ATTRIBUTES = [
 		'module'
 	],
 	RESERVED_ATTRIBUTES_REQ_INC = [
+		'customToolbar',
 		'platform',
 		'type',
 		'src',
@@ -65,20 +67,28 @@ _.each(CONST.PLATFORMS, function(p) {
 	exports.CONDITION_MAP[p] = require(path.join(platformsDir, p, 'index'))['condition'];
 });
 
+exports.abstractMethods = '';
 exports.bindingsMap = {};
-exports.destroyCode = '';
-exports.postCode = '';
-exports.models = [];
 exports.dataFunctionNames = {};
+exports.dataFunctionsCode = '';
+exports.destroyCode = '';
+exports.importCode = '';
+exports.models = [];
+exports.postCode = '';
+exports.preCode = '';
+exports.properties = '';
+exports.typesCode = '';
 
 //////////////////////////////////////
 ////////// public interface //////////
 //////////////////////////////////////
+exports.alloyUniqueIdPrefix = alloyUniqueIdPrefix;
+
 exports.getCompilerConfig = function() {
 	return compilerConfig;
 };
 
-exports.generateVarName = function(id, name) {
+exports.generateVarName = function(id, name, state) {
 	if (_.includes(CONST.JS_RESERVED_ALL, id)) {
 		U.die([
 			'Invalid ID "' + id + '" for <' + name + '>.',
@@ -86,7 +96,7 @@ exports.generateVarName = function(id, name) {
 			'Reserved words: [' + CONST.JS_RESERVED_ALL.sort().join(',') + ']'
 		]);
 	}
-	return '$.__views["' + id + '"]';
+	return state.outputFormat === 'TS' ? 'this["' + id + '"]' : '$.__views["' + id + '"]';
 };
 
 exports.generateUniqueId = function() {
@@ -122,12 +132,19 @@ exports.getParserArgs = function(node, state, opts) {
 		name = node.nodeName,
 		ns = node.getAttribute('ns') || CONST.IMPLICIT_NAMESPACES[name] || CONST.NAMESPACE_DEFAULT,
 		fullname = (ns && ns.length) ? (ns + '.' + name) : name,
-		id = node.getAttribute('id') || defaultId || exports.generateUniqueId(),
+		id = node.getAttribute('id'),
 		platform = node.getAttribute('platform'),
 		formFactor = node.getAttribute('formFactor'),
 		tssIf = node.getAttribute('if'),
 		platformObj;
-
+	if (!id) {
+		doSetId = true;
+		if (defaultId) {
+			id = defaultId;
+		} else {
+			id = exports.generateUniqueId();
+		}
+	}
 	// make sure we're not reusing the default ID for the first top level element
 	if (id === exports.currentDefaultId &&
 		(node.parentNode && node.parentNode.nodeName !== 'Alloy') &&
@@ -225,7 +242,7 @@ exports.getParserArgs = function(node, state, opts) {
 				} else {
 					return;
 				}
-			}	
+			}
 
 			if (/(^|\+)\s*(?:(?:Ti|Titanium|Alloy.Globals|Alloy.CFG|\$.args)\.|L\(.+\)\s*$)/.test(theValue)) {
 				var match = theValue.match(/^\s*L\([^'"]+\)\s*$/);
@@ -270,7 +287,7 @@ exports.getParserArgs = function(node, state, opts) {
 		id: id,
 		fullname: fullname,
 		formFactor: node.getAttribute('formFactor'),
-		symbol: exports.generateVarName(id, name),
+		symbol: exports.generateVarName(id, name, state),
 		classes: node.getAttribute('class').split(' ') || [],
 		tssIf: node.getAttribute('if').split(',') || [],
 		parent: state.parent || {},
@@ -285,12 +302,13 @@ exports.generateNodeExtended = function(node, state, newState) {
 };
 
 exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCollection) {
+	var parentIsConditional = state.parentCondition;
 	if (node.nodeType != 1) return '';
-	if (!exports.isNodeForCurrentPlatform(node)) {
+	if (state.outputFormat !== 'TS' && !exports.isNodeForCurrentPlatform(node)) {
 		return '';
 	}
 
-	var args = exports.getParserArgs(node, state, { defaultId: defaultId }),
+	var args = exports.getParserArgs(node, state, { defaultId: defaultId, doSetId: false }),
 		codeTemplate = 'if (<%= condition %>) {\n<%= content %>}\n',
 		code = {
 			content: '',
@@ -354,14 +372,16 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 	// Use manually given args.symbol if present
 	if (state.args) { args.symbol = state.args.symbol || args.symbol; }
 
+	var thisController = state.outputFormat === 'TS' ? 'this' : '$';
+
 	// add to list of top level views, if its top level
 	if (isTopLevel) {
 		if (state.isProxyProperty) {
 			delete state.isProxyProperty;
-			code.content += state.parent.symbol + ' && $.addProxyProperty("' + state.propertyName +
+			code.content += state.parent.symbol + ' && ' + thisController + '.addProxyProperty("' + state.propertyName +
 				'", ' + state.parent.symbol + ');\n';
 		} else {
-			code.content += args.symbol + ' && $.addTopLevelView(' + args.symbol + ');\n';
+			code.content += args.symbol + ' && ' + thisController + '.addTopLevelView(' + args.symbol + ');\n';
 		}
 	}
 
@@ -398,8 +418,27 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 			// create templates for immediate and deferred event handler creation
 			var theDefer = _.template("__defers['<%= obj %>!<%= ev %>!<%= escapedCb %>']")(eventObj);
 			var theEvent;
+			var thisController = '$';
+
+			if (state.outputFormat === 'TS') {
+				var name = eventObj.cb;
+				if (/(\$|this)[.\[]/.test(eventObj.cb)) {
+					name = eventObj.cb.replace(/((\$|this)[.\[])/, '');
+				}
+				var method = `abstract ${name}(event: ${args.fullname}_${ev.name.replace(':', '_')}_Event): void;\n`;
+				var index = exports.abstractMethods.indexOf(`abstract ${name}(`);
+				if (index === -1) {
+					exports.abstractMethods += method;
+				} else if (exports.abstractMethods.indexOf(method) === -1) {
+					var before = exports.abstractMethods.substr(0, index);
+					var after = exports.abstractMethods.substr(index, exports.abstractMethods.length);
+					exports.abstractMethods = before + method + after;
+				}
+				eventObj.cb = `this.${name}.bind(this)`;
+				thisController = 'this';
+			}
 			if (eventFunc === 'addEventListener') {
-				theEvent = _.template("$.addListener(<%= obj %>,'<%= ev %>',<%= cb %>)")(eventObj);
+				theEvent = _.template(thisController + ".addListener(<%= obj %>,'<%= ev %>',<%= cb %>)")(eventObj);
 			} else {
 				theEvent = _.template("<%= obj %>.<%= func %>('<%= ev %>',<%= cb %>)")(eventObj);
 			}
@@ -412,8 +451,14 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 			}
 
 			// add the generated code to the view code and post-controller code respectively
-			code.content += _.template(immediateTemplate)(eventObj);
-			postCode = _.template(deferTemplate)(eventObj);
+			if (state.outputFormat === 'TS') {
+				code.content += theEvent + ';\n';
+				postCode = '';
+			} else {
+				code.content += _.template(immediateTemplate)(eventObj);
+				postCode = _.template(deferTemplate)(eventObj);
+			}
+
 			exports.postCode += state.condition ? _.template(codeTemplate)({
 				condition: state.condition,
 				content: postCode
@@ -433,12 +478,43 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 					// propagate the form factor down through the hierarchy
 					newState.parentFormFactor = (node.getAttribute('formFactor') || state.parentFormFactor);
 				}
+				if (code.condition || parentIsConditional) {
+					newState.parentCondition = true;
+				}
 				code.content += exports.generateNode(parent.childNodes.item(i), newState);
 			}
 		});
 	}
 
+	if (state.importCode && exports.importCode.indexOf(state.importCode) === -1) {
+		exports.importCode += state.importCode;
+	}
+	if (!isLocal) {
+		var propertyDeclaration = state.propertyDeclaration;
+		var conditional = state.condition || code.condition || parentIsConditional;
+		if (typeof propertyDeclaration === 'object') {
+			var type = propertyDeclaration.type;
+			var property = propertyDeclaration.name;
+			var pre = propertyDeclaration.pre || '';
+			var post = propertyDeclaration.post || '';
+			conditional = conditional || propertyDeclaration.conditional;
+			if (type && property) {
+				propertyDeclaration = `    ${pre}public ${property}${conditional ? '?' : ''}: ${type};${post}\n`;
+			}
+		}
+		if (typeof propertyDeclaration !== 'string') {
+			propertyDeclaration = '';
+
+			propertyDeclaration += `    public ${args.id}${conditional ? '?' : ''}: ${args.fullname};\n`;
+		}
+		if (exports.properties.indexOf(propertyDeclaration) === -1) {
+			exports.properties += propertyDeclaration;
+		}
+	}
 	if (!isModelOrCollection) {
+		if (!exports.isNodeForCurrentPlatform(node)) {
+			return '';
+		}
 		return code.condition ? _.template(codeTemplate)(code) : code.content;
 	} else {
 		return {
@@ -839,7 +915,7 @@ function generateConfig(obj) {
 	var resourcesBase = (function() {
 		var base = obj.dir.resources;
 		if (platform) { base = path.join(base, platform); }
-		return path.join(base, 'alloy');
+		return path.join(base);
 	})();
 	var resourcesCfg = path.join(resourcesBase, 'CFG.js');
 
@@ -859,7 +935,7 @@ function generateConfig(obj) {
 
 	// only regenerate the CFG.js when necessary
 	var hash = U.createHashFromString(JSON.stringify(o));
-	if (buildLog.data.cfgHash && buildLog.data.cfgHash === hash && fs.existsSync(path.join(obj.dir.resources, 'alloy', 'CFG.js'))) {
+	if (buildLog.data.cfgHash && buildLog.data.cfgHash === hash && fs.existsSync(path.join(obj.dir.resources, 'CFG.js'))) {
 		// use cached CFG.js file
 		logger.info(' [config.json] config.json unchanged, using cached config.json...');
 	} else {
@@ -875,7 +951,7 @@ function generateConfig(obj) {
 		fs.writeFileSync(resourcesCfg, output);
 
 		// TODO: deal with TIMOB-14884
-		var baseFolder = path.join(obj.dir.resources, 'alloy');
+		var baseFolder = path.join(obj.dir.resources);
 		if (!fs.existsSync(baseFolder)) {
 			fs.mkdirpSync(baseFolder);
 			chmodr.sync(baseFolder, 0755);
@@ -944,7 +1020,16 @@ exports.loadController = function(file) {
 	}
 
 	// get the base controller for this controller, also process import/export statements
-	var controller = astController.processController(contents, file);
+	var controller;
+	if (file.indexOf('.ts') === file.length - 3) {
+		controller = {
+			es6mods: '',
+			base: '',
+			code: code
+		};
+	} else {
+		controller = astController.processController(contents, file);
+	}
 	code.controller = controller.code;
 	code.parentControllerName = controller.base;
 	code.es6mods = controller.es6mods;
@@ -975,10 +1060,10 @@ exports.validateNodeName = function(node, names) {
 	return null;
 };
 
-exports.generateCollectionBindingTemplate = function(args) {
+exports.generateCollectionBindingTemplate = function(args, state) {
 	var code = '';
 	var COLLECTION_BINDING_EVENTS = CONST.COLLECTION_BINDING_EVENTS_092;
-	
+
 	// Check if not 0.9.2 and if it's a supported version as we'll default to 0.9.2 if the version is not supported
 	if (compilerConfig.backbone !== '0.9.2' && CONST.SUPPORTED_BACKBONE_VERSIONS.includes(compilerConfig.backbone)) {
 		COLLECTION_BINDING_EVENTS = CONST.COLLECTION_BINDING_EVENTS;
@@ -987,7 +1072,7 @@ exports.generateCollectionBindingTemplate = function(args) {
 	// Determine the collection variable to use
 	var obj = { name: args[CONST.BIND_COLLECTION] };
 	var col = _.template((exports.currentManifest ? CONST.WIDGET_OBJECT : 'Alloy') + ".Collections['<%= name %>'] || <%= name %>")(obj);
-	var colVar = exports.generateUniqueId();
+	var colVar = args[CONST.BIND_COLLECTION];
 
 	// Create the code for the filter and transform functions
 	var where = args[CONST.BIND_WHERE];
@@ -1003,31 +1088,102 @@ exports.generateCollectionBindingTemplate = function(args) {
 		// append the form factor for the code below
 		handlerFunc += U.ucfirst(args.parentFormFactor);
 	}
-	// construct code template
-	code += 'var ' + colVar + '=' + col + ';';
-	code += 'function ' + handlerFunc + '(e) {';
-	code += '   if (e && e.fromAdapter) { return; }';
-	code += '   var opts = ' + handlerFunc + '.opts || {};';
-	code += '	var models = ' + whereCode + ';';
-	code += '	var len = models.length;';
-	code += '<%= pre %>';
-	code += '	for (var i = 0; i < len; i++) {';
-	code += '		var <%= localModel %> = models[i];';
-	if (!args.isDataBoundMap) {
-		code += '		<%= localModel %>.' + CONST.BIND_TRANSFORM_VAR + ' = ' + transformCode + ';';
-	} else {
-		// because (ti.map).annotations[] doesn't accept an array of anonymous objects
-		// we convert them to actual Annotations before pushing them to the array
-		code += "		<%= annotationArray %>.push(require('ti.map').createAnnotation(" + transformCode + '));';
-	}
-	code += '<%= items %>';
-	code += '	}';
-	code += '<%= post %>';
-	code += '};';
-	code += colVar + ".on('" + COLLECTION_BINDING_EVENTS + "'," + handlerFunc + ');';
+	
+	if (state.outputFormat === 'TS') {
+		var thisBindingRegex = /((\$|this)[.\[])/;
+		var cTypeName;
+		var mTypeName;
+		if (/(\$|this)[.\[]/.test(colVar)) {
+			// instance
+			colVar = colVar.replace(thisBindingRegex, '');
+			cTypeName = `${colVar}CollectionType`;
+			mTypeName = `${colVar}ModelType`;
+			var cTypeCode = `type ${cTypeName} = typeof <%= className %>.prototype.${colVar};\n`;
+			var mTypeCode = `type ${mTypeName} = InstanceType<typeof <%= className %>.prototype.${colVar}.model>;\n`;
+			if (exports.typesCode.indexOf(cTypeCode) === -1) {
+				exports.typesCode += cTypeCode;
+			}
+			if (exports.typesCode.indexOf(mTypeCode) === -1) {
+				exports.typesCode += mTypeCode;
+			}
+			col = `this.${colVar}`;
+		} else {
+			// singleton
+			col = _.template((exports.currentManifest ? CONST.WIDGET_OBJECT : 'Alloy') + ".Collections['<%= name %>']")(obj);
+			cTypeName = `${colVar}Collection`;
+			mTypeName = `${colVar}Model`;
+		}
 
-	exports.destroyCode += colVar + ' && ' + ((args.parentFormFactor) ? 'Alloy.is' + U.ucfirst(args.parentFormFactor) + ' && ' : '' ) +
-		colVar + ".off('" + COLLECTION_BINDING_EVENTS + "'," + handlerFunc + ');';
+
+		var method;
+
+		if (where) {
+			method = `abstract ${where}(collection: ${cTypeName}): ${mTypeName}[];\n`;
+			exports.abstractMethods += method;
+			where = `this.${where}`;
+			whereCode = `${where}(${col})`;
+		} else {
+			whereCode = `${col}.models`;
+		}
+		if (transform) {
+			method = `abstract ${transform}(model: ${mTypeName}): any;\n`;
+			exports.abstractMethods += method;
+			transform = `this.${transform}`;
+			transformCode = `${transform}(<%= localModel %>);`;
+		} else {
+			transformCode = '<%= localModel %>.transform();';
+		}
+
+		exports.preCode += '        ' + col + ".on('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + '.bind(this));\n';
+		code += `
+protected ${handlerFunc}(e?: any): void {
+  if (e && e.fromAdapter) {
+    return;
+  }
+  const opts: any = /*${handlerFunc}.opts ||*/ {};
+  const models = ${whereCode};
+  const len = models.length;
+  <%= pre %>
+  for (var i = 0; i < len; i++) {
+    const <%= localModel %> = models[i];
+    ${!args.isDataBoundMap ?
+		`let ${CONST.BIND_TRANSFORM_VAR} = ${transformCode}\n` :
+		`<%= annotationArray %>.push(require('ti.map').createAnnotation(${transformCode}));\n`}
+    <%= items %>
+  }
+  <%= post %>
+}`;
+		exports.destroyCode += col + ' && ' + ((args.parentFormFactor) ? 'Alloy.is' + U.ucfirst(args.parentFormFactor) + ' && ' : '' ) +
+				col + ".off('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + ');';
+
+	} else {
+		
+		// construct code template
+		code += 'var ' + colVar + '=' + col + ';';
+		code += 'function ' + handlerFunc + '(e) {';
+		code += '   if (e && e.fromAdapter) { return; }';
+		code += '   var opts = ' + handlerFunc + '.opts || {};';
+		code += '	var models = ' + whereCode + ';';
+		code += '	var len = models.length;';
+		code += '<%= pre %>';
+		code += '	for (var i = 0; i < len; i++) {';
+		code += '		var <%= localModel %> = models[i];';
+		if (!args.isDataBoundMap) {
+			code += '		<%= localModel %>.' + CONST.BIND_TRANSFORM_VAR + ' = ' + transformCode + ';';
+		} else {
+			// because (ti.map).annotations[] doesn't accept an array of anonymous objects
+			// we convert them to actual Annotations before pushing them to the array
+			code += "		<%= annotationArray %>.push(require('ti.map').createAnnotation(" + transformCode + '));';
+		}
+		code += '<%= items %>';
+		code += '	}';
+		code += '<%= post %>';
+		code += '};';
+		code += colVar + ".on('" + COLLECTION_BINDING_EVENTS + "'," + handlerFunc + ');';
+
+		exports.destroyCode += colVar + ' && ' + ((args.parentFormFactor) ? 'Alloy.is' + U.ucfirst(args.parentFormFactor) + ' && ' : '' ) +
+				colVar + ".off('" + COLLECTION_BINDING_EVENTS + "'," + handlerFunc + ');';
+	}
 
 	return code;
 };

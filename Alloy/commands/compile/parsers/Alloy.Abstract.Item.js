@@ -17,6 +17,7 @@ function parse(node, state, args) {
 	}
 
 	return {
+		propertyDeclaration: '',
 		parent: {},
 		styles: state.styles,
 		code: state.itemsArray + '.push(' + string + ');'

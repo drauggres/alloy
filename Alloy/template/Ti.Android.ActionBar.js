@@ -1,4 +1,4 @@
-function <%= openFunc %>() {
+const <%= openFunc %> = ()<%= returnType %> => {
 	<%= parent %>.removeEventListener('open', <%= openFunc %>);
 	if (<%= parent %>.activity) {
 		<%= code %>

@@ -40,6 +40,7 @@ function parse(node, state, args) {
 	}
 
 	return {
+		propertyDeclaration: '',
 		parent: {},
 		code: code
 	};

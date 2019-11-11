@@ -48,9 +48,15 @@ exports.parse = function(node, state) {
 		if (activityTssStyles[activityTssKey] && activityTssStyles[activityTssKey].style) {
 			_.defaults(xmlStyles, activityTssStyles[activityTssKey].style);
 		}
+		
+		var viewsHolder = '$.__views.';
+		if (state.outputFormat === 'TS') {
+			viewsHolder = 'this.';
+		}
+
 		// Generate the template code
 		if ((_.filter(_.values(xmlStyles), function(val) { return val !== undefined; })).length > 0) {
-			code += state.parent.symbol + '.activity.setSupportActionBar($.__views.' + node.getAttribute('id') + ');';
+			code += state.parent.symbol + '.activity.setSupportActionBar(' + viewsHolder + node.getAttribute('id') + ');';
 			if (xmlStyles.backgroundImage)  { code += state.parent.symbol + '.activity.actionBar.backgroundImage = "' + xmlStyles.backgroundImage + '";'; }
 			if (xmlStyles.displayHomeAsUp)  { code += state.parent.symbol + '.activity.actionBar.displayHomeAsUp = ' + xmlStyles.displayHomeAsUp + ';'; }
 			if (xmlStyles.homeButtonEnabled)  { code += state.parent.symbol + '.activity.actionBar.homeButtonEnabled = ' + xmlStyles.homeButtonEnabled + ';'; }
@@ -59,6 +65,7 @@ exports.parse = function(node, state) {
 		}
 
 		tempRes.code += U.evaluateTemplate('Ti.Android.ActionBar.js', {
+			returnType: state.outputFormat === 'TS' ? ': void' : '',
 			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
 			code: code,
 			eventObject: eventObject,

@@ -1,7 +1,7 @@
-function <%= openFunc %>() {
+const <%= openFunc %> = ()<%= returnType %> => {
 	<%= parent %>.removeEventListener('open', <%= openFunc %>);
 	if (<%= parent %>.activity) {
-		<%= parent %>.activity.onCreateOptionsMenu = function(<%= eventObject %>) {
+		<%= parent %>.activity.onCreateOptionsMenu = (<%= eventObject %>)<%= returnType %> => {
 			<%= code %>
 		};
 	} else {

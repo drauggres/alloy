@@ -72,7 +72,7 @@ function parse(node, state, args) {
 		}
 		// set a custom property for special handling of Annotations in CU.generateCollectionBindingTemplate()
 		args.isDataBoundMap = true;
-		code += _.template(CU.generateCollectionBindingTemplate(args))({
+		CU.dataFunctionsCode += _.template(CU.generateCollectionBindingTemplate(args, state))({
 			localModel: localModel,
 			pre: '',
 			items: itemCode,

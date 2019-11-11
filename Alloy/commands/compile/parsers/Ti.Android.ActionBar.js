@@ -59,11 +59,22 @@ function parse(node, state, args) {
 		if (xmlStyles.navigationMode)  { code += state.parent.symbol + '.activity.actionBar.navigationMode = ' + xmlStyles.navigationMode + ';'; }
 		if (xmlStyles.onHomeIconItemSelected)  { code += state.parent.symbol + '.activity.actionBar.onHomeIconItemSelected = ' + xmlStyles.onHomeIconItemSelected + ';'; }
 	}
+
+	var propertyDeclaration;
+	if (!state.local) {
+		propertyDeclaration = {
+			pre: '// ',
+			name: args.id,
+			type: args.fullname
+		};
+	}
 	// Update the parsing state, and process the template
 	return {
+		propertyDeclaration: propertyDeclaration,
 		parent: {},
 		styles: state.styles,
 		code: U.evaluateTemplate('Ti.Android.ActionBar.js', {
+			returnType: state.outputFormat === 'TS' ? ': void' : '',
 			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
 			code: code,
 			eventObject: eventObject,

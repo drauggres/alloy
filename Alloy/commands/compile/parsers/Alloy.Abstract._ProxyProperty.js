@@ -30,6 +30,7 @@ function parse(node, state, args) {
 			U.dieWithNode(node, 'Parent element must one of the following: [' + def.parents.join(',') + ']');
 		}
 	}
+	var propertyDeclaration;
 
 	// standard proxy property handling
 	if (node.hasChildNodes()) {
@@ -53,12 +54,18 @@ function parse(node, state, args) {
 				}
 			});
 		});
+		propertyDeclaration = '';
 
 	// explicitly create nav buttons from proxy property element
 	} else if (_.includes(['LeftNavButton', 'RightNavButton'], node.nodeName)) {
+		var type = 'Ti.UI.Button';
+		propertyDeclaration = {
+			name: args.id,
+			type: type
+		};
 		node.nodeName = 'Button';
 		var exState = _.extend(_.clone(state), { parent: {} });
-		var buttonState = require('./Ti.UI.Button').parse(node, exState);
+		var buttonState = require('./' + type).parse(node, exState);
 		code += buttonState.code;
 		proxy = buttonState.parent.symbol;
 
@@ -74,6 +81,7 @@ function parse(node, state, args) {
 	}
 
 	return {
+		propertyDeclaration: propertyDeclaration,
 		parent: {
 			proxyProperty: proxy
 		},

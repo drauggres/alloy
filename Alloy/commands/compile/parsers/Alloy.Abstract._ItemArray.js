@@ -20,6 +20,7 @@ exports.parse = function(node, state) {
 
 function parse(node, state, args) {
 	var def = fixDefinition(state.itemArrayDefinition);
+	var tsOutput = state.outputFormat === 'TS';
 
 	// Ensure that this _ItemArray has an appropriate parent
 	if (!state.itemsArray) {
@@ -91,14 +92,16 @@ function parse(node, state, args) {
 			// we need to pass it to the data binding generator
 			args.parentFormFactor = (state.parentFormFactor || node.getAttribute('formFactor'));
 		}
-		code += _.template(CU.generateCollectionBindingTemplate(args))({
+		var pre = tsOutput ? 'const ' + itemsVar + ' = [];' : 'var ' + itemsVar + '=[];';
+		CU.dataFunctionsCode += _.template(CU.generateCollectionBindingTemplate(args, state))({
 			localModel: localModel,
-			pre: 'var ' + itemsVar + '=[];',
+			pre: pre,
 			items: itemCode,
 			post: '<%= itemContainer %>.' + def.property + '=' + itemsVar + ';'
 		});
 
 		return {
+			propertyDeclaration: '',
 			parent: {},
 			code: code
 		};
@@ -110,6 +113,7 @@ function parse(node, state, args) {
 			code += ((state.parent && state.parent.symbol ? state.parent.symbol : CONST.PARENT_SYMBOL_VAR) + '.' + state.property + ' = ' + state.itemsArray + ';');
 		}
 		return {
+			propertyDeclaration: '',
 			parent: {},
 			code: code
 		};
@@ -117,6 +121,7 @@ function parse(node, state, args) {
 	// return the current modified state if we need to continue processing
 	} else {
 		return _.extend(state, {
+			propertyDeclaration: '',
 			isCollectionBound: isCollectionBound,
 			parent: { node: node },
 			code: code

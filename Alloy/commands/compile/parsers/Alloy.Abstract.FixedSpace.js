@@ -19,7 +19,14 @@ function parse(node, state, args) {
 		iOSProxy = 'iPhone';
 	}
 
+	var propertyDeclaration = {
+		name: args.id,
+		conditional: true,
+		type: 'Ti.UI.Button'
+	};
+
 	return {
+		propertyDeclaration: propertyDeclaration,
 		parent: {
 			node: node,
 			symbol: args.symbol

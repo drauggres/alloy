@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 	<%= Widget %>
-	require('/alloy/controllers/' + <%= parentController %>).apply(this, Array.prototype.slice.call(arguments));
+	require('/controllers/' + <%= parentController %>).apply(this, Array.prototype.slice.call(arguments));
 	this.__controllerPath = '<%= controllerPath %>';
 	this.args = arguments[0] || {};
 
@@ -32,6 +32,10 @@ function Controller() {
 	// controller code. One example is all model and collection
 	// declarations from markup.
 	<%= preCode %>
+
+	// <dataFunctions>
+	<%= dataFunctionsCode %>
+	// </dataFunctionsCode>
 
 	// Generated UI code
 	<%= viewCode %>

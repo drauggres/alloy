@@ -74,9 +74,6 @@ function parse(node, state, args) {
 		_.defaults(xmlStyles, menuTssStyles[menuTssKey].style);
 	}
 	if ((_.filter(_.values(xmlStyles), function(val) { return val !== undefined; })).length > 0) {
-		// TODO: once Android 2.x support is deprecated, remove the if(actionBar) test from the following
-		// to speed up execution of the resulting code
-		code += 'if(' + state.parent.symbol + '.activity.actionBar) {\n';
 		if (xmlStyles.title)  { code += state.parent.symbol + '.activity.actionBar.title = "' + xmlStyles.title + '";'; }
 		if (xmlStyles.subtitle)  { code += state.parent.symbol + '.activity.actionBar.subtitle = "' + xmlStyles.subtitle + '";'; }
 		if (xmlStyles.backgroundImage)  { code += state.parent.symbol + '.activity.actionBar.backgroundImage = "' + xmlStyles.backgroundImage + '";'; }
@@ -85,13 +82,15 @@ function parse(node, state, args) {
 		if (xmlStyles.logo)  { code += state.parent.symbol + '.activity.actionBar.logo = "' + xmlStyles.logo + '";'; }
 		if (xmlStyles.navigationMode)  { code += state.parent.symbol + '.activity.actionBar.navigationMode = ' + xmlStyles.navigationMode + ';'; }
 		if (xmlStyles.onHomeIconItemSelected)  { code += state.parent.symbol + '.activity.actionBar.onHomeIconItemSelected = ' + xmlStyles.onHomeIconItemSelected + ';'; }
-		code += '}\n';
 	}
 	// Update the parsing state
 	return {
+		// we don't need it
+		propertyDeclaration: '',
 		parent: {},
 		styles: state.styles,
 		code: U.evaluateTemplate('Ti.Android.Menu.js', {
+			returnType: state.outputFormat === 'TS' ? ': void' : '',
 			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
 			code: code,
 			eventObject: eventObject,

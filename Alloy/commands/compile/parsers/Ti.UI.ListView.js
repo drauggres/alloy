@@ -36,6 +36,13 @@ function parse(node, state, args) {
 		proxyProperties = {},
 		sectionArray, templateObject;
 
+	var viewsHolder = '$.__views.';
+	var anyString = '';
+	if (state.outputFormat === 'TS') {
+		viewsHolder = 'this.';
+		anyString = ': any';
+	}
+
 	if (isDataBound) {
 		U.dieWithNode(node, "'dataCollection' attribute should be set on <ListSection>.");
 	}
@@ -127,7 +134,7 @@ function parse(node, state, args) {
 				} else if (fullname === 'Alloy.Abstract.ItemTemplate') {
 					if (!templateObject) {
 						templateObject = CU.generateUniqueId();
-						code += 'var ' + templateObject + '={};';
+						code += 'var ' + templateObject + anyString + '={};';
 					}
 					code += CU.generateNodeExtended(template, state, {
 						parent: {},
@@ -151,7 +158,7 @@ function parse(node, state, args) {
 	// the <ListView> and linked to the list via the searchView attribute
 	if (node.hasAttribute('searchView')) {
 		var attr = node.getAttribute('searchView');
-		extras.push(['searchView', '$.__views.' + attr]);
+		extras.push(['searchView', viewsHolder + attr]);
 		node.removeAttribute('searchView');
 	}
 	if (extras.length) { state.extraStyle = styler.createVariableStyle(extras); }

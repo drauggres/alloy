@@ -2,10 +2,10 @@ var isTitanium = typeof Titanium !== 'undefined';
 var _, generatePlatformArray;
 
 if (isTitanium) {
-	_ = require('/alloy/underscore')._;
+	_ = require('underscore')._;
 } else {
 	var platforms = require('../../platforms/index');
-	_ = require('../lib/alloy/underscore')._;
+	_ = require('../lib/underscore')._;
 
 	// iterate through supported platforms to create specific constants
 	generatePlatformArray = function(key) {
@@ -93,22 +93,29 @@ exports.DIST_TYPES = [
 
 // mappings of file extensions and folders for each file type
 exports.FILE_EXT = {
+	TS_CONTROLLER: 'ts',
+	TS_COMPONENT: 'ts',
+	TS_MODEL: 'ts',
+	TS_MODELCODE: 'ts',
 	VIEW: 'xml',
 	STYLE: 'tss',
-	MODEL: 'js',
-	MODELCODE: 'js',
+	JS_MODEL: 'js',
+	JS_MODELCODE: 'js',
 	MIGRATION: 'js',
-	CONTROLLER: 'js',
-	COMPONENT: 'js',
+	JS_CONTROLLER: 'js',
+	JS_COMPONENT: 'js',
 	CONFIG: 'json',
 	JMK: 'jmk',
 	MAP: 'map'
 };
 exports.DIR = {
+	TS_CONTROLLER: 'controllers',
+	TS_COMPONENT: 'gen/controllers',
+	TS_RUNTIME_STYLE: 'gen/styles',
 	VIEW: 'views',
 	STYLE: 'styles',
-	RUNTIME_STYLE: 'styles',
-	CONTROLLER: 'controllers',
+	JS_RUNTIME_STYLE: 'styles',
+	JS_CONTROLLER: 'controllers',
 	MODEL: 'models',
 	MODELCODE: 'models',
 	MIGRATION: 'migrations',
@@ -116,7 +123,7 @@ exports.DIR = {
 	ASSETS: 'assets',
 	WIDGET: 'widgets',
 	LIB: 'lib',
-	COMPONENT: 'controllers',
+	JS_COMPONENT: 'controllers',
 	MAP: 'build/map',
 	VENDOR: 'vendor',
 	THEME: 'themes',

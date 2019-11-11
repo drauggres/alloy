@@ -27,8 +27,16 @@ function parse(node, state, args) {
 		_.extend(state, { isListItem: true })
 	) + ';';
 
+	var propertyDeclaration;
+	if (!state.local) {
+		propertyDeclaration = {
+			name: args.id,
+			type: 'any'
+		};
+	}
 	// Update the parsing state
 	return {
+		propertyDeclaration: propertyDeclaration,
 		parent: {
 			node: node,
 			symbol: args.symbol

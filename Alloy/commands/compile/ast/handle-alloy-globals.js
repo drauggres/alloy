@@ -42,13 +42,13 @@ module.exports = function(babel) {
 						case '_':
 							this.toRequire.push({
 								VARIABLE: '_',
-								REQUIRECALL: 'require(\'/alloy/underscore\')._'
+								REQUIRECALL: 'require(\'underscore\')._'
 							});
 							break;
 						case 'Backbone':
 							this.toRequire.push({
 								VARIABLE: 'Backbone',
-								REQUIRECALL: 'require(\'/alloy/backbone\')'
+								REQUIRECALL: 'require(\'backbone\')'
 							});
 							break;
 					}
@@ -86,12 +86,12 @@ function checkStatement(moduleName, state) {
 		case '/alloy':
 			state.required.push('Alloy');
 			break;
-		case 'alloy/underscore':
-		case '/alloy/underscore':
+		case 'underscore':
+		case '/underscore':
 			state.required.push('_');
 			break;
-		case 'alloy/backbone':
-		case '/alloy/backbone':
+		case 'backbone':
+		case '/backbone':
 			state.required.push('Backbone');
 			break;
 	}

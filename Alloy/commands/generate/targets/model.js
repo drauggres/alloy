@@ -6,7 +6,7 @@ var path = require('path'),
 	logger = require('../../../logger');
 
 var ALLOY_ROOT = path.join(__dirname, '..', '..', '..'),
-	MODEL_TEMPLATE = path.join(ALLOY_ROOT, 'template', 'modelcode.js'),
+	JS_MODEL_TEMPLATE = path.join(ALLOY_ROOT, 'template', 'js_modelcode.js'),
 	VALID_ADAPTERS = ['sql', 'properties', 'localStorage'],
 	USAGE = [
 		'Usage:',
@@ -49,7 +49,7 @@ module.exports = function(name, args, program) {
 	});
 
 	// assemble columns object into code
-	var code = _.template(fs.readFileSync(MODEL_TEMPLATE, 'utf8'))({
+	var code = _.template(fs.readFileSync(JS_MODEL_TEMPLATE, 'utf8'))({
 		adapter: adapter,
 		name: name,
 		schema: _.isEmpty(columns) ? '' : prepareColumnsForWriting(columns)
@@ -57,7 +57,7 @@ module.exports = function(name, args, program) {
 
 	// write out the model file
 	var modelDir = path.join(paths.app, 'models');
-	var modelFile = path.join(modelDir, name + '.' + CONST.FILE_EXT.MODEL);
+	var modelFile = path.join(modelDir, name + '.' + CONST.FILE_EXT.JS_MODEL);
 	fs.mkdirpSync(modelDir);
 	fs.writeFileSync(modelFile, code);
 

@@ -96,13 +96,13 @@ function testController(viewName, opts) {
 
 	if (!opts.widgetId) {
 		paths = {
-			controller: path.join(appPath,CONST.DIR.CONTROLLER,viewName + '.' + CONST.FILE_EXT.CONTROLLER),
+			controller: path.join(appPath,CONST.DIR.JS_CONTROLLER,viewName + '.' + CONST.FILE_EXT.JS_CONTROLLER),
 			template: path.join(templatePath,'controller.js')
 		};
 	} else {
 		var widgetPath = path.join(appPath,CONST.DIR.WIDGET,opts.widgetId);
 		paths = {
-			controller: path.join(widgetPath,CONST.DIR.CONTROLLER,viewName + '.' + CONST.FILE_EXT.CONTROLLER),
+			controller: path.join(widgetPath,CONST.DIR.JS_CONTROLLER,viewName + '.' + CONST.FILE_EXT.JS_CONTROLLER),
 			template: path.join(templatePath,'widget','controller.js')
 		};
 	}

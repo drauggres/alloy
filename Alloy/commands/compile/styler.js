@@ -439,7 +439,13 @@ exports.processStyle = function(_style, _state) {
 exports.generateStyleParams = function(styles, classes, id, apiName, extraStyle, theState) {
 	var styleCollection = [],
 		lastObj = {},
+		alloyUniqueIdPrefix = CU.alloyUniqueIdPrefix,
 		elementName = apiName.split('.').pop();
+
+	// never add generate id to the style
+	if (extraStyle && extraStyle.id && extraStyle.id.indexOf(alloyUniqueIdPrefix) === 0) {
+		delete extraStyle.id;
+	}
 
 	// don't add an id to the generated style if we are in a local state
 	if (theState && theState.local) {
@@ -587,16 +593,19 @@ exports.generateStyleParams = function(styles, classes, id, apiName, extraStyle,
 					referencePath.unshift('Alloy', 'Models');
 				}
 
+				var isTsOutput = theState.outputFormat === 'TS';
 				// model binding
 				if (attribute !== undefined) {
-					modelVar = fromPath(referencePath);
-					reference = fromPath(referencePath.concat(CONST.BIND_TRANSFORM_VAR, attribute));
+					modelVar = fromPath(referencePath, isTsOutput);
+					var arr = isTsOutput ? [] : referencePath;
+					reference = fromPath(arr.concat(CONST.BIND_TRANSFORM_VAR, attribute), isTsOutput);
 					if (!_.includes(bindsModels, modelVar)) {
 						bindsModels.push(modelVar);
 					}
 				} else {
 					// collection binding
-					reference = collectionModelVar + '.' + CONST.BIND_TRANSFORM_VAR + (reference[0] === '[' ? '' : '.') + reference;
+					var pre = isTsOutput ? '' : collectionModelVar + '.';
+					reference = pre + CONST.BIND_TRANSFORM_VAR + (reference[0] === '[' ? '' : '.') + reference;
 				}
 
 				bindingExpParts.push(reference);
@@ -708,14 +717,21 @@ function toPath(value) {
 	return result;
 }
 
-function fromPath(path) {
+function fromPath(path, tsOutput) {
 	var result = path[0];
 
 	if (path.length > 1) {
-		result += '[' + path.slice(1).map(function(string) {
-			return "'" + string.replace(/'/g, "\\'") + "'";
-		}).join('][') + ']';
+		result += path.slice(1).map(function(string) {
+			if (string.lastIndexOf('()') === string.length - 2) {
+				return '.' + string;
+			} else {
+				return "['" + string.replace(/'/g, "\\'") + "']";
+			}
+		}).join('');
 	}
 
+	if (tsOutput) {
+		result = result.replace(/^\$/, 'this');
+	}
 	return result;
 }

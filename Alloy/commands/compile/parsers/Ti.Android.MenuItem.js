@@ -23,13 +23,19 @@ function parse(node, state, args) {
 			actionView = require('./_ProxyProperty.' + parts[1]).parse(node, state);
 		}
 	});
+	var anyTypeString = '';
+	var thisController = '$';
+	if (state.outputFormat === 'TS') {
+		thisController = 'this';
+		anyTypeString = ': any';
+	}
 	if (actionView) {
 		// add the code to the parent
 		code += actionView.code;
 
 		// expose UI id
 		id = actionView.parent && actionView.parent.symbol;
-		newCode = id ? ('$.' + id.split('.').pop() + '=' + id + ';') : '';
+		newCode = id ? (thisController + '.' + id.split('.').pop() + '=' + id + ';') : '';
 		code += newCode;
 	}
 
@@ -41,11 +47,22 @@ function parse(node, state, args) {
 		_.defaults(state.extraStyle || {}, createArgs)
 	);
 
+	var propertyDeclaration;
+	if (!state.local) {
+		propertyDeclaration = {
+			name: args.id,
+			conditional: true,
+			type: args.fullname
+		};
+	}
 	return {
+		importCode: `import * as _ from 'underscore';\n`,
+		propertyDeclaration: propertyDeclaration,
 		parent: {},
 		styles: state.styles,
 		code: code + U.evaluateTemplate('Ti.Android.MenuItem.js', {
 			item: args.symbol,
+			anyString: anyTypeString,
 			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
 			style: CU.generateUniqueId(),
 			styleCode: styleObjectCode,

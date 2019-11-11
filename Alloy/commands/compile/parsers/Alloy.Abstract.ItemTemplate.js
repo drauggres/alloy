@@ -99,6 +99,7 @@ function parse(node, state, args) {
 
 	// Update the parsing state
 	return {
+		propertyDeclaration: '',
 		parent: {},
 		local: state.local || false,
 		model: state.model || undefined,

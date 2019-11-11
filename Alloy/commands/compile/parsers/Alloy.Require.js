@@ -132,8 +132,17 @@ function parse(node, state, args) {
 	if (args.parent.symbol && !state.templateObject && !state.androidMenu) {
 		code += args.symbol + '.setParent(' + args.parent.symbol + ');\n';
 	}
+	
+	var propertyDeclaration;
+	if (!state.local) {
+		propertyDeclaration = {
+			name: args.id,
+			type: 'Alloy.Controller'
+		};
+	}
 
 	return {
+		propertyDeclaration: propertyDeclaration,
 		parent: {
 			symbol: args.symbol + '.getViewEx({recurse:true})'
 		},

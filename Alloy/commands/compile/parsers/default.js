@@ -14,6 +14,7 @@ function parse(node, state, args) {
 	var fullname = CU.getNodeFullname(node),
 		parts = fullname.split('.'),
 		extras = [];
+	var tsOutput = state.outputFormat === 'TS';
 
 	if (node.previewContext) {
 		extras.push(['previewContext', node.previewContext]);
@@ -56,7 +57,8 @@ function parse(node, state, args) {
 	// Generate runtime code
 	if (state.isViewTemplate) {
 		var bindId = node.getAttribute('bindId');
-		code += (state.local ? 'var ' : '') + args.symbol + '={';
+		var type = tsOutput ? ': any' : '';
+		code += (state.local ? 'var ' : '') + args.symbol + type + '={';
 		code += "type:'" + fullname + "',";
 		if (bindId) {
 			code += "bindId:'" + bindId + "',";
@@ -170,7 +172,7 @@ function parse(node, state, args) {
 				// we need to pass it to the data binding generator
 				args.parentFormFactor = (state.parentFormFactor || node.getAttribute('formFactor'));
 			}
-			code += _.template(CU.generateCollectionBindingTemplate(args))({
+			CU.dataFunctionsCode += _.template(CU.generateCollectionBindingTemplate(args, state))({
 				localModel: localModel,
 				pre: pre,
 				items: itemCode,

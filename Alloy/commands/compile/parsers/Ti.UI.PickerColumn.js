@@ -70,7 +70,7 @@ function parse(node, state, args) {
 			// we need to pass it to the data binding generator
 			args.parentFormFactor = (state.parentFormFactor || node.getAttribute('formFactor'));
 		}
-		code += _.template(CU.generateCollectionBindingTemplate(args))({
+		CU.dataFunctionsCode += _.template(CU.generateCollectionBindingTemplate(args, state))({
 			localModel: localModel,
 			pre: 'var rows=[];\n_.each(' + args.symbol + '.getRows(), function(r) { ' + args.symbol + '.removeRow(r);});\n',
 			items: rowCode,

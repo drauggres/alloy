@@ -19,6 +19,16 @@ function parse(node, state, args) {
 	var backboneVar;
 	var manifest = CU.currentManifest;
 	var root = manifest ? CONST.WIDGET_OBJECT : 'Alloy';
+	var tsOutput = state.outputFormat === 'TS';
+	var thisController = '$';
+	var ext = CONST.FILE_EXT.JS_MODEL;
+	var propertyDeclaration = '';
+	var importCode = '';
+	if (tsOutput) {
+		thisController = 'this';
+		ext = CONST.FILE_EXT.TS_MODEL;
+		importCode += `import { Collection as ${src}Collection, Model as ${src}Model } from '<%= models %>/${src}';\n`;
+	}
 
 	// Make sure the parent is <Alloy>
 	if (!node.parentNode || node.parentNode.nodeName !== 'Alloy') {
@@ -41,7 +51,7 @@ function parse(node, state, args) {
 		}
 
 		// Make sure we have a valid model src
-		var validModelsPrint = '[' + _.map(validModels, function(s) { return s.replace(/\.js$/, ''); }).join(',') + ']';
+		var validModelsPrint = '[' + _.map(validModels, function(s) { return s.replace(new RegExp('\\.' + ext + '$'), ''); }).join(',') + ']';
 		if (!src) {
 			U.dieWithNode(node, [
 				'All ' + U.lcfirst(nodeName) + 's must have a "src" attribute which identifies its base model',
@@ -49,7 +59,7 @@ function parse(node, state, args) {
 				'Valid models: ' + validModelsPrint
 			]);
 		} else {
-			var modelPath = path.join(modelsPath, src + '.' + CONST.FILE_EXT.MODEL);
+			var modelPath = path.join(modelsPath, src + '.' + ext);
 			if (!path.existsSync(modelPath)) {
 				U.dieWithNode(node, [
 					'"src" attribute\'s model "' + src + '" does not exist in app/' + CONST.DIR.MODEL,
@@ -79,11 +89,19 @@ function parse(node, state, args) {
 		// code += backboneVar + ' || (' + backboneVar + ' = ' + createCall + ');';
 	} else {
 		id = id || args.id;
-		backboneVar = '$.' + id;
-		code += backboneVar + ' = ' + createCall + ';';
+		backboneVar = thisController + '.' + id;
+		if (tsOutput) {
+			propertyDeclaration = '    // TODO: replace with normal instantiation:\n' +
+					`    // public ${args.id}: ${src}${nodeName} = new ${src}${nodeName}();\n` +
+					`    public ${args.id}: ${src}${nodeName} = ${createCall} as ${src}${nodeName};\n`;
+		} else {
+			code += backboneVar + ' = ' + createCall + ';';
+		}
 	}
 
 	return {
+		importCode: importCode,
+		propertyDeclaration: propertyDeclaration,
 		code: '',
 		modelCode: code, // modelCode will add this before the UI code
 		args: {
