@@ -3,8 +3,8 @@
 /platform
 /i18n
 /app/gen
+/build
 build.log
-build
 npm-debug.log
 tmp
 .map

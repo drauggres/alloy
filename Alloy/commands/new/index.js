@@ -60,8 +60,12 @@ module.exports = function(args, program) {
 		}
 	});
 
-	// add the default alloy.js file
-	U.copyFileSync(path.join(paths.template, 'alloy.js'), path.join(paths.app, 'alloy.js'));
+	if (templateName === 'typescript') {
+		U.copyFileSync(path.join(paths.template, 'app.ts'), path.join(paths.app, 'app.ts'));
+	} else {
+		// add the default alloy.js file
+		U.copyFileSync(path.join(paths.template, 'alloy.js'), path.join(paths.app, 'alloy.js'));
+	}
 
 	// install ti.alloy compiler plugin
 	U.installPlugin(path.join(paths.alloy, '..'), paths.project);
