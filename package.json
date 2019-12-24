@@ -63,6 +63,7 @@
     "lint": "eslint ."
   },
   "main": "./Alloy/alloy",
+  "types": "./Alloy/template/lib/alloy.d.ts",
   "engines": {
     "node": ">=0.10"
   },
