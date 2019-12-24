@@ -61,7 +61,8 @@ module.exports = function(args, program) {
 	});
 
 	if (templateName === 'typescript') {
-		U.copyFileSync(path.join(paths.template, 'app.ts'), path.join(paths.app, 'app.ts'));
+		U.copyFileSync(path.join(paths.appTemplate, 'app.ts'), path.join(paths.app, 'app.ts'));
+		U.copyFileSync(path.join(paths.projectTemplate, 'tsconfig.json'), path.join(paths.project, 'tsconfig.json'));
 	} else {
 		// add the default alloy.js file
 		U.copyFileSync(path.join(paths.template, 'alloy.js'), path.join(paths.app, 'alloy.js'));

@@ -7,6 +7,6 @@ export class Index extends IndexAbstract {
 		this.Index.open();
 	}
 	public doClick() {
-		alert(`${this.label.text} ${Alloy.Global.myGlobal}`);
+		alert(`${this.label.text} ${Alloy.Globals.myGlobal}`);
 	}
 }
