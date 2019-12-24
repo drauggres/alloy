@@ -569,6 +569,11 @@ exports.stripColors = function(str) {
 exports.installPlugin = function(alloyPath, projectPath) {
 	var id = 'ti.alloy';
 	var plugins = {
+		tscompile: {
+			file: CONST.HOOK_FILE_TS_COMPILE,
+			src: path.join(alloyPath, 'hooks'),
+			dest: path.join(projectPath, 'plugins', id, 'hooks')
+		},
 		plugin: {
 			file: CONST.PLUGIN_FILE,
 			src: path.join(alloyPath, 'Alloy', 'plugin'),

@@ -37,6 +37,7 @@ exports.REQUIRE_TYPE_DEFAULT = 'view';
 exports.PLUGIN_NAME = 'ti.alloy';
 exports.EXPR_PREFIX = '#';
 exports.PLUGIN_FILE = 'plugin.py';
+exports.HOOK_FILE_TS_COMPILE = 'tscompile.js';
 exports.HOOK_FILE = 'alloy.js';
 exports.HOOK_FILE_CLEAN = 'deepclean.js';
 exports.MINIMUM_TI_SDK = '3.0.0';
