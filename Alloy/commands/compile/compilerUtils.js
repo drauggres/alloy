@@ -425,7 +425,11 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 				if (/(\$|this)[.\[]/.test(eventObj.cb)) {
 					name = eventObj.cb.replace(/((\$|this)[.\[])/, '');
 				}
-				var method = `abstract ${name}(event: ${args.fullname}_${ev.name.replace(':', '_')}_Event): void;\n`;
+				var typeName = args.fullname;
+				if (state.propertyDeclaration && typeof state.propertyDeclaration === 'object') {
+					typeName = state.propertyDeclaration.type;
+				}
+				var method = `abstract ${name}(event: ${typeName}_${ev.name.replace(':', '_')}_Event): void;\n`;
 				var index = exports.abstractMethods.indexOf(`abstract ${name}(`);
 				if (index === -1) {
 					exports.abstractMethods += method;
@@ -1088,7 +1092,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 		// append the form factor for the code below
 		handlerFunc += U.ucfirst(args.parentFormFactor);
 	}
-	
+
 	if (state.outputFormat === 'TS') {
 		var thisBindingRegex = /((\$|this)[.\[])/;
 		var cTypeName;
@@ -1157,7 +1161,7 @@ protected ${handlerFunc}(e?: any): void {
 				col + ".off('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + ');';
 
 	} else {
-		
+
 		// construct code template
 		code += 'var ' + colVar + '=' + col + ';';
 		code += 'function ' + handlerFunc + '(e) {';
