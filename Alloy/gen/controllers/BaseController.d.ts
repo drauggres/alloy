@@ -35,7 +35,7 @@ declare class BaseController extends Backbone.EventsMixin implements Alloy.Contr
     public updateViews(args: { [k: string]: any; }): BaseController;
     public addListener(proxy: Ti.Proxy, type: string, callback: (e: any) => void): string;
     public getListener(proxy?: Ti.Proxy | undefined, type?: string | undefined): any[];
-    public removeListener(proxy: Ti.Proxy, type?: string | undefined, callback?: ((e: any) => void) | undefined): BaseController;
+    public removeListener(proxy?: Ti.Proxy, type?: string | undefined, callback?: ((e: any) => void) | undefined): BaseController;
 }
 
 export = BaseController;
