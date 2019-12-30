@@ -109,7 +109,7 @@ declare module Alloy {
      */
     updateViews(args: { [k: string]: any}): Alloy.Controller;
   }
-  
+
   const Android: {
       menuItemCreateArgs: string[]
   }
@@ -152,7 +152,7 @@ declare module Alloy {
   /**
    * true if the current device is a tablet.
    */
-  const isTabled: boolean;
+  const isTablet: boolean;
 
   /**
    * Factory method for instantiating a Backbone collection of model objects. Creates and returns a collection for holding the named type of model objects.
@@ -186,14 +186,14 @@ declare module Alloy {
    * @param args Arguments to pass to the widget.
    */
   const createWidget: (id: string, name?: string, args?: any) => Alloy.Controller;
-  
+
   const createStyle: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, opts?: any, defaults?: any) => Dictionary<T>;
   const addClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
   const removeClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
   const resetClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
 }
 
-declare global {    
+declare global {
     /**
      * True if the current target platform is Android, false otherwise
      */
