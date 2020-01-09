@@ -25,7 +25,7 @@ function parse(node, state, args) {
 	// iterate through all children
 	for (var i = 0, l = children.length; i < l; i++) {
 		var child = children[i],
-			childArgs = CU.getParserArgs(child);
+			childArgs = CU.getParserArgs(child, state);
 
 		// Process the Map's Annotations
 		if (childArgs.fullname === 'Ti.Map.Annotation' ||

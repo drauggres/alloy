@@ -16,13 +16,20 @@ function parse(node, state, args) {
 		}
 	});
 
-	var code = require('./default').parse(node, {
+	var code = require('./default').parse(node, _.extend(state, {
 		parent: {},
 		styles: state.styles,
 		extraStyle: styler.createVariableStyle(extraStyle)
-	}).code;
+	})).code;
+
+	var tiMapModule = 'TiMap';
 
 	return {
+		propertyDeclaration: {
+			name: args.id,
+			type: `${tiMapModule}.Annotation`
+		},
+		importCode: `import ${tiMapModule} from 'ti.map';\n`,
 		parent: {
 			node: node,
 			symbol: args.symbol

@@ -10,6 +10,12 @@ exports.parse = function(node, state) {
 	return require('./base').parse(node, state, parse);
 };
 
+function formatModuleName(name) {
+	return name.split('.').reduce(function(p, c) {
+		return p + c.substr(0, 1).toUpperCase() + c.substr(1);
+	}, '');
+}
+
 function parse(node, state, args) {
 	var fullname = CU.getNodeFullname(node),
 		parts = fullname.split('.'),
@@ -43,10 +49,20 @@ function parse(node, state, args) {
 	var createFunc = 'create' + node.nodeName,
 		isCollectionBound = args[CONST.BIND_COLLECTION] ? true : false,
 		code = '';
+	var importCode;
+	var propertyDeclaration;
+	var moduleName;
+	var moduleVariableName;
 	if (node.nodeName === 'Annotation' && ( (platform == 'ios' && tiapp.version.gte('3.2.0')) || platform == 'android' && tiapp.version.gte('3.1.0'))) {
 		// ALOY-800: on iOS & Android, using the external ti.map module, set the
 		// namespace so that the ti.map module's createAnnotation() method is used
 		args.ns = 'require("ti.map")';
+		if (tsOutput) {
+			moduleName = 'ti.map';
+			moduleVariableName = formatModuleName(moduleName);
+			importCode = `import ${moduleVariableName} from '${moduleName}';\n`;
+			args.ns = moduleVariableName;
+		}
 	}
 
 	// make symbol a local variable if necessary
@@ -115,8 +131,21 @@ function parse(node, state, args) {
 	} else {
 		var module = node.getAttribute('module');
 		if (module) {
+			moduleVariableName = formatModuleName(module);
+			var moduleImport = `import ${moduleVariableName} from '${module}';\n`;
+			if (!importCode) {
+				importCode = '';
+			}
+			if (importCode.indexOf(moduleImport) === -1) {
+				importCode += moduleImport;
+			}
+			propertyDeclaration = {
+				name: args.id,
+				type: `${moduleVariableName}.${args.name}`
+			};
 			createFunc = node.getAttribute('method') || createFunc;
-			code += (state.local ? 'var ' : '') + args.symbol + ' = ' + '(require("' + module + '").' + createFunc + ' || ' + args.ns + '.' + createFunc + ')(\n';
+			var moduleRequire = tsOutput ? moduleVariableName : 'require("' + module + '")';
+			code += (state.local ? 'var ' : '') + args.symbol + ' = ' + moduleRequire + '.' + createFunc + '(\n';
 			code += styler.generateStyleParams(
 				state.styles,
 				args.classes,
@@ -183,6 +212,8 @@ function parse(node, state, args) {
 
 	// Update the parsing state
 	var ret = {
+		importCode: importCode,
+		propertyDeclaration: propertyDeclaration,
 		isViewTemplate: state.isViewTemplate || false,
 		local: state.local || false,
 		model: state.model || undefined,

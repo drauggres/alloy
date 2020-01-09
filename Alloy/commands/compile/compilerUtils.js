@@ -228,6 +228,8 @@ exports.getParserArgs = function(node, state, opts) {
 			}
 			events.push({
 				name: U.lcfirst(matches[2]),
+				createFunc: node.getAttribute('method'),
+				module: node.getAttribute('module'),
 				value: node.getAttribute(attrName)
 			});
 		} else {
@@ -1137,7 +1139,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 		} else {
 			transformCode = '<%= localModel %>.transform();';
 		}
-
+		var tiMapName = 'TiMap';
 		exports.preCode += '        ' + col + ".on('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + '.bind(this));\n';
 		code += `
 protected ${handlerFunc}(e?: any): void {
@@ -1152,11 +1154,15 @@ protected ${handlerFunc}(e?: any): void {
     const <%= localModel %> = models[i];
     ${!args.isDataBoundMap ?
 		`let ${CONST.BIND_TRANSFORM_VAR} = ${transformCode}\n` :
-		`<%= annotationArray %>.push(require('ti.map').createAnnotation(${transformCode}));\n`}
+		`<%= annotationArray %>.push(${tiMapName}.createAnnotation(${transformCode}));\n`}
     <%= items %>
   }
   <%= post %>
 }`;
+		var importCode = `import ${tiMapName} from 'ti.map'\n`;
+		if (exports.importCode.indexOf(importCode) === -1) {
+			exports.importCode += importCode;
+		}
 		exports.destroyCode += col + ' && ' + ((args.parentFormFactor) ? 'Alloy.is' + U.ucfirst(args.parentFormFactor) + ' && ' : '' ) +
 				col + ".off('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + ');';
 
