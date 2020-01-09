@@ -1,5 +1,5 @@
 import Alloy from 'alloy';
-import  BaseController from '/controllers/BaseController';
+import BaseController from '/controllers/BaseController';
 <%= importCode %>
 
 <%= typesCode %>
