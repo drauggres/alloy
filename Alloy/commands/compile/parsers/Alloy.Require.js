@@ -28,7 +28,8 @@ function parse(node, state, args) {
 	var extraArgs = '';
 	var config = CU.getCompilerConfig();
 	var appPath = config.dir.home;
-	var paths = [];
+	var viewPaths = [];
+	var codePaths = [];
 
 	var platform;
 	if (config && config.alloyConfig && config.alloyConfig.platform) {
@@ -38,8 +39,9 @@ function parse(node, state, args) {
 	switch (type) {
 		case 'view':
 			method = 'createController';
-			if (platform) { paths.push(path.join(appPath, CONST.DIR.VIEW, platform, src)); }
-			paths.push(path.join(appPath, CONST.DIR.VIEW, src));
+			if (platform) { viewPaths.push(path.join(appPath, CONST.DIR.VIEW, platform, src)); }
+			viewPaths.push(path.join(appPath, CONST.DIR.VIEW, src));
+			codePaths.push(path.join(appPath, CONST.DIR.TS_CONTROLLER, src));
 			break;
 		case 'widget':
 			method = 'createWidget';
@@ -47,9 +49,10 @@ function parse(node, state, args) {
 			U.getWidgetDirectories(appPath).forEach(function(wDir) {
 				if (wDir.manifest.id === src) {
 					if (platform) {
-						paths.push(path.join(wDir.dir, CONST.DIR.VIEW, platform, name));
+						viewPaths.push(path.join(wDir.dir, CONST.DIR.VIEW, platform, name));
 					}
-					paths.push(path.join(wDir.dir, CONST.DIR.VIEW, name));
+					viewPaths.push(path.join(wDir.dir, CONST.DIR.VIEW, name));
+					// TODO: support Widgets in TypeScript
 				}
 			});
 			break;
@@ -60,8 +63,8 @@ function parse(node, state, args) {
 	// check the extensions on the paths to check
 	var regex = new RegExp('\\.' + CONST.FILE_EXT.VIEW + '$');
 	var found = false;
-	for (var i = 0; i < paths.length; i++) {
-		var fullpath = paths[i];
+	for (var i = 0; i < viewPaths.length; i++) {
+		var fullpath = viewPaths[i];
 		fullpath += regex.test(fullpath) ? '' :  '.' + CONST.FILE_EXT.VIEW;
 		if (fs.existsSync(fullpath)) {
 			found = true;
@@ -75,7 +78,25 @@ function parse(node, state, args) {
 			type + ' "' + src + '" ' + (type === 'widget' ? 'view "' + name + '" ' : '') +
 				'does not exist.',
 			'The following paths were inspected:'
-		].concat(paths));
+		].concat(viewPaths));
+	}
+
+	var importCode;
+	var requiredType = 'Alloy.Controller';
+
+	// searching for TypeScript controller
+	found = false;
+	for (i = 0; i < codePaths.length; i++) {
+		fullpath = codePaths[i].replace(regex, '') + '.' + CONST.FILE_EXT.TS_CONTROLLER;
+		if (fs.existsSync(fullpath)) {
+			found = true;
+			break;
+		}
+	}
+
+	if (found) {
+		requiredType = `Controller_${src.replace(regex, '').replace(/\//g, '')}`;
+		importCode = `import ${requiredType} from '/${path.join(CONST.DIR.TS_CONTROLLER, src)}';\n`;
 	}
 
 	// Remove <Require>-specific attributes from createArgs
@@ -120,28 +141,35 @@ function parse(node, state, args) {
 	args.createArgs = _.extend(args.createArgs || {}, xArgs);
 
 	// Generate runtime code
-	code += (state.local ? 'var ' : '') + args.symbol + ' = Alloy.' + method + "('" + src +
-		"'," + extraArgs + styler.generateStyleParams(
-			state.styles,
-			args.classes,
-			args.id,
-			type === 'widget' ? 'Alloy.Widget' : 'Alloy.Require',
-			args.createArgs,
-			state
-		) + ');\n';
+	var params = extraArgs + styler.generateStyleParams(
+		state.styles,
+		args.classes,
+		args.id,
+		type === 'widget' ? 'Alloy.Widget' : 'Alloy.Require',
+		args.createArgs,
+		state
+	);
+	var instance;
+	if (found) {
+		instance = 'new ' + requiredType + '(' + params + ')';
+	} else {
+		instance = 'Alloy.' + method + "('" + src + "'," + params + ')';
+	}
+	code += (state.local ? 'var ' : '') + args.symbol + ' = ' + instance + ';\n';
 	if (args.parent.symbol && !state.templateObject && !state.androidMenu) {
 		code += args.symbol + '.setParent(' + args.parent.symbol + ');\n';
 	}
-	
+
 	var propertyDeclaration;
 	if (!state.local) {
 		propertyDeclaration = {
 			name: args.id,
-			type: 'Alloy.Controller'
+			type: requiredType
 		};
 	}
 
 	return {
+		importCode: importCode,
 		propertyDeclaration: propertyDeclaration,
 		parent: {
 			symbol: args.symbol + '.getViewEx({recurse:true})'

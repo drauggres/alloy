@@ -16,7 +16,7 @@ export abstract class <%= className %> extends BaseController {
 // views available via `$.viewId`
 <%= properties %>
 
-    protected constructor(protected args?: any) {
+    public constructor(protected args?: any) {
         super();
         this.__controllerPath = '<%= controllerPath %>';
 
