@@ -461,7 +461,7 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 
 			// add the generated code to the view code and post-controller code respectively
 			if (state.outputFormat === 'TS') {
-				code.content += theEvent + ';\n';
+				code.content += eventObj.obj + ' && ' + theEvent + ';\n';
 				postCode = '';
 			} else {
 				code.content += _.template(immediateTemplate)(eventObj);
