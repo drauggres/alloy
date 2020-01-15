@@ -15,6 +15,7 @@ declare class BaseController extends Backbone.EventsMixin implements Alloy.Contr
         create: (apiName: string, opts: any) => Ti.Proxy
     };
 
+    public setParent(parent: BaseController | Ti.Proxy): void;
     public addTopLevelView(view: Ti.Proxy): void;
     public addProxyProperty(key: string, value: any): void;
     public removeProxyProperty(key: string): void;
