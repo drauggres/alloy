@@ -6,7 +6,7 @@
 // TypeScript Version: 3.2
 
 /// <reference types="titanium" />
-import * as Backbone from "backbone";
+import * as Backbone from 'backbone';
 
 /**
  * Top-level module for Alloy functions.
@@ -17,12 +17,10 @@ declare module Alloy {
     name: string|null
   };
 
-
   /**
    * The base class for Alloy controllers.
    */
   interface Controller {
-
     [k: string]: any;
 
     /**
@@ -49,7 +47,7 @@ declare module Alloy {
      * @param opts Dictionary of styles to apply.
      * @returns Dictionary of properties that can be passed to a view factory function or applyProperties().
      */
-    createStyle<T extends Titanium.Proxy>(opts: any): Dictionary<T>
+    createStyle<T extends Titanium.Proxy>(opts: any): Dictionary<T>;
 
     destroy(): void;
 
@@ -107,16 +105,29 @@ declare module Alloy {
      *
      * @param args An object whose keys are the IDs (in form '#id') of views to which the styles will be applied.
      */
-    updateViews(args: { [k: string]: any}): Alloy.Controller;
+    updateViews(args: { [k: string]: any }): Alloy.Controller;
   }
 
   const Android: {
-      menuItemCreateArgs: string[]
-  }
+    menuItemCreateArgs: [
+      'itemId',
+      'groupId',
+      'title',
+      'order',
+      'actionView',
+      'checkable',
+      'checked',
+      'enabled',
+      'icon',
+      'showAsAction',
+      'titleCondensed',
+      'visible'
+    ];
+  };
 
   const UI: {
-      create: (controller: Alloy.ControllerParams, apiName: string, opts: any) => Ti.Proxy
-  }
+    create: (controller: Alloy.ControllerParams, apiName: string, opts: any) => Ti.Proxy;
+  };
 
   /**
    * An object that stores Alloy configuration values as defined in your app's app/config.json file
@@ -187,26 +198,48 @@ declare module Alloy {
    */
   const createWidget: (id: string, name?: string, args?: any) => Alloy.Controller;
 
-  const createStyle: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, opts?: any, defaults?: any) => Dictionary<T>;
-  const addClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
-  const removeClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
-  const resetClass: <T extends Ti.Proxy>(controller: Alloy.ControllerParams, proxy: T, classes: string | string[], opts?: Dictionary<T> | undefined) => void;
+  const createStyle: <T extends Ti.Proxy>(
+      controller: Alloy.ControllerParams,
+      opts?: any,
+      defaults?: any,
+  ) => Dictionary<T>;
+
+  const addClass: <T extends Ti.Proxy>(
+      controller: Alloy.ControllerParams,
+      proxy: T,
+      classes: string | string[],
+      opts?: Dictionary<T> | undefined,
+  ) => void;
+
+  const removeClass: <T extends Ti.Proxy>(
+      controller: Alloy.ControllerParams,
+      proxy: T,
+      classes: string | string[],
+      opts?: Dictionary<T> | undefined,
+  ) => void;
+
+  const resetClass: <T extends Ti.Proxy>(
+      controller: Alloy.ControllerParams,
+      proxy: T,
+      classes: string | string[],
+      opts?: Dictionary<T> | undefined,
+  ) => void;
 }
 
 declare global {
-    /**
-     * True if the current target platform is Android, false otherwise
-     */
-    const OS_ANDROID: boolean;
+  /**
+   * True if the current target platform is Android, false otherwise
+   */
+  const OS_ANDROID: boolean;
 
-    /**
-     * True if the current target platform is iOS, false otherwise
-     */
-    const OS_IOS: boolean;
+  /**
+   * True if the current target platform is iOS, false otherwise
+   */
+  const OS_IOS: boolean;
 
-    const OS_MOBILEWEB: boolean;
+  const OS_MOBILEWEB: boolean;
 
-    const OS_WINDOWS: boolean;
+  const OS_WINDOWS: boolean;
 }
 
 export = Alloy;
