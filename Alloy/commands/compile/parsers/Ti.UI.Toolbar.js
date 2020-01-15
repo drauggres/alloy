@@ -48,10 +48,18 @@ exports.parse = function(node, state) {
 		if (activityTssStyles[activityTssKey] && activityTssStyles[activityTssKey].style) {
 			_.defaults(xmlStyles, activityTssStyles[activityTssKey].style);
 		}
-		
+
 		var viewsHolder = '$.__views.';
 		if (state.outputFormat === 'TS') {
 			viewsHolder = 'this.';
+			if (xmlStyles.onHomeIconItemSelected) {
+				var value = xmlStyles.onHomeIconItemSelected;
+				var match = value.match(CU.BINDING_REGEX);
+				if (match) {
+					value = match[4] || match[3] || match[2];
+				}
+				xmlStyles.onHomeIconItemSelected = 'this.' + value + '.bind(this)';
+			}
 		}
 
 		// Generate the template code

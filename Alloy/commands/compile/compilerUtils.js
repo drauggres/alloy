@@ -54,6 +54,8 @@ var RESERVED_ATTRIBUTES = [
 	],
 	RESERVED_EVENT_REGEX =  new RegExp(`^(?:(${CONST.PLATFORMS.join('|')}):)?on([A-Z].+)`);
 
+exports.BINDING_REGEX = /(?:\$|this)(\[(?:'(.*)'|"(.*)")]|\.(.*))/;
+
 // load CONDITION_MAP with platforms
 exports.CONDITION_MAP = {
 	handheld: {
@@ -424,8 +426,9 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 
 			if (state.outputFormat === 'TS') {
 				var name = eventObj.cb;
-				if (/(\$|this)[.\[]/.test(eventObj.cb)) {
-					name = eventObj.cb.replace(/((\$|this)[.\[])/, '');
+				var match = eventObj.cb.match(exports.BINDING_REGEX);
+				if (match) {
+					name = match[4] || match[3] || match[2];
 				}
 				var typeName = args.fullname;
 				if (state.propertyDeclaration && typeof state.propertyDeclaration === 'object') {
@@ -1096,12 +1099,12 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 	}
 
 	if (state.outputFormat === 'TS') {
-		var thisBindingRegex = /((\$|this)[.\[])/;
 		var cTypeName;
 		var mTypeName;
-		if (/(\$|this)[.\[]/.test(colVar)) {
+		var match = colVar.match(exports.BINDING_REGEX);
+		if (match) {
 			// instance
-			colVar = colVar.replace(thisBindingRegex, '');
+			colVar = match[4] || match[3] || match[2];
 			cTypeName = `${colVar}CollectionType`;
 			mTypeName = `${colVar}ModelType`;
 			var cTypeCode = `type ${cTypeName} = typeof <%= className %>.prototype.${colVar};\n`;

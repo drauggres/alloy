@@ -68,6 +68,14 @@ function parse(node, state, args) {
 		navigationMode: node.getAttribute('navigationMode') ? node.getAttribute('navigationMode') : undefined,
 		onHomeIconItemSelected: node.getAttribute('onHomeIconItemSelected') ? node.getAttribute('onHomeIconItemSelected') : undefined
 	};
+	if (state.outputFormat === 'TS' && xmlStyles.onHomeIconItemSelected) {
+		var value = xmlStyles.onHomeIconItemSelected;
+		var match = value.match(CU.BINDING_REGEX);
+		if (match) {
+			value = match[4] || match[3] || match[2];
+		}
+		xmlStyles.onHomeIconItemSelected = 'this.' + value + '.bind(this)';
+	}
 	// to respect proper style hierarchy, take the last element in the array (which will be the highest priority)
 	var menuTssKey = _.isArray(menuTssStyles) ? menuTssStyles.length - 1 : 0;
 	if (menuTssStyles[menuTssKey] && menuTssStyles[menuTssKey].style) {

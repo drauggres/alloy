@@ -47,6 +47,15 @@ function parse(node, state, args) {
 	if (activityTssStyles[activityTssKey] && activityTssStyles[activityTssKey].style) {
 		_.defaults(xmlStyles, activityTssStyles[activityTssKey].style);
 	}
+	if (state.outputFormat === 'TS' && xmlStyles.onHomeIconItemSelected) {
+		var value = xmlStyles.onHomeIconItemSelected;
+		var match = value.match(CU.BINDING_REGEX);
+		if (match) {
+			value = match[4] || match[3] || match[2];
+		}
+		xmlStyles.onHomeIconItemSelected = 'this.' + value + '.bind(this)';
+	}
+
 	// generate the template code
 	if ((_.filter(_.values(xmlStyles), function(val) { return val !== undefined; })).length > 0) {
 		if (xmlStyles.title)  { code += state.parent.symbol + '.activity.actionBar.title = "' + xmlStyles.title + '";'; }
