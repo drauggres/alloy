@@ -1151,6 +1151,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 			transformCode = '<%= localModel %>.transform();';
 		}
 		var tiMapName = 'TiMap';
+		var importCode = '';
 		exports.preCode += '        ' + col + ".on('" + COLLECTION_BINDING_EVENTS + "', this." + handlerFunc + '.bind(this));\n';
 		code += `
 protected ${handlerFunc}(e?: any): void {
@@ -1163,15 +1164,19 @@ protected ${handlerFunc}(e?: any): void {
   <%= pre %>
   for (var i = 0; i < len; i++) {
     const <%= localModel %> = models[i];
-    ${!args.isDataBoundMap ?
-		`let ${CONST.BIND_TRANSFORM_VAR} = ${transformCode}\n` :
-		`<%= annotationArray %>.push(${tiMapName}.createAnnotation(${transformCode}));\n`}
+    `;
+		if (args.isDataBoundMap) {
+			code += `<%= annotationArray %>.push(${tiMapName}.createAnnotation(${transformCode}));`;
+			importCode = `import ${tiMapName} from 'ti.map'\n`;
+		} else {
+			code += `let ${CONST.BIND_TRANSFORM_VAR} = ${transformCode}`;
+		}
+		code += `
     <%= items %>
   }
   <%= post %>
 }`;
-		var importCode = `import ${tiMapName} from 'ti.map'\n`;
-		if (exports.importCode.indexOf(importCode) === -1) {
+		if (importCode && exports.importCode.indexOf(importCode) === -1) {
 			exports.importCode += importCode;
 		}
 		exports.destroyCode += col + ' && ' + ((args.parentFormFactor) ? 'Alloy.is' + U.ucfirst(args.parentFormFactor) + ' && ' : '' ) +
