@@ -4,25 +4,20 @@ import BaseController from '/controllers/BaseController';
 
 <%= typesCode %>
 
-function __processArg(obj: any, key: string): any | null {
-    let arg = null;
-    if (obj) {
-        arg = obj[key] || null;
-    }
-    return arg;
-}
-
 export abstract class <%= className %> extends BaseController {
-// views available via `$.viewId`
+    protected readonly <%= parentVariable %>: any;
+    protected readonly <%= modelVariable %>: any;
+    protected readonly <%= itemTemplateVariable %>: any;
+
 <%= properties %>
 
     public constructor(protected args?: any) {
         super();
         this.__controllerPath = '<%= controllerPath %>';
 
-        const <%= parentVariable %>: any = args ? __processArg(args, '<%= parentVariable %>') : null;
-        const <%= modelVariable %>: any = args ? __processArg(args, '<%= modelVariable %>') : null;
-        const <%= itemTemplateVariable %>: any = args ? __processArg(args, '<%= itemTemplateVariable %>') : null;
+        this.<%= parentVariable %> = args && args['<%= parentVariable %>'] ? args['<%= parentVariable %>'] : null;
+        this.<%= modelVariable %> = args && args['<%= modelVariable %>'] ? args['<%= modelVariable %>'] : null;
+        this.<%= itemTemplateVariable %> = args && args['<%= itemTemplateVariable %>'] ? args['<%= itemTemplateVariable %>'] : null;
 
         // Generated code that must be executed before all UI and/or
         // controller code. One example is all model and collection

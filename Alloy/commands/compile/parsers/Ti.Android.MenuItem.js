@@ -63,7 +63,7 @@ function parse(node, state, args) {
 		code: code + U.evaluateTemplate('Ti.Android.MenuItem.js', {
 			item: args.symbol,
 			anyString: anyTypeString,
-			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
+			parent: state.parent.symbol || CU.getParentSymbol(state),
 			style: CU.generateUniqueId(),
 			styleCode: styleObjectCode,
 			argsId: args.id,

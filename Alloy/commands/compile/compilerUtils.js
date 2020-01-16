@@ -56,6 +56,14 @@ var RESERVED_ATTRIBUTES = [
 
 exports.BINDING_REGEX = /(?:\$|this)(\[(?:'(.*)'|"(.*)")]|\.(.*))/;
 
+exports.getParentSymbol = function(state) {
+	if (state.outputFormat === 'TS') {
+		return 'this.' + CONST.PARENT_SYMBOL_VAR;
+	} else {
+		return CONST.PARENT_SYMBOL_VAR;
+	}
+};
+
 // load CONDITION_MAP with platforms
 exports.CONDITION_MAP = {
 	handheld: {

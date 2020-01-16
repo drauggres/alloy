@@ -133,7 +133,7 @@ function parse(node, state, args) {
 	if (state.parent && state.parent.symbol) {
 		xArgs[CONST.PARENT_SYMBOL_VAR] = '__ALLOY_EXPR__--' + state.parent.symbol;
 	} else if (CU.currentDefaultId !== 'index') {
-		xArgs[CONST.PARENT_SYMBOL_VAR] = '__ALLOY_EXPR__--' + CONST.PARENT_SYMBOL_VAR;
+		xArgs[CONST.PARENT_SYMBOL_VAR] = '__ALLOY_EXPR__--' + CU.getParentSymbol(state);
 	}
 	if (state.templateObject) {
 		xArgs[CONST.ITEM_TEMPLATE_VAR] = '__ALLOY_EXPR__--' + state.templateObject;

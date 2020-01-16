@@ -99,7 +99,7 @@ function parse(node, state, args) {
 		styles: state.styles,
 		code: U.evaluateTemplate('Ti.Android.Menu.js', {
 			returnType: state.outputFormat === 'TS' ? ': void' : '',
-			parent: state.parent.symbol || CONST.PARENT_SYMBOL_VAR,
+			parent: state.parent.symbol || CU.getParentSymbol(state),
 			code: code,
 			eventObject: eventObject,
 			openFunc: CU.generateUniqueId()

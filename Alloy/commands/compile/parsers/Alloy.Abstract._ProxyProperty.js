@@ -76,7 +76,7 @@ function parse(node, state, args) {
 
 	// assign proxy property to parent
 	if (!def.skipAssignParent) {
-		code += (state.parent && state.parent.symbol ? state.parent.symbol : CONST.PARENT_SYMBOL_VAR) +
+		code += (state.parent && state.parent.symbol ? state.parent.symbol : CU.getParentSymbol(state)) +
 				'.' + proxyPropertyName + '=' + proxy + ';';
 	}
 
