@@ -226,6 +226,11 @@ declare module Alloy {
   ) => void;
 }
 
+declare class Alloy {
+  static deepExtend(target: any, ...source: any): any;
+  static deepExtend(deep: boolean, targer: any, ...source: any): any;
+}
+
 declare global {
   /**
    * True if the current target platform is Android, false otherwise
