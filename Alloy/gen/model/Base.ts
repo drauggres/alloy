@@ -10,7 +10,7 @@ export class BaseModel<M extends { [key: string]: any }> extends Backbone.Model 
         return super.get(attributeName as string);
     }
     public set<T extends M, K extends keyof M>(attributeName: K, value: T[K], options?: Backbone.ModelSetOptions): BaseModel<M>;
-    public set(obj: M, options?: Backbone.ModelSetOptions): BaseModel<M>;
+    public set(obj: Partial<M>, options?: Backbone.ModelSetOptions): BaseModel<M>;
     public set(first: any, second?: any, third?: any): BaseModel<M> {
         return super.set(first, second, third) as BaseModel<M>;
     }
