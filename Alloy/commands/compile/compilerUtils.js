@@ -442,7 +442,13 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 				if (state.propertyDeclaration && typeof state.propertyDeclaration === 'object') {
 					typeName = state.propertyDeclaration.type;
 				}
-				var method = `abstract ${name}(event: ${typeName}_${ev.name.replace(':', '_')}_Event): void;\n`;
+				var eventType;
+				if (CONST.CONTROLLER_NODES.indexOf(args.fullname) === -1) {
+					eventType = `${typeName}_${ev.name.replace(':', '_')}_Event`;
+				} else {
+					eventType = 'any';
+				}
+				var method = `abstract ${name}(event: ${eventType}): void;\n`;
 				var index = exports.abstractMethods.indexOf(`abstract ${name}(`);
 				if (index === -1) {
 					exports.abstractMethods += method;
