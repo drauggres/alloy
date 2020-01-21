@@ -4,6 +4,8 @@ import Alloy from 'alloy';
 <%= typesCode %>
 
 export abstract class <%= className %> extends BaseController {
+    static readonly controllerPath: string = '<%= controllerPath %>';
+
     protected readonly <%= parentVariable %>: any;
     protected readonly <%= modelVariable %>: any;
     protected readonly <%= itemTemplateVariable %>: any;
@@ -12,7 +14,7 @@ export abstract class <%= className %> extends BaseController {
 
     public constructor(protected args?: any) {
         super();
-        this.__controllerPath = '<%= controllerPath %>';
+        this.__controllerPath = <%= className %>.controllerPath;
 
         this.<%= parentVariable %> = args && args['<%= parentVariable %>'] ? args['<%= parentVariable %>'] : null;
         this.<%= modelVariable %> = args && args['<%= modelVariable %>'] ? args['<%= modelVariable %>'] : null;
