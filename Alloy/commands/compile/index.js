@@ -716,7 +716,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	var controllerType = outputFormat + '_CONTROLLER';
 	var componentType = outputFormat + '_COMPONENT';
 	var runtimeStylePathType = 'JS_RUNTIME_STYLE'; // No point currentrly to generate TS for styles
-	
+
 	state.outputFormat = outputFormat;
 
 	// we are processing a view, not just a controller
@@ -894,8 +894,21 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	if (outputFormat !== 'TS') {
 		template.parentController = (cCode.parentControllerName !== '') ?
 			cCode.parentControllerName : CU[CONST.DOCROOT_BASECONTROLLER_PROPERTY] || "'BaseController'";
+	} else {
+		// cCode.parentControllerName is not supported in TS
+		let basePath;
+		if (CU[CONST.DOCROOT_BASECONTROLLER_PROPERTY]) {
+			basePath = CU[CONST.DOCROOT_BASECONTROLLER_PROPERTY].replace(/^"/, '').replace(/"$/, '');
+		} else {
+			const baseName = 'BaseController';
+			basePath = `/controllers/${baseName}`;
+		}
+		const baseImport = `import BaseController from '${basePath}';`;
+		if (CU.importCode.indexOf(baseImport) === -1) {
+			CU.importCode += baseImport + '\n';
+		}
 	}
-	
+
 	template.__MAPMARKER_CONTROLLER_CODE__ += cCode.controller;
 	template.preCode += cCode.pre;
 	template.ES6Mod += cCode.es6mods;
@@ -1035,7 +1048,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 			widgetStyleDir, viewName + '.js'
 		);
 	}
-	
+
 	if (outputFormat === 'TS') {
 		fs.mkdirpSync(path.dirname(targetFilepath));
 		chmodr.sync(path.dirname(targetFilepath), 0755);
