@@ -14,7 +14,7 @@ export class BaseModel<M extends { [key: string]: any }> extends Backbone.Model 
     public set(first: any, second?: any, third?: any): BaseModel<M> {
         return super.set(first, second, third) as BaseModel<M>;
     }
-    public transform(): M {
+    public transform(): any {
         return this.toJSON();
     }
     public toJSON(options?: never): M {
