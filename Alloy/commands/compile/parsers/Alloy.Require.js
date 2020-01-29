@@ -30,6 +30,7 @@ function parse(node, state, args) {
 	var appPath = config.dir.home;
 	var viewPaths = [];
 	var codePaths = [];
+	var tsOutput = state.outputFormat === 'TS';
 
 	var platform;
 	if (config && config.alloyConfig && config.alloyConfig.platform) {
@@ -41,7 +42,9 @@ function parse(node, state, args) {
 			method = 'createController';
 			if (platform) { viewPaths.push(path.join(appPath, CONST.DIR.VIEW, platform, src)); }
 			viewPaths.push(path.join(appPath, CONST.DIR.VIEW, src));
-			codePaths.push(path.join(appPath, CONST.DIR.TS_CONTROLLER, src));
+			if (tsOutput) {
+				codePaths.push(path.join(appPath, CONST.DIR.TS_CONTROLLER, src));
+			}
 			break;
 		case 'widget':
 			method = 'createWidget';
