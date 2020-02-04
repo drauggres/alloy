@@ -91,9 +91,16 @@ function parse(node, state, args) {
 		id = id || args.id;
 		backboneVar = thisController + '.' + id;
 		if (tsOutput) {
-			propertyDeclaration = '    // TODO: replace with normal instantiation:\n' +
-					`    // public ${args.id}: ${src}${nodeName} = new ${src}${nodeName}();\n` +
-					`    public ${args.id}: ${src}${nodeName} = ${createCall} as ${src}${nodeName};\n`;
+			propertyDeclaration = {
+				pre: '// TODO: replace with normal instantiation:\n' +
+						`    // public ${args.id}: ${src}${nodeName} = new ${src}${nodeName}();\n    `,
+				access: CU.ACCESS_LEVEL.PUBLIC,
+				name: args.id,
+				type: `${src}${nodeName}`
+			};
+			if (CU.isNodeForCurrentPlatform(node)) {
+				propertyDeclaration.value = `${createCall} as ${src}${nodeName}`;
+			}
 		} else {
 			code += backboneVar + ' = ' + createCall + ';';
 		}

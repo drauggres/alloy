@@ -652,7 +652,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	CU.preCode = '';
 	CU.destroyCode = '';
 	CU.importCode = '';
-	CU.properties = '';
+	CU.propertiesMap = {};
 	CU.postCode = '';
 	CU.typesCode = '';
 	CU[CONST.AUTOSTYLE_PROPERTY] = compileConfig[CONST.AUTOSTYLE_PROPERTY];
@@ -918,7 +918,13 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 
 		// open the model binding handler
 		var handlerVar = CU.generateUniqueId();
-		CU.properties += `    protected ${handlerVar}: () => void;\n`;
+		list = CU.propertiesMap[handlerVar] || [];
+		list.push({
+			name: handlerVar,
+			access: CU.ACCESS_LEVEL.PROTECTED,
+			type: '() => void'
+		});
+		CU.propertiesMap[handlerVar] = list;
 		handlerVar = `this.${handlerVar}`;
 		var thisVar = '';
 		if (outputFormat === 'TS') {
@@ -972,7 +978,49 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	} else {
 		template.viewCode += 'exports.destroy = function () {' + CU.destroyCode + '};\n';
 	}
-	template.properties += CU.properties;
+	for (var p in CU.propertiesMap) if (CU.propertiesMap.hasOwnProperty(p)) {
+		var property;
+		var declarations = CU.propertiesMap[p];
+		var conditional = false;
+		var pre = '';
+		var post = '';
+		var type = '';
+		var accessNumber = 0;
+		var value = '';
+		for (var i = 0, l = declarations.length; i < l; i++) {
+			property = declarations[i];
+			pre = property.pre || '';
+			post = property.post || '';
+			conditional = conditional || !!property.condition || !!property.conditional;
+			if (property.access) {
+				if (!accessNumber || accessNumber < property.access) {
+					accessNumber = property.access;
+				}
+			}
+			if (property.value) {
+				if (value) {
+					U.die([
+						'Value defined more than once.',
+						'Error occurred during processing XML for view "' + view + '"'
+					]);
+				}
+				value = ` = ${property.value}`;
+			}
+			if (type) {
+				type = type + ' | ';
+			}
+			type += property.type;
+		}
+		var access = '';
+		if (accessNumber === CU.ACCESS_LEVEL.PUBLIC) {
+			access = 'public';
+		} else if (accessNumber === CU.ACCESS_LEVEL.PROTECTED) {
+			access = 'protected';
+		} else if (accessNumber === CU.ACCESS_LEVEL.PRIVATE) {
+			access = 'private';
+		}
+		template.properties += `    ${pre}${access} ${p}${conditional ? '?' : ''}: ${type}${value};${post}\n`;
+	}
 
 	if (CU.preCode) {
 		template.preCode += CU.preCode;

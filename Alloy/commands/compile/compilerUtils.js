@@ -56,6 +56,12 @@ var RESERVED_ATTRIBUTES = [
 
 exports.BINDING_REGEX = /(?:\$|this)(\[(?:'(.*)'|"(.*)")]|\.(.*))/;
 
+exports.ACCESS_LEVEL = {
+	PRIVATE: 1,
+	PROTECTED: 2,
+	PUBLIC: 3
+};
+
 exports.getParentSymbol = function(state) {
 	if (state.outputFormat === 'TS') {
 		return 'this.' + CONST.PARENT_SYMBOL_VAR;
@@ -86,7 +92,7 @@ exports.importCode = '';
 exports.models = [];
 exports.postCode = '';
 exports.preCode = '';
-exports.properties = '';
+exports.propertiesMap = {};
 exports.typesCode = '';
 
 //////////////////////////////////////
@@ -514,24 +520,22 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 	}
 	if (!isLocal) {
 		var propertyDeclaration = state.propertyDeclaration;
-		var conditional = state.condition || code.condition || parentIsConditional;
+		var conditional = !!state.condition || !!code.condition || parentIsConditional;
+		var property = args.id;
 		if (typeof propertyDeclaration === 'object') {
-			var type = propertyDeclaration.type;
-			var property = propertyDeclaration.name;
-			var pre = propertyDeclaration.pre || '';
-			var post = propertyDeclaration.post || '';
-			conditional = conditional || propertyDeclaration.conditional;
-			if (type && property) {
-				propertyDeclaration = `    ${pre}public ${property}${conditional ? '?' : ''}: ${type};${post}\n`;
-			}
+			property = propertyDeclaration.name;
+		} else if (typeof propertyDeclaration !== 'string') {
+			propertyDeclaration = {
+				name: args.id,
+				type: args.fullname
+			};
 		}
-		if (typeof propertyDeclaration !== 'string') {
-			propertyDeclaration = '';
-
-			propertyDeclaration += `    public ${args.id}${conditional ? '?' : ''}: ${args.fullname};\n`;
-		}
-		if (exports.properties.indexOf(propertyDeclaration) === -1) {
-			exports.properties += propertyDeclaration;
+		if (propertyDeclaration) {
+			propertyDeclaration.access = exports.ACCESS_LEVEL.PUBLIC;
+			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || !!propertyDeclaration.conditional;
+			var list = exports.propertiesMap[property] || [];
+			list.push(propertyDeclaration);
+			exports.propertiesMap[property] = list;
 		}
 	}
 	if (!isModelOrCollection) {
