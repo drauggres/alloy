@@ -75,6 +75,15 @@ function parse(node, state, args) {
 			value = match[4] || match[3] || match[2];
 		}
 		xmlStyles.onHomeIconItemSelected = 'this.' + value + '.bind(this)';
+		var method = `abstract ${value}(...args: any[]): void;\n`;
+		var index = CU.abstractMethods.indexOf(`abstract ${value}(`);
+		if (index === -1) {
+			CU.abstractMethods += method;
+		} else if (CU.abstractMethods.indexOf(method) === -1) {
+			var before = CU.abstractMethods.substr(0, index);
+			var after = CU.abstractMethods.substr(index, CU.abstractMethods.length);
+			CU.abstractMethods = before + method + after;
+		}
 	}
 	// to respect proper style hierarchy, take the last element in the array (which will be the highest priority)
 	var menuTssKey = _.isArray(menuTssStyles) ? menuTssStyles.length - 1 : 0;
