@@ -22,11 +22,13 @@ function parse(node, state, args) {
 				'To get rid of this warning, add platform="android" to your <Menu> element'
 			]);
 		}
-		return {
-			parent: {},
-			styles: state.styles,
-			code: ''
-		};
+		if (state.outputFormat !== 'TS') {
+			return {
+				parent: {},
+				styles: state.styles,
+				code: ''
+			};
+		}
 	}
 
 	// Start the onCreateOptionsMenu() call
