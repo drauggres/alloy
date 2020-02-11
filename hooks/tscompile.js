@@ -86,18 +86,21 @@ exports.init = (logger, config, cli, appc) => {
 						const Resources = path.join(projectDir, 'Resources');
 						const moveLevelUp = ['gen', 'lib', 'src'];
 
+						logger.info('Copying compiled TypeScript files');
 						copyResultSync(appc.fs, absoluteOutDir, Resources, {
 							logger: logger.log,
 							moveLevelUp: moveLevelUp,
 						});
 					} catch (e) {
 						return callback(e);
+						process.exit(1);
 					}
 					callback();
 				} else {
 					const error = new Error(`TypeScript compiler with non-zero exit code ${code}`);
 					error.code = code;
 					callback(error);
+					process.exit(code);
 				}
 			});
 		}
