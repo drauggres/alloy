@@ -108,7 +108,7 @@ function parse(node, state, args) {
 
 	var outState = require('./default').parse(node, state);
 	if (outState.parent) {
-		code = _.template(code)({
+		CU.dataFunctionsCode = _.template(CU.dataFunctionsCode)({
 			itemContainer: outState.parent.symbol
 		});
 	}
