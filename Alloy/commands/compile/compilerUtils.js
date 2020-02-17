@@ -1099,7 +1099,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 	// Determine the collection variable to use
 	var obj = { name: args[CONST.BIND_COLLECTION] };
 	var col = _.template((exports.currentManifest ? CONST.WIDGET_OBJECT : 'Alloy') + ".Collections['<%= name %>'] || <%= name %>")(obj);
-	var colVar = args[CONST.BIND_COLLECTION];
+	var colVar = exports.generateUniqueId();
 
 	// Create the code for the filter and transform functions
 	var where = args[CONST.BIND_WHERE];
@@ -1117,6 +1117,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 	}
 
 	if (state.outputFormat === 'TS') {
+		colVar = args[CONST.BIND_COLLECTION];
 		var cTypeName;
 		var mTypeName;
 		var match = colVar.match(exports.BINDING_REGEX);
