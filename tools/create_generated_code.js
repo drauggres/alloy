@@ -4,7 +4,9 @@ var fs = require('fs-extra'),
 	platforms = require('../platforms/index'),
 	_ = require('lodash'),
 	colors = require('colors'),
-	exec = require('child_process').exec,
+	child_process = require('child_process'),
+	exec = child_process.exec,
+	execSync = child_process.execSync,
 	TESTS_WITH_DATES = ['ALOY-263', 'ALOY-1003', 'ALOY-1058'],
 	TESTS_TO_SKIP = ['ALOY-840', 'ALOY-887', 'ALOY-932', 'ALOY-1080'];
 
@@ -13,7 +15,7 @@ var alloyRoot = path.join(__dirname, '..'),
 		apps: path.join(alloyRoot, 'test', 'apps'),
 		harness: path.join(alloyRoot, 'test', 'projects', 'Harness')
 	},
-	platformsArray = _.keys(platforms),
+	platformsArray = ['android', 'ios'],
 	platformCtr = 0;
 
 // make sure we get a test app
@@ -33,8 +35,13 @@ if (!testApp) {
 	console.log('generating code for ' + testApp.yellow);
 }
 
+const pluginPath = path.join(paths.harness, 'plugins/ti.alloy/hooks/tscompile.js');
+const alloyPath = path.join(__dirname, '../bin/alloy');
+
+execSync(`npx jake app:clobber`);
+
 // Stage the app
-var cmd = 'npx jake app:setup dir=' + testApp + ' quiet=1';
+var cmd = `node ${alloyPath} new -f ${paths.harness} --testapp ${path.join('../../test/apps', testApp)}`;
 exec(cmd, function(error, stdout, stderr) {
 	if (error !== null) {
 		console.error(error);
@@ -42,49 +49,87 @@ exec(cmd, function(error, stdout, stderr) {
 		process.exit(2);
 	}
 
+	console.log(stdout);
 	doCompile(platformsArray[platformCtr++]);
 });
+
+function runTsCompileHook(callback) {
+	require(pluginPath).compileTS({
+		logger: console,
+		dir: paths.harness
+	}, callback);
+}
 
 function doCompile(platform) {
 	if (!platform) { return; }
 
-	exec('alloy compile ' + paths.harness + ' --config platform=' + platform, function(error, stdout, stderr) {
+	const cmd = `node ${alloyPath} compile ${paths.harness} --config platform=${platform}`;
+	exec(cmd, function(error, stdout, stderr) {
 		if (error !== null) {
 			console.error(error);
 			console.error(stderr);
 			process.exit(3);
 		}
 
-		var genDir = path.join(paths.apps, testApp, '_generated', platform);
-		fs.removeSync(genDir);
-		fs.mkdirpSync(genDir);
-		chmodr.sync(genDir, 0777);
-
-		var locations = [
-			path.join('alloy', 'controllers'),
-			path.join('alloy', 'models'),
-			path.join('alloy', 'widgets')
-		];
-		_.each(locations, function(l) {
-			var src = path.join(paths.harness, 'Resources', (platform === 'ios' ? 'iphone' : platform), l);
-			var dst = path.join(genDir, l);
-			if (fs.existsSync(src) && fs.readdirSync(src).length !== 0) {
-				fs.mkdirpSync(dst);
-				chmodr.sync(dst, 0777);
-				fs.copySync(src, dst);
-
-				// we don't need to evaluate BaseController.js every time
-				var bc = path.join(dst, 'BaseController.js');
-				if (l === path.join('alloy', 'controllers') && fs.existsSync(bc)) {
-					fs.unlinkSync(bc);
+		if (fs.existsSync(pluginPath)) {
+			runTsCompileHook((e) => {
+				if (e) {
+					console.error(e.message);
+					console.error(e.stack);
+					process.exit(4);
 				}
-
-				console.log('Generated runtime files in ' +
-					path.join('_generated', platform, l).cyan
-				);
-			}
-		});
-
+				copyCompiledFiles(platform);
+				doCompile(platformsArray[platformCtr++]);
+			});
+			return;
+		}
+		copyCompiledFiles(platform);
 		doCompile(platformsArray[platformCtr++]);
 	});
+}
+
+function copyCompiledFiles(platform) {
+	var genDir = path.join(paths.apps, testApp, '_generated', platform);
+	fs.removeSync(genDir);
+	fs.mkdirpSync(genDir);
+	chmodr.sync(genDir, 0777);
+	var p = platform === 'ios' ? 'iphone' : platform;
+
+	var locations = [
+		{ src: path.join(p, 'alloy', 'controllers'), dst: path.join('alloy', 'controllers')},
+		{ src: path.join(p, 'alloy', 'models'), dst: path.join('alloy', 'models')},
+		{ src: path.join(p, 'alloy', 'widgets'), dst: path.join('alloy', 'widgets')},
+		{ src: 'controllers', dst: path.join('alloy', 'controllers')},
+		{ src: 'models', dst: path.join('alloy', 'models')},
+		{ src: 'widgets', dst: path.join('alloy', 'widgets')},
+		{ src: path.join(p, 'controllers'), dst: path.join('alloy', 'controllers')},
+		{ src: path.join(p, 'models'), dst: path.join('alloy', 'models')},
+		{ src: path.join(p, 'widgets'), dst: path.join('alloy', 'widgets')},
+		{ src: 'model', dst: 'model'},
+	];
+	_.each(locations, function(l) {
+		var src = path.join(paths.harness, 'Resources', l.src);
+		var dst = path.join(genDir, l.dst);
+		if (fs.existsSync(src) && fs.readdirSync(src).length !== 0) {
+			fs.mkdirpSync(dst);
+			chmodr.sync(dst, 0777);
+			fs.copySync(src, dst);
+
+			// we don't need to evaluate BaseController.js every time
+			var bc = path.join(dst, 'BaseController.js');
+			if ((l.dst === path.join('alloy', 'controllers') || (l.dst === 'controllers'))
+					&& fs.existsSync(bc)) {
+				fs.unlinkSync(bc);
+			}
+
+			console.log('Generated runtime files in ' +
+					path.join('_generated', platform, l.src).cyan
+			);
+		}
+	});
+	var appJs = path.join(paths.harness, 'Resources', p, 'app.js');
+	if (!fs.existsSync(appJs)) {
+		appJs = path.join(paths.harness, 'Resources', 'app.js');
+	}
+	fs.copySync(appJs, path.join(genDir, 'app.js'));
 }
