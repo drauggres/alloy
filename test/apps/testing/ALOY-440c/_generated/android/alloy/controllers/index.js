@@ -1,148 +1,120 @@
+var Alloy = require('/alloy'),
+Backbone = Alloy.Backbone,
+_ = Alloy._;
+
+
+
+
 function __processArg(obj, key) {
-    var arg = null;
-    if (obj) {
-        arg = obj[key] || null;
-        delete obj[key];
-    }
-    return arg;
+  var arg = null;
+  if (obj) {
+    arg = obj[key] || null;
+  }
+  return arg;
 }
 
 function Controller() {
-    function __alloyId5() {
-        $.__views.index.removeEventListener("open", __alloyId5);
-        if ($.__views.index.activity) $.__views.index.activity.onCreateOptionsMenu = function(e) {
-            var __alloyId4 = {
-                title: "Add",
-                showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS,
-                id: "__alloyId3"
-            };
-            $.__views.__alloyId3 = e.menu.add(_.pick(__alloyId4, Alloy.Android.menuItemCreateArgs));
-            $.__views.__alloyId3.applyProperties(_.omit(__alloyId4, Alloy.Android.menuItemCreateArgs));
-            $.__alloyId3 = $.__views.__alloyId3;
-            doClick ? $.addListener($.__views.__alloyId3, "click", doClick) : __defers["$.__views.__alloyId3!click!doClick"] = true;
-        }; else {
-            Ti.API.warn("You attempted to attach an Android Menu to a lightweight Window");
-            Ti.API.warn("or other UI component which does not have an Android activity.");
-            Ti.API.warn("Android Menus can only be opened on TabGroups and heavyweight Windows.");
+
+  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  this.__controllerPath = 'index';
+  this.args = arguments[0] || {};
+
+  if (arguments[0]) {
+    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
+    var $model = __processArg(arguments[0], '$model');
+    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
+  }
+  var $ = this;
+  var exports = {};
+  var __defers = {};
+
+  // Generated code that must be executed before all UI and/or
+  // controller code. One example is all model and collection
+  // declarations from markup.
+  Alloy.Collections.instance('book');
+
+  // Generated UI code
+  $.__views["index"] = Ti.UI.createWindow(
+  { backgroundColor: "white", exitOnClose: true, id: "index" });
+
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  function __alloyId7() {
+    $.__views["index"].removeEventListener('open', __alloyId7);
+    if ($.__views["index"].activity) {
+      $.__views["index"].activity.onCreateOptionsMenu = function (e) {
+        var __alloyId6 = { title: "Add", showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS, id: "__alloyId5" };
+        if (false) {
+          __alloyId6.actionView = false;
         }
+        $.__views["__alloyId5"] = e.menu.add(_.pick(__alloyId6, Alloy.Android.menuItemCreateArgs));
+        $.__views["__alloyId5"].applyProperties(_.omit(__alloyId6, Alloy.Android.menuItemCreateArgs));
+        $.__alloyId5 = $.__views["__alloyId5"];
+        doClick ? $.addListener($.__views["__alloyId5"], 'click', doClick) : __defers['$.__views["__alloyId5"]!click!doClick'] = true;
+      };
+    } else {
+      Ti.API.warn('You attempted to attach an Android Menu to a lightweight Window');
+      Ti.API.warn('or other UI component which does not have an Android activity.');
+      Ti.API.warn('Android Menus can only be opened on TabGroups and heavyweight Windows.');
     }
-    function __alloyId12(e) {
-        if (e && e.fromAdapter) return;
-        __alloyId12.opts || {};
-        var models = __alloyId11.models;
-        var len = models.length;
-        var rows = [];
-        _.each($.__views.__alloyId8.getRows(), function(r) {
-            $.__views.__alloyId8.removeRow(r);
-        });
-        for (var i = 0; len > i; i++) {
-            var __alloyId9 = models[i];
-            __alloyId9.__transform = _.isFunction(__alloyId9.transform) ? __alloyId9.transform() : __alloyId9.toJSON();
-            $.__views.__alloyId10 = Ti.UI.createPickerRow({
-                fontSize: "18dp",
-                title: __alloyId9.__transform.title,
-                id: "__alloyId10"
-            });
-            rows.push($.__views.__alloyId10);
-        }
-        _.each(rows, function(row) {
-            $.__views.__alloyId8.addRow(row);
-        });
-    }
-    function __alloyId18(e) {
-        if (e && e.fromAdapter) return;
-        __alloyId18.opts || {};
-        var models = __alloyId17.models;
-        var len = models.length;
-        var rows = [];
-        for (var i = 0; len > i; i++) {
-            var __alloyId14 = models[i];
-            __alloyId14.__transform = _.isFunction(__alloyId14.transform) ? __alloyId14.transform() : __alloyId14.toJSON();
-            var __alloyId16 = Ti.UI.createTableViewRow({
-                color: "black",
-                font: {
-                    fontSize: "18dp"
-                },
-                title: __alloyId14.__transform.title
-            });
-            rows.push(__alloyId16);
-        }
-        $.__views.__alloyId13.setData(rows);
-    }
-    function doClick(e) {
-        Ti.API.info(JSON.stringify(e));
-        var item = Alloy.createModel("book", {
-            title: i
-        });
-        Alloy.Collections.book.add(item);
-        i++;
-    }
-    require("/alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "index";
-    this.args = arguments[0] || {};
-    if (arguments[0]) {
-        __processArg(arguments[0], "__parentSymbol");
-        __processArg(arguments[0], "$model");
-        __processArg(arguments[0], "__itemTemplate");
-    }
-    var $ = this;
-    var exports = {};
-    var __defers = {};
-    Alloy.Collections.instance("book");
-    $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
-        exitOnClose: true,
-        id: "index"
-    });
-    $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.index.addEventListener("open", __alloyId5);
-    $.__views.__alloyId6 = Ti.UI.createPicker({
-        backgroundColor: "black",
-        width: Ti.UI.FILL,
-        height: Ti.UI.SIZE,
-        selectionIndicator: true,
-        top: 0,
-        id: "__alloyId6"
-    });
-    $.__views.index.add($.__views.__alloyId6);
-    var __alloyId7 = [];
-    $.__views.__alloyId8 = Ti.UI.createPickerColumn({
-        id: "__alloyId8"
-    });
-    __alloyId7.push($.__views.__alloyId8);
-    var __alloyId11 = Alloy.Collections["book"] || book;
-    __alloyId11.on("fetch destroy change add remove reset", __alloyId12);
-    $.__views.__alloyId6.add(__alloyId7);
-    $.__views.__alloyId13 = Ti.UI.createTableView({
-        top: 100,
-        id: "__alloyId13"
-    });
-    $.__views.index.add($.__views.__alloyId13);
-    var __alloyId17 = Alloy.Collections["book"] || book;
-    __alloyId17.on("fetch destroy change add remove reset", __alloyId18);
-    $.__views.__alloyId19 = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        font: {
-            fontSize: "15dp"
-        },
-        text: "Click the ActionBar icon to add a row",
-        id: "__alloyId19"
-    });
-    $.__views.index.add($.__views.__alloyId19);
-    exports.destroy = function() {
-        __alloyId11 && __alloyId11.off("fetch destroy change add remove reset", __alloyId12);
-        __alloyId17 && __alloyId17.off("fetch destroy change add remove reset", __alloyId18);
-    };
-    _.extend($, $.__views);
-    Alloy.Collections.book.fetch();
-    var i = 0;
-    $.index.open();
-    __defers["$.__views.__alloyId3!click!doClick"] && $.addListener($.__views.__alloyId3, "click", doClick);
-    _.extend($, exports);
+  }
+  $.__views["index"].addEventListener('open', __alloyId7);$.__views["__alloyId8"] = Ti.UI.createPicker(
+  { backgroundColor: "black", width: Ti.UI.FILL, height: Ti.UI.SIZE, selectionIndicator: true, top: 0, id: "__alloyId8" });
+
+  $.__views["index"].add($.__views["__alloyId8"]);
+  var __alloyId9 = [];$.__views["__alloyId10"] = Ti.UI.createPickerColumn(
+  { id: "__alloyId10" });
+
+  __alloyId9.push($.__views["__alloyId10"]);
+  var __alloyId13 = Alloy.Collections['book'] || book;function __alloyId14(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId14.opts || {};var models = __alloyId13.models;var len = models.length;var rows = [];
+    _.each($.__views["__alloyId10"].getRows(), function (r) {$.__views["__alloyId10"].removeRow(r);});
+    for (var i = 0; i < len; i++) {var __alloyId11 = models[i];__alloyId11.__transform = _.isFunction(__alloyId11.transform) ? __alloyId11.transform() : __alloyId11.toJSON();$.__views["__alloyId12"] = Ti.UI.createPickerRow(
+      { fontSize: "18dp", title: __alloyId11.__transform.title, id: "__alloyId12" });
+
+      rows.push($.__views["__alloyId12"]);
+    }_.each(rows, function (row) {$.__views["__alloyId10"].addRow(row);});};__alloyId13.on('fetch destroy change add remove reset', __alloyId14);$.__views["__alloyId8"].add(__alloyId9);
+  $.__views["__alloyId15"] = Ti.UI.createTableView(
+  { top: 100, id: "__alloyId15" });
+
+  $.__views["index"].add($.__views["__alloyId15"]);
+  var __alloyId19 = Alloy.Collections['book'] || book;function __alloyId20(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId20.opts || {};var models = __alloyId19.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId16 = models[i];__alloyId16.__transform = _.isFunction(__alloyId16.transform) ? __alloyId16.transform() : __alloyId16.toJSON();var __alloyId18 = Ti.UI.createTableViewRow(
+      { color: "black", font: { fontSize: "18dp" }, title: __alloyId16.__transform.title });
+
+      rows.push(__alloyId18);
+    }$.__views["__alloyId15"].setData(rows);};__alloyId19.on('fetch destroy change add remove reset', __alloyId20);$.__views["__alloyId21"] = Ti.UI.createLabel(
+  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", font: { fontSize: "15dp" }, text: 'Click the ActionBar icon to add a row', id: "__alloyId21" });
+
+  $.__views["index"].add($.__views["__alloyId21"]);
+  exports.destroy = function () {__alloyId13 && __alloyId13.off('fetch destroy change add remove reset', __alloyId14);__alloyId19 && __alloyId19.off('fetch destroy change add remove reset', __alloyId20);};
+
+  // make all IDed elements in $.__views available right on the $ in a
+  // controller's internal code. Externally the IDed elements will
+  // be accessed with getView().
+  _.extend($, $.__views);
+
+  // Controller code directly from the developer's controller file
+  Alloy.Collections.book.fetch();
+
+  var i = 0;
+
+  function doClick(e) {
+    Ti.API.info(JSON.stringify(e));
+    var item = Alloy.createModel('book', { title: i });
+    Alloy.Collections.book.add(item);
+    i++;
+  }
+
+  $.index.open();
+
+  // Generated code that must be executed after all UI and
+  // controller code. One example deferred event handlers whose
+  // functions are not defined until after the controller code
+  // is executed.
+  __defers['$.__views["__alloyId5"]!click!doClick'] && $.addListener($.__views["__alloyId5"], 'click', doClick);
+
+  // Extend the $ instance with all functions and properties
+  // defined on the exports object.
+  _.extend($, exports);
 }
 
-var Alloy = require("/alloy"), Backbone = Alloy.Backbone, _ = Alloy._;
-
 module.exports = Controller;
+//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

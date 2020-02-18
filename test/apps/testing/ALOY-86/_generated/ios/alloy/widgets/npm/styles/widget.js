@@ -1,14 +1,8 @@
-function WPATH(s) {
-    var index = s.lastIndexOf("/");
-    var path = -1 === index ? "npm/" + s : s.substring(0, index) + "/npm/" + s.substring(index + 1);
-    return path;
-}
+module.exports = [{ "isApi": true, "priority": 1000.0002, "key": "Label", "style": { top: 20 } }];function WPATH(s) {
+  var index = s.lastIndexOf('/');
+  var path = index === -1 ?
+  'npm/' + s :
+  s.substring(0, index) + '/npm/' + s.substring(index + 1);
 
-module.exports = [ {
-    isApi: true,
-    priority: 1000.0002,
-    key: "Label",
-    style: {
-        top: 20
-    }
-} ];
+  return path.indexOf('/') !== 0 ? '/' + path : path;
+}

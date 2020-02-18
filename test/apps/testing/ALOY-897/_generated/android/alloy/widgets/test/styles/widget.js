@@ -1,31 +1,8 @@
-function WPATH(s) {
-    var index = s.lastIndexOf("/");
-    var path = -1 === index ? "test/" + s : s.substring(0, index) + "/test/" + s.substring(index + 1);
-    return 0 !== path.indexOf("/") ? "/" + path : path;
-}
+module.exports = [{ "isApi": true, "priority": 1000.0001, "key": "Window", "style": { backgroundColor: "#fff" } }, { "isApi": true, "priority": 1000.0002, "key": "Button", "style": { top: 200, width: 200, height: 50 } }, { "isId": true, "priority": 100000.0004, "key": "loading", "style": { height: 20, width: 20 } }];function WPATH(s) {
+  var index = s.lastIndexOf('/');
+  var path = index === -1 ?
+  'test/' + s :
+  s.substring(0, index) + '/test/' + s.substring(index + 1);
 
-module.exports = [ {
-    isApi: true,
-    priority: 1000.0001,
-    key: "Window",
-    style: {
-        backgroundColor: "#fff"
-    }
-}, {
-    isApi: true,
-    priority: 1000.0002,
-    key: "Button",
-    style: {
-        top: 200,
-        width: 200,
-        height: 50
-    }
-}, {
-    isId: true,
-    priority: 100000.0004,
-    key: "loading",
-    style: {
-        height: 20,
-        width: 20
-    }
-} ];
+  return path.indexOf('/') !== 0 ? '/' + path : path;
+}
