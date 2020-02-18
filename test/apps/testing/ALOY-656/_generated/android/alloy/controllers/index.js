@@ -18,29 +18,10 @@ function Controller() {
     }
     var $ = this;
     var exports = {};
-    var __defers = {};
-    $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
-        id: "index"
-    });
-    $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.label = Ti.UI.createLabel({
-        width: Ti.UI.SIZE,
-        height: Ti.UI.SIZE,
-        color: "#000",
-        font: {
-            fontSize: 12
-        },
-        text: "Hello, World",
-        id: "label"
-    });
-    $.__views.index.add($.__views.label);
-    doClick ? $.addListener($.__views.label, "click", doClick) : __defers["$.__views.label!click!doClick"] = true;
     exports.destroy = function() {};
     _.extend($, $.__views);
     var win2 = Alloy.createController("win2").getView();
     win2.open();
-    __defers["$.__views.label!click!doClick"] && $.addListener($.__views.label, "click", doClick);
     _.extend($, exports);
 }
 
