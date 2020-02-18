@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'labels';
   this.args = arguments[0] || {};
 
@@ -33,24 +33,29 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["labels"] = Ti.UI.createView(
-  { apiName: "Ti.UI.View", backgroundColor: "#fcc", height: Ti.UI.SIZE, layout: "vertical", id: "labels", classes: [] });
+  { backgroundColor: "#fcc", height: Ti.UI.SIZE, layout: "vertical", id: "labels", classes: [] });
 
   $.__views["labels"] && $.addTopLevelView($.__views["labels"]);
   $.__views["__alloyId2"] = Ti.UI.createLabel(
-  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 1', apiName: "Ti.UI.Label", classes: ["someClass"], id: "__alloyId2" });
+  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 1', classes: ["someClass"] });
 
   $.__views["labels"].add($.__views["__alloyId2"]);
   $.__views["__alloyId3"] = Ti.UI.createLabel(
-  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 2', apiName: "Ti.UI.Label", classes: ["someClass"], id: "__alloyId3" });
+  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 2', classes: ["someClass"] });
 
   $.__views["labels"].add($.__views["__alloyId3"]);
   $.__views["__alloyId4"] = Ti.UI.createLabel(
-  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 3', apiName: "Ti.UI.Label", classes: ["someClass"], id: "__alloyId4" });
+  { color: "#000", height: Ti.UI.SIZE, width: Ti.UI.SIZE, top: 15, backgroundColor: "#ccf", text: 'label 3', classes: ["someClass"] });
 
   $.__views["labels"].add($.__views["__alloyId4"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -76,4 +81,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/labels.js.map

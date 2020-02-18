@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,31 +33,35 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (true) {
     $.__views["__alloyId0"] = Ti.UI.createWindow(
-    { title: "NavButtons", id: "__alloyId0" });
+    { title: "NavButtons" });
 
     var leftNavButtons = [];$.__views["__alloyId2"] = Ti.UI.createView(
-    { width: 25, height: 25, backgroundColor: "red", id: "__alloyId2" });
+    { width: 25, height: 25, backgroundColor: "red" });
 
     leftNavButtons.push($.__views["__alloyId2"]);$.__views["__alloyId3"] = Ti.UI.createView(
-    { width: 25, height: 25, backgroundColor: "green", id: "__alloyId3" });
+    { width: 25, height: 25, backgroundColor: "green" });
 
     leftNavButtons.push($.__views["__alloyId3"]);$.__views["__alloyId4"] = Ti.UI.createView(
-    { width: 25, height: 25, backgroundColor: "blue", id: "__alloyId4" });
+    { width: 25, height: 25, backgroundColor: "blue" });
 
     leftNavButtons.push($.__views["__alloyId4"]);$.__views["__alloyId0"].leftNavButtons = leftNavButtons;var rightNavButtons = [];$.__views["__alloyId6"] = Ti.UI.createButton(
-    { title: "B1", id: "__alloyId6" });
+    { title: "B1" });
 
     rightNavButtons.push($.__views["__alloyId6"]);$.__views["__alloyId7"] = Ti.UI.createButton(
-    { title: "B2", id: "__alloyId7" });
+    { title: "B2" });
 
     rightNavButtons.push($.__views["__alloyId7"]);$.__views["__alloyId8"] = Ti.UI.createButton(
-    { title: "B3", id: "__alloyId8" });
+    { title: "B3" });
 
     rightNavButtons.push($.__views["__alloyId8"]);$.__views["__alloyId0"].rightNavButtons = rightNavButtons;$.__views["__alloyId9"] = Ti.UI.createLabel(
-    { text: "The window should have three colored views on the left, and three buttons on the right, of the NavigationBar.", id: "__alloyId9" });
+    { text: "The window should have three colored views on the left, and three buttons on the right, of the NavigationBar." });
 
     $.__views["__alloyId0"].add($.__views["__alloyId9"]);
     $.__views["index"] = Ti.UI.createNavigationWindow(
@@ -66,6 +70,7 @@ function Controller() {
     $.__views["index"] && $.addTopLevelView($.__views["index"]);
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -87,4 +92,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

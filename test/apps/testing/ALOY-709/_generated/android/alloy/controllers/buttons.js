@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'buttons';
   this.args = arguments[0] || {};
 
@@ -33,13 +33,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["button1"] = Ti.UI.createButton(
-  { title: 'button 1', apiName: "Ti.UI.Button", id: "button1", classes: ["bob", "lou"] });
+  { title: 'button 1', id: "button1", classes: ["bob", "lou"] });
 
   $.__views["button1"] && $.addTopLevelView($.__views["button1"]);
   $.__views["button2"] = Ti.UI.createButton(
-  { title: 'button 2', apiName: "Ti.UI.Button", id: "button2", classes: ["bob", "lou"] });
+  { title: 'button 2', id: "button2", classes: ["bob", "lou"] });
 
   $.__views["button2"] && $.addTopLevelView($.__views["button2"]);
   $.__views["button3"] = Ti.UI.createButton(
@@ -47,6 +51,7 @@ function Controller() {
 
   $.__views["button3"] && $.addTopLevelView($.__views["button3"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -72,4 +77,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/buttons.js.map

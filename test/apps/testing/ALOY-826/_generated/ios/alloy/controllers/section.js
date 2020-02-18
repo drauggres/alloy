@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'section';
   this.args = arguments[0] || {};
 
@@ -33,12 +33,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
-  var __alloyId13 = [];$.__views["__alloyId14"] = { properties: { title: "Required", id: "__alloyId14" } };__alloyId13.push($.__views["__alloyId14"]);$.__views["section"] = Ti.UI.createListSection(
+  var __alloyId13 = [];$.__views["__alloyId14"] = { properties: { title: "Required" } };__alloyId13.push($.__views["__alloyId14"]);$.__views["section"] = Ti.UI.createListSection(
   { id: "section" });
 
   $.__views["section"].items = __alloyId13;$.__views["section"] && $.addTopLevelView($.__views["section"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -60,4 +65,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/section.js.map

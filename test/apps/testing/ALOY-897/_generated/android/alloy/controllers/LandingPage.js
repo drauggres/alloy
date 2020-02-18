@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'LandingPage';
   this.args = arguments[0] || {};
 
@@ -33,18 +33,23 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["landingPageWindow"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", id: "landingPageWindow" });
 
   $.__views["landingPageWindow"] && $.addTopLevelView($.__views["landingPageWindow"]);
-  $.__views["__alloyId0"] = Alloy.createController('middle', { id: "__alloyId0", __parentSymbol: $.__views["landingPageWindow"] });
+  $.__views["__alloyId0"] = Alloy.createController('middle', { __parentSymbol: $.__views["landingPageWindow"] });
   $.__views["__alloyId0"].setParent($.__views["landingPageWindow"]);
   $.__views["__alloyId1"] = Ti.UI.createButton(
-  { top: 200, width: 200, height: 50, title: 'CLOSE WINDOW', id: "__alloyId1" });
+  { top: 200, width: 200, height: 50, title: 'CLOSE WINDOW' });
 
   $.__views["landingPageWindow"].add($.__views["__alloyId1"]);
   closeWindow ? $.addListener($.__views["__alloyId1"], 'click', closeWindow) : __defers['$.__views["__alloyId1"]!click!closeWindow'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -68,4 +73,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/LandingPage.js.map

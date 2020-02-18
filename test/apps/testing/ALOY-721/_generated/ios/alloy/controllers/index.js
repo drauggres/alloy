@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,17 +33,21 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#ECF0F1", fullscreen: false, navBarHidden: true, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { textAlign: "center", left: null, right: null, height: "50dp", width: Ti.UI.FILL, shadowOffset: { x: 0, y: 1 }, backgroundColor: "#E74C3C", color: "#ECF0F1", font: { fontSize: "24dp", fontWeight: "bold" }, shadowColor: "#888", top: 0, text: 'resetStyle()', id: "__alloyId0" });
+  { textAlign: "center", left: null, right: null, height: "50dp", width: Ti.UI.FILL, shadowOffset: { x: 0, y: 1 }, backgroundColor: "#E74C3C", color: "#ECF0F1", font: { fontSize: "24dp", fontWeight: "bold" }, shadowColor: "#888", top: 0, text: 'resetStyle()' });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["tester"] = Ti.UI.createLabel(
-  { textAlign: "center", left: null, right: null, height: Ti.UI.SIZE, width: Ti.UI.SIZE, shadowOffset: { x: 0, y: 0 }, text: 'click me to reset classes', apiName: "Ti.UI.Label", id: "tester", classes: [] });
+  { textAlign: "center", left: null, right: null, height: Ti.UI.SIZE, width: Ti.UI.SIZE, shadowOffset: { x: 0, y: 0 }, text: 'click me to reset classes', id: "tester", classes: [] });
 
   $.__views["index"].add($.__views["tester"]);
   resetClasses ? $.addListener($.__views["tester"], 'click', resetClasses) : __defers['$.__views["tester"]!click!resetClasses'] = true;$.__views["currentClassesHeader"] = Ti.UI.createLabel(
@@ -55,6 +59,7 @@ function Controller() {
 
   $.__views["index"].add($.__views["currentClasses"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -94,4 +99,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

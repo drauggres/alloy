@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,22 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+  var __alloyId7 = Alloy.Collections['todo'] || todo;function __alloyId8(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId8.opts || {};var models = whereFunction(__alloyId7);var len = models.length;var children = $.__views["todoTable"].children;for (var d = children.length - 1; d >= 0; d--) {$.__views["todoTable"].remove(children[d]);}for (var i = 0; i < len; i++) {var __alloyId3 = models[i];__alloyId3.__transform = transformFunction(__alloyId3);var __alloyId4 = Ti.UI.createView(
+      { height: "50dp", backgroundColor: "#fff", focusable: false });
+
+      $.__views["todoTable"].add(__alloyId4);
+      var __alloyId5 = Ti.UI.createLabel(
+      { color: "#000", left: "50dp", right: "50dp", height: Ti.UI.SIZE, font: { fontSize: "18dp" }, text: __alloyId3.__transform.item });
+
+      __alloyId4.add(__alloyId5);
+      var __alloyId6 = Ti.UI.createTextField(
+      { right: 0, height: "50dp", width: "100dp", borderColor: "#ccc", borderWidth: 1, value: 1, text: "Quantity" });
+
+      __alloyId4.add(__alloyId6);
+      setQuantity ? $.addListener(__alloyId6, 'focus', setQuantity) : __defers['__alloyId6!focus!setQuantity'] = true;}};__alloyId7.on('fetch destroy change add remove reset', __alloyId8);
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (false || true) {
     $.__views["todoWin"] = Ti.UI.createWindow(
@@ -48,7 +64,7 @@ function Controller() {
 
     $.__views["header"].add($.__views["title"]);
     $.__views["__alloyId2"] = Ti.UI.createView(
-    { height: "48dp", width: "3dp", top: "1dp", right: "50dp", backgroundGradient: { type: "linear", startPoint: { x: "0%", y: "0%" }, endPoint: { x: "100%", y: "0%" }, colors: [{ color: "#666", offset: 0 }, { color: "#ccc", offset: 0.5 }, { color: "#666", offset: 1 }] }, id: "__alloyId2" });
+    { height: "48dp", width: "3dp", top: "1dp", right: "50dp", backgroundGradient: { type: "linear", startPoint: { x: "0%", y: "0%" }, endPoint: { x: "100%", y: "0%" }, colors: [{ color: "#666", offset: 0 }, { color: "#ccc", offset: 0.5 }, { color: "#666", offset: 1 }] } });
 
     $.__views["header"].add($.__views["__alloyId2"]);
     $.__views["addView"] = Ti.UI.createView(
@@ -63,20 +79,9 @@ function Controller() {
     { top: Alloy.Globals.tableTop, bottom: "46dp", layout: "vertical", id: "todoTable", dataTransform: "transformFunction" });
 
     $.__views["todoWin"].add($.__views["todoTable"]);
-    var __alloyId7 = Alloy.Collections['todo'] || todo;function __alloyId8(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId8.opts || {};var models = whereFunction(__alloyId7);var len = models.length;var children = $.__views["todoTable"].children;for (var d = children.length - 1; d >= 0; d--) {$.__views["todoTable"].remove(children[d]);}for (var i = 0; i < len; i++) {var __alloyId3 = models[i];__alloyId3.__transform = transformFunction(__alloyId3);var __alloyId4 = Ti.UI.createView(
-        { height: "50dp", backgroundColor: "#fff", focusable: false });
-
-        $.__views["todoTable"].add(__alloyId4);
-        var __alloyId5 = Ti.UI.createLabel(
-        { color: "#000", left: "50dp", right: "50dp", height: Ti.UI.SIZE, font: { fontSize: "18dp" }, text: __alloyId3.__transform.item });
-
-        __alloyId4.add(__alloyId5);
-        var __alloyId6 = Ti.UI.createTextField(
-        { right: 0, height: "50dp", width: "100dp", borderColor: "#ccc", borderWidth: 1, value: 1, text: "Quantity" });
-
-        __alloyId4.add(__alloyId6);
-        setQuantity ? $.addListener(__alloyId6, 'focus', setQuantity) : __defers['__alloyId6!focus!setQuantity'] = true;}};__alloyId7.on('fetch destroy change add remove reset', __alloyId8);}
+  }
   exports.destroy = function () {__alloyId7 && __alloyId7.off('fetch destroy change add remove reset', __alloyId8);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -138,4 +143,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

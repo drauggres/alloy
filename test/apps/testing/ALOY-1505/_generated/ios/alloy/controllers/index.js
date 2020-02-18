@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -40,10 +44,11 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   ;;var __alloyId3 = [];__alloyId3.push("Confirm");if (true) {
     __alloyId3.push("Help");}
-  __alloyId0 = __alloyId3.push("Cancel") - 1;$.__views["dialog"] = Ti.UI.createOptionDialog(
+  var __alloyId0 = __alloyId3.push("Cancel") - 1;$.__views["dialog"] = Ti.UI.createOptionDialog(
   { options: __alloyId3, cancel: __alloyId0, id: "dialog", title: "Delete File?" });
 
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -65,4 +70,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

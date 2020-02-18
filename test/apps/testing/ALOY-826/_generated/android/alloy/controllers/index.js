@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,20 +33,25 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  var __alloyId4 = [];$.__views["__alloyId5"] = { properties: { title: "One", id: "__alloyId5" } };__alloyId4.push($.__views["__alloyId5"]);$.__views["__alloyId6"] = { properties: { title: "Two", id: "__alloyId6" } };__alloyId4.push($.__views["__alloyId6"]);$.__views["__alloyId7"] = { properties: { title: "Three", id: "__alloyId7" } };__alloyId4.push($.__views["__alloyId7"]);$.__views["__alloyId2"] = Ti.UI.createListSection(
-  { id: "__alloyId2" });
+  var __alloyId4 = [];$.__views["__alloyId5"] = { properties: { title: "One" } };__alloyId4.push($.__views["__alloyId5"]);$.__views["__alloyId6"] = { properties: { title: "Two" } };__alloyId4.push($.__views["__alloyId6"]);$.__views["__alloyId7"] = { properties: { title: "Three" } };__alloyId4.push($.__views["__alloyId7"]);$.__views["__alloyId2"] = Ti.UI.createListSection(
+  {});
 
-  $.__views["__alloyId2"].items = __alloyId4;var __alloyId8 = [];__alloyId8.push($.__views["__alloyId2"]);$.__views["__alloyId10"] = Alloy.createController('section', { id: "__alloyId10" });
+  $.__views["__alloyId2"].items = __alloyId4;var __alloyId8 = [];__alloyId8.push($.__views["__alloyId2"]);$.__views["__alloyId10"] = Alloy.createController('section', {});
   __alloyId8.push($.__views["__alloyId10"].getViewEx({ recurse: true }));$.__views["__alloyId0"] = Ti.UI.createListView(
-  { sections: __alloyId8, id: "__alloyId0" });
+  { sections: __alloyId8 });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -68,4 +73,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

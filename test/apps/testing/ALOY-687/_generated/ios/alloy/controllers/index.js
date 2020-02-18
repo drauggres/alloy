@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,23 +33,28 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["label"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { height: Ti.UI.SIZE, width: "90%", font: { fontSize: "24dp", fontWeight: "normal" }, textAlign: "center", color: "#0f0" });
     if (Alloy.isHandheld) Alloy.deepExtend(true, o, { color: "#0ff" });
     if (Alloy.isTablet) Alloy.deepExtend(true, o, { color: "#963" });
     Alloy.deepExtend(true, o, { text: 'Check the console output and make sure that only styles relevant to the current build platform are listed in the printed array. Note also that the "platform" key has been removed entirely from the "queries" object in conditional styles.', id: "label" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["label"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -73,4 +78,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

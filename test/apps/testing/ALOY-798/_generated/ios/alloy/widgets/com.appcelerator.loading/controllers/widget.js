@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('com.appcelerator.loading');this.__widgetId = 'com.appcelerator.loading';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('com.appcelerator.loading');this.__widgetId = 'com.appcelerator.loading';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'widget';
   this.args = arguments[0] || {};
 
@@ -40,12 +40,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["loading"] = Ti.UI.createImageView(
   { height: 20, width: 20, images: ["/images/com.appcelerator.loading/00.png", "/images/com.appcelerator.loading/01.png", "/images/com.appcelerator.loading/02.png", "/images/com.appcelerator.loading/03.png", "/images/com.appcelerator.loading/04.png", "/images/com.appcelerator.loading/05.png", "/images/com.appcelerator.loading/06.png", "/images/com.appcelerator.loading/07.png", "/images/com.appcelerator.loading/08.png", "/images/com.appcelerator.loading/09.png", "/images/com.appcelerator.loading/10.png", "/images/com.appcelerator.loading/11.png"], id: "loading" });
 
   $.__views["loading"] && $.addTopLevelView($.__views["loading"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -111,10 +116,10 @@ function Controller() {
   $.loading.start();
 
   /**
-                                         * @method setOpacity
-                                         * Sets the opacity of the loading image.
-                                         * @param {Number} opacity Opacity from 0.0 (transparent) to 1.0 (opaque).
-                                         */
+                                                            * @method setOpacity
+                                                            * Sets the opacity of the loading image.
+                                                            * @param {Number} opacity Opacity from 0.0 (transparent) to 1.0 (opaque).
+                                                            */
   exports.setOpacity = function (opacity) {
     $.loading.opacity = opacity;
   };
@@ -131,4 +136,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/widgets/com.appcelerator.loading/controllers/widget.js.map

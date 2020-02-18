@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,15 +33,7 @@ function Controller() {
   // declarations from markup.
 
 
-  // Generated UI code
-  $.__views["index"] = Ti.UI.createWindow(
-  { backgroundColor: "#efefef", fullscreen: false, exitOnClose: true, id: "index" });
-
-  $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  $.__views["__alloyId0"] = Ti.UI.createTableView(
-  { id: "__alloyId0" });
-
-  $.__views["index"].add($.__views["__alloyId0"]);
+  // <dataFunctions>
   var __alloyId6 = Alloy.Collections['collection'] || collection;function __alloyId7(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId7.opts || {};var models = filterCollection(__alloyId6);var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId1 = models[i];__alloyId1.__transform = transformCollection(__alloyId1);var __alloyId3 = Ti.UI.createTableViewRow(
       { backgroundColor: "#efefef", height: "60dp" });
 
@@ -50,7 +42,20 @@ function Controller() {
       { textAlign: "left", color: "#181818", font: { fontSize: "32dp", fontWeight: "bold" }, touchEnabled: false, text: __alloyId1.__transform.text });
 
       __alloyId3.add(__alloyId5);
-    }$.__views["__alloyId0"].setData(rows);};__alloyId6.on('fetch destroy change add remove reset', __alloyId7);exports.destroy = function () {__alloyId6 && __alloyId6.off('fetch destroy change add remove reset', __alloyId7);};
+    }$.__views["__alloyId0"].setData(rows);};__alloyId6.on('fetch destroy change add remove reset', __alloyId7);
+  // </dataFunctionsCode>
+
+  // Generated UI code
+  $.__views["index"] = Ti.UI.createWindow(
+  { backgroundColor: "#efefef", fullscreen: false, exitOnClose: true, id: "index" });
+
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  $.__views["__alloyId0"] = Ti.UI.createTableView(
+  {});
+
+  $.__views["index"].add($.__views["__alloyId0"]);
+  exports.destroy = function () {__alloyId6 && __alloyId6.off('fetch destroy change add remove reset', __alloyId7);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -86,4 +91,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

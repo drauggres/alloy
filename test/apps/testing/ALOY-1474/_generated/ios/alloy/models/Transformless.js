@@ -1,5 +1,5 @@
 var Alloy = require('/alloy'),
-_ = require("/alloy/underscore")._,
+_ = require("/underscore")._,
 model,collection;
 
 exports.definition = {};

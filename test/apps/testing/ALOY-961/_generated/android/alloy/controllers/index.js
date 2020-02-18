@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,36 +33,41 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", layout: "vertical", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId1"] = Ti.UI.createAttributedString(
-  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'Label - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.', id: "__alloyId1" });
+  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'Label - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.' });
 
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: Ti.UI.SIZE, attributedString: $.__views["__alloyId1"], id: "__alloyId0" });
+  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: Ti.UI.SIZE, attributedString: $.__views["__alloyId1"] });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["__alloyId3"] = Ti.UI.createAttributedString(
-  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextField - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.', id: "__alloyId3" });
+  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextField - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.' });
 
   $.__views["__alloyId4"] = Ti.UI.createAttributedString(
-  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextField HintText - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.', id: "__alloyId4" });
+  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextField HintText - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.' });
 
   $.__views["__alloyId2"] = Ti.UI.createTextField(
-  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: Ti.UI.SIZE, attributedString: $.__views["__alloyId3"], attributedHintText: $.__views["__alloyId4"], id: "__alloyId2" });
+  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: Ti.UI.SIZE, attributedString: $.__views["__alloyId3"], attributedHintText: $.__views["__alloyId4"] });
 
   $.__views["index"].add($.__views["__alloyId2"]);
   $.__views["__alloyId6"] = Ti.UI.createAttributedString(
-  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextArea - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.', id: "__alloyId6" });
+  { attributes: [{ type: Ti.UI.ATTRIBUTE_UNDERLINES_STYLE, value: Ti.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE, range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "red", range: [18, 12] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "blue", range: [31, 2] }, { type: Ti.UI.ATTRIBUTE_BACKGROUND_COLOR, value: "yellow", range: [40, 6] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "orange", range: [0, 107] }, { type: Ti.UI.ATTRIBUTE_FOREGROUND_COLOR, value: "black", range: [40, 6] }], text: 'TextArea - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak.' });
 
   $.__views["__alloyId5"] = Ti.UI.createTextArea(
-  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: 200, attributedString: $.__views["__alloyId6"], id: "__alloyId5" });
+  { top: 20, right: 10, left: 10, width: Ti.UI.FILL, height: 200, attributedString: $.__views["__alloyId6"] });
 
   $.__views["index"].add($.__views["__alloyId5"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -84,4 +89,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

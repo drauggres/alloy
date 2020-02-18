@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,48 +33,53 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, layout: "vertical", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { text: 'Hello', top: 20, width: 100, backgroundColor: "#ccc", id: "__alloyId0" });
+  { text: 'Hello', top: 20, width: 100, backgroundColor: "#ccc" });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["__alloyId1"] = Ti.UI.createLabel(
-  { text: L('hello_world'), id: "__alloyId1" });
+  { text: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId1"]);
   $.__views["__alloyId2"] = Ti.UI.createLabel(
-  { text: L('hello_world'), id: "__alloyId2" });
+  { text: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId2"]);
   $.__views["__alloyId3"] = Ti.UI.createTextField(
-  { value: 'Hello', top: 20, width: 100, backgroundColor: "#ccc", id: "__alloyId3" });
+  { value: 'Hello', top: 20, width: 100, backgroundColor: "#ccc" });
 
   $.__views["index"].add($.__views["__alloyId3"]);
   $.__views["__alloyId4"] = Ti.UI.createTextField(
-  { value: L('hello_world'), id: "__alloyId4" });
+  { value: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId4"]);
   $.__views["__alloyId5"] = Ti.UI.createTextField(
-  { value: L('hello_world'), id: "__alloyId5" });
+  { value: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId5"]);
   $.__views["__alloyId6"] = Ti.UI.createTextArea(
-  { value: 'Hello', top: 20, width: 100, backgroundColor: "#ccc", id: "__alloyId6" });
+  { value: 'Hello', top: 20, width: 100, backgroundColor: "#ccc" });
 
   $.__views["index"].add($.__views["__alloyId6"]);
   $.__views["__alloyId7"] = Ti.UI.createTextArea(
-  { value: L('hello_world'), id: "__alloyId7" });
+  { value: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId7"]);
   $.__views["__alloyId8"] = Ti.UI.createTextArea(
-  { value: L('hello_world'), id: "__alloyId8" });
+  { value: L('hello_world') });
 
   $.__views["index"].add($.__views["__alloyId8"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -96,4 +101,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

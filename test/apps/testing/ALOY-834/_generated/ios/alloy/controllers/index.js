@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,24 +33,29 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   var __alloyId0 = [];$.__views["__alloyId2"] = Ti.UI.createWindow(
-  { title: "tab 1", backgroundColor: "#fff", id: "__alloyId2" });
+  { title: "tab 1", backgroundColor: "#fff" });
 
   $.__views["__alloyId1"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId2"], title: "tab 1", id: "__alloyId1" });
+  { window: $.__views["__alloyId2"], title: "tab 1" });
 
   __alloyId0.push($.__views["__alloyId1"]);$.__views["__alloyId4"] = Ti.UI.createWindow(
-  { title: "tab 2", backgroundColor: "#fff", id: "__alloyId4" });
+  { title: "tab 2", backgroundColor: "#fff" });
 
   $.__views["__alloyId3"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId4"], title: "tab 2", id: "__alloyId3" });
+  { window: $.__views["__alloyId4"], title: "tab 2" });
 
   __alloyId0.push($.__views["__alloyId3"]);$.__views["ScheduleGroup"] = Ti.UI.createTabGroup(
   { tabs: __alloyId0, id: "ScheduleGroup", activeTabIconTint: "yellow", tabsBackgroundSelectedColor: "yellow" });
 
   $.__views["ScheduleGroup"] && $.addTopLevelView($.__views["ScheduleGroup"]);
   doOnOpen ? $.addListener($.__views["ScheduleGroup"], 'open', doOnOpen) : __defers['$.__views["ScheduleGroup"]!open!doOnOpen'] = true;doOnFocus ? $.addListener($.__views["ScheduleGroup"], 'focus', doOnFocus) : __defers['$.__views["ScheduleGroup"]!focus!doOnFocus'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -88,4 +93,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

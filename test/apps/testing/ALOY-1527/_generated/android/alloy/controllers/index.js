@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,19 +33,24 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  var __alloyId1 = {};var __alloyId4 = [];var __alloyId6 = { type: 'Ti.UI.Label', properties: { bindid: "title" } };__alloyId4.push(__alloyId6);var __alloyId3 = { properties: { name: "TabbedItem" }, childTemplates: __alloyId4 };__alloyId1["TabbedItem"] = __alloyId3;var __alloyId9 = [];$.__views["__alloyId10"] = { template: "TabbedItem", tabs: { index: 0 }, properties: { id: "__alloyId10" } };__alloyId9.push($.__views["__alloyId10"]);$.__views["__alloyId11"] = { template: "TabbedItem", tabs: { index: 1 }, properties: { id: "__alloyId11" } };__alloyId9.push($.__views["__alloyId11"]);$.__views["__alloyId7"] = Ti.UI.createListSection(
-  { id: "__alloyId7" });
+  var __alloyId1 = {};var __alloyId4 = [];var __alloyId6 = { type: 'Ti.UI.Label', properties: { bindid: "title" } };__alloyId4.push(__alloyId6);var __alloyId3 = { properties: { name: "TabbedItem" }, childTemplates: __alloyId4 };__alloyId1["TabbedItem"] = __alloyId3;var __alloyId9 = [];$.__views["__alloyId10"] = { template: "TabbedItem", tabs: { index: 0 } };__alloyId9.push($.__views["__alloyId10"]);$.__views["__alloyId11"] = { template: "TabbedItem", tabs: { index: 1 } };__alloyId9.push($.__views["__alloyId11"]);$.__views["__alloyId7"] = Ti.UI.createListSection(
+  {});
 
   $.__views["__alloyId7"].items = __alloyId9;var __alloyId12 = [];__alloyId12.push($.__views["__alloyId7"]);$.__views["__alloyId0"] = Ti.UI.createListView(
-  { sections: __alloyId12, templates: __alloyId1, id: "__alloyId0" });
+  { sections: __alloyId12, templates: __alloyId1 });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -67,4 +72,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

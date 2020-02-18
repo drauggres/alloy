@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -40,15 +44,16 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   if (true) {
     $.__views["__alloyId0"] = Ti.UI.Android.createCardView(
-    { contentPadding: 20, cardCornerRadius: 10, cardUseCompatPadding: true, cardBackgroundColor: "#e5e4e2", id: "__alloyId0" });
+    { padding: 20, borderRadius: 10, useCompatPadding: true, backgroundColor: "#e5e4e2" });
 
     $.__views["index"].add($.__views["__alloyId0"]);
     $.__views["__alloyId1"] = Ti.UI.createLabel(
-    { color: "black", text: 'A long label with\na few line breaks\nand unicode (UTF8)\nsymbols such as\na white chess piece \u2655\nand the euro symbol \u20ac\nlooks like this!', id: "__alloyId1" });
+    { color: "black", text: 'A long label with\na few line breaks\nand unicode (UTF8)\nsymbols such as\na white chess piece \u2655\nand the euro symbol \u20ac\nlooks like this!' });
 
     $.__views["__alloyId0"].add($.__views["__alloyId1"]);
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -70,4 +75,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

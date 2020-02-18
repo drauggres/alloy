@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
   Alloy.Collections.instance('pins');
 
+  // <dataFunctions>
+  var __alloyId5 = Alloy.Collections['pins'] || pins;function __alloyId6(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId6.opts || {};var models = __alloyId5.models;var len = models.length;for (var i = 0; i < len; i++) {var __alloyId4 = models[i];__alloyId2.push(require('ti.map').createAnnotation(_.isFunction(__alloyId4.transform) ? __alloyId4.transform() : __alloyId4.toJSON()));}$.__views["map"].annotations = __alloyId2;};__alloyId5.on('fetch destroy change add remove reset', __alloyId6);
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -40,14 +44,15 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   var __alloyId2 = [];
   $.__views["__alloyId3"] = require("ti.map").createAnnotation(
-  { latitude: 37.39, longitude: -122.051, title: "XML Annotation", id: "__alloyId3" });
+  { latitude: 37.39, longitude: -122.051, title: "XML Annotation" });
 
   __alloyId2.push($.__views["__alloyId3"]);
-  $.__views["map"] = (require("ti.map").createView || Ti.UI.createView)(
+  $.__views["map"] = require("ti.map").createView(
   { userLocation: false, animate: true, region: { latitude: 37.3892876, latitudeDelta: 0.015, longitude: -122.0502364, longitudeDelta: 0.015 }, annotations: __alloyId2, id: "map" });
 
   $.__views["index"].add($.__views["map"]);
-  var __alloyId5 = Alloy.Collections['pins'] || pins;function __alloyId6(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId6.opts || {};var models = __alloyId5.models;var len = models.length;for (var i = 0; i < len; i++) {var __alloyId4 = models[i];__alloyId2.push(require('ti.map').createAnnotation(_.isFunction(__alloyId4.transform) ? __alloyId4.transform() : __alloyId4.toJSON()));}$.__views["map"].annotations = __alloyId2;};__alloyId5.on('fetch destroy change add remove reset', __alloyId6);exports.destroy = function () {__alloyId5 && __alloyId5.off('fetch destroy change add remove reset', __alloyId6);};
+  exports.destroy = function () {__alloyId5 && __alloyId5.off('fetch destroy change add remove reset', __alloyId6);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -98,4 +103,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

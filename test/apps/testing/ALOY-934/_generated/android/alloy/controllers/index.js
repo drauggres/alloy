@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -40,10 +44,10 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   ;;var __alloyId3 = [];__alloyId3.push("Confirm");__alloyId3.push("Cancel");var __alloyId8 = [];__alloyId8.push("Help");if (true) {
     $.__views["__alloyId10"] = Ti.UI.createView(
-    { id: "__alloyId10" });
+    {});
 
     $.__views["__alloyId11"] = Ti.UI.createLabel(
-    { font: { fontSize: "14dp" }, text: "In an AndroidView", id: "__alloyId11" });
+    { font: { fontSize: "14dp" }, text: "In an AndroidView" });
 
     $.__views["__alloyId10"].add($.__views["__alloyId11"]);
   }
@@ -51,10 +55,11 @@ function Controller() {
   { options: __alloyId3, buttonNames: __alloyId8, androidView: $.__views["__alloyId10"], id: "dialog", title: "Delete File?" });
 
   $.__views["__alloyId12"] = Ti.UI.createLabel(
-  { font: { fontSize: "14dp" }, text: "Click for OptionDialog", id: "__alloyId12" });
+  { font: { fontSize: "14dp" }, text: "Click for OptionDialog" });
 
   $.__views["index"].add($.__views["__alloyId12"]);
   showOptions ? $.addListener($.__views["__alloyId12"], 'click', showOptions) : __defers['$.__views["__alloyId12"]!click!showOptions'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -79,4 +84,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

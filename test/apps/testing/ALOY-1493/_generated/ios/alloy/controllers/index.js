@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,24 +33,29 @@ function Controller() {
   // declarations from markup.
   Alloy.Collections.instance('test');
 
+  // <dataFunctions>
+  var __alloyId8 = Alloy.Collections['test'] || test;function __alloyId9(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId9.opts || {};var models = __alloyId8.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId3 = models[i];__alloyId3.__transform = _.isFunction(__alloyId3.transform) ? __alloyId3.transform() : __alloyId3.toJSON();var __alloyId5 = Ti.UI.createTableViewRow(
+      {});
+
+      rows.push(__alloyId5);
+      var __alloyId7 = Ti.UI.createLabel(
+      { text: __alloyId3.__transform.username });
+
+      __alloyId5.add(__alloyId7);
+    }$.__views["__alloyId2"].setData(rows);};__alloyId8.on('fetch destroy change add remove reset', __alloyId9);
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId2"] = Ti.UI.createTableView(
-  { id: "__alloyId2" });
+  {});
 
   $.__views["index"].add($.__views["__alloyId2"]);
-  var __alloyId8 = Alloy.Collections['test'] || test;function __alloyId9(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId9.opts || {};var models = __alloyId8.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId3 = models[i];__alloyId3.__transform = _.isFunction(__alloyId3.transform) ? __alloyId3.transform() : __alloyId3.toJSON();var __alloyId5 = Ti.UI.createTableViewRow(
-      {});
+  exports.destroy = function () {__alloyId8 && __alloyId8.off('fetch destroy change add remove reset', __alloyId9);};
 
-      rows.push(__alloyId5);
-      var __alloyId7 = Ti.UI.createLabel(
-      { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", text: __alloyId3.__transform.username });
-
-      __alloyId5.add(__alloyId7);
-    }$.__views["__alloyId2"].setData(rows);};__alloyId8.on('fetch destroy change add remove reset', __alloyId9);exports.destroy = function () {__alloyId8 && __alloyId8.off('fetch destroy change add remove reset', __alloyId9);};
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -74,4 +79,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

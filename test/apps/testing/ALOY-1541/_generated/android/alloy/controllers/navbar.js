@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'navbar';
   this.args = arguments[0] || {};
 
@@ -33,15 +33,20 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   var leftNavButtons = [];$.__views["__alloyId2"] = Ti.UI.createButton(
-  { title: 'Btn1', id: "__alloyId2" });
+  { title: 'Btn1' });
 
   leftNavButtons.push($.__views["__alloyId2"]);$.__views["__alloyId3"] = Ti.UI.createButton(
-  { title: 'Btn2', id: "__alloyId3" });
+  { title: 'Btn2' });
 
   leftNavButtons.push($.__views["__alloyId3"]);__parentSymbol.leftNavButtons = leftNavButtons;$.__views["navbar"] && $.addTopLevelView($.__views["navbar"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -63,4 +68,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/navbar.js.map

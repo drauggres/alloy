@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,26 +33,31 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "yellow", fullscreen: false, exitOnClose: true, layout: "vertical", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, top: 30, color: "#000", font: { fontSize: 12 }, text: 'Background should be YELLOW on ios & android, WHITE on mobile web', id: "__alloyId0" });
+  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, top: 30, color: "#000", font: { fontSize: 12 }, text: 'Background should be YELLOW on ios & android, WHITE on mobile web' });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["lbl1"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { width: Ti.UI.SIZE, height: Ti.UI.SIZE, top: 30, color: "#000", font: { fontSize: 12 } });
     if (Alloy.isHandheld) Alloy.deepExtend(true, o, { color: "red" });
     Alloy.deepExtend(true, o, { text: 'This should be RED on ios and android handheld, BLACK on others', id: "lbl1" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["lbl1"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -74,4 +79,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

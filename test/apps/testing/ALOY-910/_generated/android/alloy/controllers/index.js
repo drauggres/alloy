@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -42,16 +46,16 @@ function Controller() {
   { id: "ptr", tintColor: "#008" });
 
   var __alloyId0 = [];$.__views["__alloyId1"] = Ti.UI.createTableViewRow(
-  { title: "tableview", id: "__alloyId1" });
+  { title: "tableview" });
 
   __alloyId0.push($.__views["__alloyId1"]);$.__views["__alloyId2"] = Ti.UI.createTableViewRow(
-  { title: "drag down to show refreshControl", id: "__alloyId2" });
+  { title: "drag down to show refreshControl" });
 
   __alloyId0.push($.__views["__alloyId2"]);$.__views["__alloyId3"] = Ti.UI.createTableViewRow(
-  { title: "click here to open listview", id: "__alloyId3" });
+  { title: "click here to open listview" });
 
   __alloyId0.push($.__views["__alloyId3"]);openList ? $.addListener($.__views["__alloyId3"], 'click', openList) : __defers['$.__views["__alloyId3"]!click!openList'] = true;$.__views["jobList"] = Ti.UI.createTableView(
-  { data: __alloyId0, refreshControl: $.__views["ptr"], id: "jobList" });
+  { data: __alloyId0, refreshControl: $.__views["ptr"], id: "jobList", filterAttribute: "title" });
 
   $.__views["index"].add($.__views["jobList"]);
   $.__views["listWin"] = Ti.UI.createWindow(
@@ -61,14 +65,15 @@ function Controller() {
   $.__views["ptr"] = Ti.UI.createRefreshControl(
   { id: "ptr", tintColor: "#800" });
 
-  var __alloyId6 = [];$.__views["__alloyId7"] = { properties: { title: "listview", id: "__alloyId7" } };__alloyId6.push($.__views["__alloyId7"]);$.__views["__alloyId8"] = { properties: { title: "drag down to show refreshControl", id: "__alloyId8" } };__alloyId6.push($.__views["__alloyId8"]);$.__views["__alloyId4"] = Ti.UI.createListSection(
-  { id: "__alloyId4" });
+  var __alloyId6 = [];$.__views["__alloyId7"] = { properties: { title: "listview" } };__alloyId6.push($.__views["__alloyId7"]);$.__views["__alloyId8"] = { properties: { title: "drag down to show refreshControl" } };__alloyId6.push($.__views["__alloyId8"]);$.__views["__alloyId4"] = Ti.UI.createListSection(
+  {});
 
   $.__views["__alloyId4"].items = __alloyId6;var __alloyId9 = [];__alloyId9.push($.__views["__alloyId4"]);$.__views["jobList"] = Ti.UI.createListView(
   { sections: __alloyId9, refreshControl: $.__views["ptr"], id: "jobList" });
 
   $.__views["listWin"].add($.__views["jobList"]);
   openList ? $.addListener($.__views["jobList"], 'click', openList) : __defers['$.__views["jobList"]!click!openList'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -94,4 +99,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

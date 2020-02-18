@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -40,36 +44,37 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   if (true) {
     $.__views["__alloyId3"] = Ti.UI.createView(
-    { id: "__alloyId3" });
+    {});
 
     $.__views["__alloyId4"] = Ti.UI.createLabel(
-    { text: 'Hello Preview', id: "__alloyId4" });
+    { text: 'Hello Preview' });
 
     $.__views["__alloyId3"].add($.__views["__alloyId4"]);
     var __alloyId5 = [];$.__views["__alloyId7"] = Ti.UI.iOS.createPreviewAction(
-    { title: "Email", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_DESTRUCTIVE, id: "__alloyId7" });
+    { title: "Email", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_DESTRUCTIVE });
 
     __alloyId5.push($.__views["__alloyId7"]);fn ? $.addListener($.__views["__alloyId7"], 'click', fn) : __defers['$.__views["__alloyId7"]!click!fn'] = true;$.__views["__alloyId9"] = Ti.UI.iOS.createPreviewAction(
-    { title: "Confirm", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED, id: "__alloyId9" });
+    { title: "Confirm", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED });
 
     fn ? $.addListener($.__views["__alloyId9"], 'click', fn) : __defers['$.__views["__alloyId9"]!click!fn'] = true;$.__views["__alloyId10"] = Ti.UI.iOS.createPreviewAction(
-    { title: "Cancel", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED, id: "__alloyId10" });
+    { title: "Cancel", style: Ti.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED });
 
     fn ? $.addListener($.__views["__alloyId10"], 'click', fn) : __defers['$.__views["__alloyId10"]!click!fn'] = true;$.__views["__alloyId8"] = Ti.UI.iOS.createPreviewActionGroup(
-    { actions: [$.__views["__alloyId9"], $.__views["__alloyId10"]], title: "Delete", id: "__alloyId8" });
+    { actions: [$.__views["__alloyId9"], $.__views["__alloyId10"]], title: "Delete" });
 
     __alloyId5.push($.__views["__alloyId8"]);$.__views["__alloyId1"] = Ti.UI.iOS.createPreviewContext(
-    { preview: $.__views["__alloyId3"], actions: __alloyId5, id: "__alloyId1" });
+    { preview: $.__views["__alloyId3"], actions: __alloyId5 });
 
     fn ? $.addListener($.__views["__alloyId1"], 'peek', fn) : __defers['$.__views["__alloyId1"]!peek!fn'] = true;}
-  var __alloyId13 = [];$.__views["__alloyId14"] = { properties: { title: "Hello", id: "__alloyId14" } };__alloyId13.push($.__views["__alloyId14"]);$.__views["__alloyId11"] = Ti.UI.createListSection(
-  { id: "__alloyId11" });
+  var __alloyId13 = [];$.__views["__alloyId14"] = { properties: { title: "Hello" } };__alloyId13.push($.__views["__alloyId14"]);$.__views["__alloyId11"] = Ti.UI.createListSection(
+  {});
 
   $.__views["__alloyId11"].items = __alloyId13;var __alloyId15 = [];__alloyId15.push($.__views["__alloyId11"]);$.__views["__alloyId0"] = Ti.UI.createListView(
-  { sections: __alloyId15, previewContext: $.__views["__alloyId1"], id: "__alloyId0" });
+  { sections: __alloyId15, previewContext: $.__views["__alloyId1"] });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -102,4 +107,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

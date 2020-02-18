@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#efefef", fullscreen: false, exitOnClose: true, layout: "vertical", id: "index" });
@@ -43,10 +47,11 @@ function Controller() {
 
   $.__views["index"].add($.__views["labelNoAutoStyle"]);
   $.__views["labelAutoStyle"] = Ti.UI.createLabel(
-  { color: "#a00", height: Ti.UI.SIZE, width: Ti.UI.SIZE, font: { fontSize: "24dp", fontWeight: "bold" }, right: null, left: null, bottom: null, top: "15dp", textAlign: "center", backgroundColor: "#999", text: '["red","greyBg"]', apiName: "Ti.UI.Label", id: "labelAutoStyle", classes: ["red", "greyBg"] });
+  { color: "#a00", height: Ti.UI.SIZE, width: Ti.UI.SIZE, font: { fontSize: "24dp", fontWeight: "bold" }, right: null, left: null, bottom: null, top: "15dp", textAlign: "center", backgroundColor: "#999", text: '["red","greyBg"]', id: "labelAutoStyle", classes: ["red", "greyBg"] });
 
   $.__views["index"].add($.__views["labelAutoStyle"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -135,4 +140,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

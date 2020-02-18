@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,12 +33,20 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+  var __alloyId10 = Alloy.Collections['heroes'] || heroes;function __alloyId11(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId11.opts || {};var models = __alloyId10.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId7 = models[i];__alloyId7.__transform = _.isFunction(__alloyId7.transform) ? __alloyId7.transform() : __alloyId7.toJSON();var __alloyId9 = Ti.UI.createTableViewRow(
+      { title: __alloyId7.__transform.name });
+
+      rows.push(__alloyId9);
+    }$.__views["table"].setData(rows);};__alloyId10.on('fetch destroy change add remove reset', __alloyId11);
+  // </dataFunctionsCode>
+
   // Generated UI code
   var __alloyId0 = [];$.__views["__alloyId2"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, navBarHidden: true, id: "__alloyId2" });
+  { backgroundColor: "#fff", fullscreen: false, navBarHidden: true });
 
   $.__views["__alloyId3"] = Ti.UI.createLabel(
-  { height: "50dp", width: Ti.UI.FILL, top: 0, textAlign: "center", color: "#fff", font: { fontSize: "32dp", fontWeight: "bold" }, text: 'Model', id: "__alloyId3" });
+  { height: "50dp", width: Ti.UI.FILL, top: 0, textAlign: "center", color: "#fff", font: { fontSize: "32dp", fontWeight: "bold" }, text: 'Model' });
 
   $.__views["__alloyId2"].add($.__views["__alloyId3"]);
   $.__views["counter"] = Ti.UI.createLabel(
@@ -46,31 +54,34 @@ function Controller() {
 
   $.__views["__alloyId2"].add($.__views["counter"]);
   updateState ? $.addListener($.__views["counter"], 'click', updateState) : __defers['$.__views["counter"]!click!updateState'] = true;$.__views["__alloyId1"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId2"], title: "model", id: "__alloyId1" });
+  { window: $.__views["__alloyId2"], title: "model" });
 
   __alloyId0.push($.__views["__alloyId1"]);$.__views["__alloyId5"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, navBarHidden: true, id: "__alloyId5" });
+  { backgroundColor: "#fff", fullscreen: false, navBarHidden: true });
 
   $.__views["__alloyId6"] = Ti.UI.createLabel(
-  { height: "50dp", width: Ti.UI.FILL, top: 0, textAlign: "center", color: "#fff", font: { fontSize: "32dp", fontWeight: "bold" }, text: 'Collection', id: "__alloyId6" });
+  { height: "50dp", width: Ti.UI.FILL, top: 0, textAlign: "center", color: "#fff", font: { fontSize: "32dp", fontWeight: "bold" }, text: 'Collection' });
 
   $.__views["__alloyId5"].add($.__views["__alloyId6"]);
   $.__views["table"] = Ti.UI.createTableView(
   { top: "50dp", id: "table" });
 
   $.__views["__alloyId5"].add($.__views["table"]);
-  var __alloyId10 = Alloy.Collections['heroes'] || heroes;function __alloyId11(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId11.opts || {};var models = __alloyId10.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId7 = models[i];__alloyId7.__transform = _.isFunction(__alloyId7.transform) ? __alloyId7.transform() : __alloyId7.toJSON();var __alloyId9 = Ti.UI.createTableViewRow(
-      { title: __alloyId7.__transform.name });
-
-      rows.push(__alloyId9);
-    }$.__views["table"].setData(rows);};__alloyId10.on('fetch destroy change add remove reset', __alloyId11);modifyHero ? $.addListener($.__views["table"], 'click', modifyHero) : __defers['$.__views["table"]!click!modifyHero'] = true;$.__views["__alloyId4"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId5"], title: "collection", id: "__alloyId4" });
+  modifyHero ? $.addListener($.__views["table"], 'click', modifyHero) : __defers['$.__views["table"]!click!modifyHero'] = true;$.__views["__alloyId4"] = Ti.UI.createTab(
+  { window: $.__views["__alloyId5"], title: "collection" });
 
   __alloyId0.push($.__views["__alloyId4"]);$.__views["index"] = Ti.UI.createTabGroup(
   { tabs: __alloyId0, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  var __alloyId12 = function () {Alloy['Models']['appState'].__transform = _.isFunction(Alloy['Models']['appState'].transform) ? Alloy['Models']['appState'].transform() : Alloy['Models']['appState'].toJSON();$.__alloyId3.backgroundColor = Alloy['Models']['appState']['__transform']['color'];$.counter.text = Alloy['Models']['appState']['__transform']['counter'];$.counter.color = Alloy['Models']['appState']['__transform']['color'];$.__alloyId6.backgroundColor = Alloy['Models']['appState']['__transform']['color'];};Alloy['Models']['appState'].on('fetch change destroy', __alloyId12);exports.destroy = function () {__alloyId10 && __alloyId10.off('fetch destroy change add remove reset', __alloyId11);Alloy['Models']['appState'] && Alloy['Models']['appState'].off('fetch change destroy', __alloyId12);};
+  this.__alloyId12 = function () {
+    Alloy['Models']['appState'].__transform = _.isFunction(Alloy['Models']['appState'].transform) ? Alloy['Models']['appState'].transform() : Alloy['Models']['appState'].toJSON();this.__alloyId3.backgroundColor = Alloy['Models']['appState']['__transform']['color'];
+    this.counter.text = Alloy['Models']['appState']['__transform']['counter'];
+    this.counter.color = Alloy['Models']['appState']['__transform']['color'];
+    this.__alloyId6.backgroundColor = Alloy['Models']['appState']['__transform']['color'];
+  }.bind(this);
+  Alloy['Models']['appState'].on('fetch change destroy', this.__alloyId12);exports.destroy = function () {__alloyId10 && __alloyId10.off('fetch destroy change add remove reset', __alloyId11);Alloy['Models']['appState'] && Alloy['Models']['appState'].off('fetch change destroy', this.__alloyId12);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -134,4 +145,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'next2';
   this.args = arguments[0] || {};
 
@@ -33,14 +33,19 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (true || false) {
     $.__views["__alloyId3"] = Ti.UI.createLabel(
-    { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "black", font: { fontSize: "16dp" }, text: 'ios/mobileweb - hi there', id: "__alloyId3" });
+    { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "black", font: { fontSize: "16dp" }, text: 'ios/mobileweb - hi there' });
 
     __parentSymbol.titleControl = $.__views["__alloyId3"];$.__views["next2"] && $.addTopLevelView($.__views["next2"]);
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -62,4 +67,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/next2.js.map

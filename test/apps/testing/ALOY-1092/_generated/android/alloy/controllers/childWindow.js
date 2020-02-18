@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'childWindow';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (true) {
     $.__views["childWindow"] = Ti.UI.createWindow(
@@ -40,13 +44,13 @@ function Controller() {
 
     $.__views["childWindow"] && $.addTopLevelView($.__views["childWindow"]);
     $.__views["argLabel"] = Ti.UI.createLabel(
-    function () {
+    (() => {
       var o = {};
       Alloy.deepExtend(true, o, { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#000", textAlign: "center", font: { fontSize: "24dp", fontWeight: "bold" }, text: "args.someProperty is falsey", top: 25 });
       if ($.args.someProperty) Alloy.deepExtend(true, o, { text: "args.someProperty is truthy" });
       Alloy.deepExtend(true, o, { id: "argLabel" });
       return o;
-    }());
+    })());
 
     $.__views["childWindow"].add($.__views["argLabel"]);
     if ($.args.someProperty) {
@@ -57,6 +61,7 @@ function Controller() {
     }
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -82,4 +87,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/childWindow.js.map

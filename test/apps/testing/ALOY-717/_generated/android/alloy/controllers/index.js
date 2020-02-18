@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,24 +33,29 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, apiName: "Ti.UI.Window", id: "index", classes: [] });
+  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index", classes: [] });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["tester"] = Ti.UI.createLabel(
-  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, textAlign: "center", apiName: "Ti.UI.Label", id: "tester", classes: [] });
+  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, textAlign: "center", id: "tester", classes: [] });
 
   $.__views["index"].add($.__views["tester"]);
   $.__views["behind"] = Ti.UI.createView(
-  { height: "100dp", width: "100dp", backgroundColor: "#0f0", zIndex: 10, apiName: "Ti.UI.View", id: "behind", classes: [] });
+  { height: "100dp", width: "100dp", backgroundColor: "#0f0", zIndex: 10, id: "behind", classes: [] });
 
   $.__views["index"].add($.__views["behind"]);
   $.__views["changer"] = Ti.UI.createLabel(
-  { height: "50dp", width: Ti.UI.FILL, textAlign: "center", backgroundColor: "#006", color: "#fff", font: { fontSize: "24dp", fontWeight: "bold" }, bottom: 0, text: 'change classes', apiName: "Ti.UI.Label", id: "changer", classes: [] });
+  { height: "50dp", width: Ti.UI.FILL, textAlign: "center", backgroundColor: "#006", color: "#fff", font: { fontSize: "24dp", fontWeight: "bold" }, bottom: 0, text: 'change classes', id: "changer", classes: [] });
 
   $.__views["index"].add($.__views["changer"]);
   changeClasses ? $.addListener($.__views["changer"], 'click', changeClasses) : __defers['$.__views["changer"]!click!changeClasses'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -97,4 +102,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

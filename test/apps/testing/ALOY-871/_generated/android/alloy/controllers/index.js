@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,13 +33,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { layout: "vertical", backgroundColor: "white", top: 20, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["title1"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
@@ -47,11 +51,11 @@ function Controller() {
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Overriding platform with custom TSS" });
     Alloy.deepExtend(true, o, { id: "title1" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["title1"]);
   $.__views["title2"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
@@ -59,54 +63,55 @@ function Controller() {
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Platform: Android, Alloy.Globals.someProperty==true" });
     Alloy.deepExtend(true, o, { id: "title2" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["title2"]);
   $.__views["title3"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
     Alloy.deepExtend(true, o, { color: "blue", text: "You should see this for label 3", id: "title3" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["title3"]);
   $.__views["title4"] = Ti.UI.createLabel(
-  function () {
+  (() => {
     var o = {};
     Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
     if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
     Alloy.deepExtend(true, o, { id: "title4" });
     return o;
-  }());
+  })());
 
   $.__views["index"].add($.__views["title4"]);
   if (Alloy.Globals.someProperty) {
     $.__views["title5"] = Ti.UI.createLabel(
-    function () {
+    (() => {
       var o = {};
       Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
       if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
       Alloy.deepExtend(true, o, { color: "blue", id: "title5" });
       return o;
-    }());
+    })());
 
     $.__views["index"].add($.__views["title5"]);
   }
   if (true && Alloy.Globals.someProperty) {
     $.__views["title6"] = Ti.UI.createLabel(
-    function () {
+    (() => {
       var o = {};
       Alloy.deepExtend(true, o, { top: 10, text: "Default label text", font: { fontSize: "14dp" } });
       if (Alloy.Globals.someProperty) Alloy.deepExtend(true, o, { text: "Custom TSS: Alloy.Globals.someProperty==true" });
       Alloy.deepExtend(true, o, { color: "blue", id: "title6" });
       return o;
-    }());
+    })());
 
     $.__views["index"].add($.__views["title6"]);
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -128,4 +133,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+  var __alloyId5 = Alloy.Collections['name'] || name;function __alloyId6(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId6.opts || {};var models = __alloyId5.models;var len = models.length;var __alloyId1 = [];for (var i = 0; i < len; i++) {var __alloyId2 = models[i];__alloyId2.__transform = _.isFunction(__alloyId2.transform) ? __alloyId2.transform() : __alloyId2.toJSON();var __alloyId4 = { properties: { title: __alloyId2.__transform.name, modelId: __alloyId2.__transform.id } };__alloyId1.push(__alloyId4);}opts.animation ? $.__views["section"].setItems(__alloyId1, opts.animation) : $.__views["section"].setItems(__alloyId1);};__alloyId5.on('fetch destroy change add remove reset', __alloyId6);
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -41,11 +45,12 @@ function Controller() {
   $.__views["section"] = Ti.UI.createListSection(
   { id: "section" });
 
-  var __alloyId5 = Alloy.Collections['name'] || name;function __alloyId6(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId6.opts || {};var models = __alloyId5.models;var len = models.length;var __alloyId1 = [];for (var i = 0; i < len; i++) {var __alloyId2 = models[i];__alloyId2.__transform = _.isFunction(__alloyId2.transform) ? __alloyId2.transform() : __alloyId2.toJSON();var __alloyId4 = { properties: { title: __alloyId2.__transform.name, modelId: __alloyId2.__transform.id } };__alloyId1.push(__alloyId4);}opts.animation ? $.__views["section"].setItems(__alloyId1, opts.animation) : $.__views["section"].setItems(__alloyId1);};__alloyId5.on('fetch destroy change add remove reset', __alloyId6);var __alloyId7 = [];__alloyId7.push($.__views["section"]);$.__views["__alloyId0"] = Ti.UI.createListView(
-  { sections: __alloyId7, id: "__alloyId0" });
+  var __alloyId7 = [];__alloyId7.push($.__views["section"]);$.__views["__alloyId0"] = Ti.UI.createListView(
+  { sections: __alloyId7 });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   showInfo ? $.addListener($.__views["__alloyId0"], 'itemclick', showInfo) : __defers['$.__views["__alloyId0"]!itemclick!showInfo'] = true;exports.destroy = function () {__alloyId5 && __alloyId5.off('fetch destroy change add remove reset', __alloyId6);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -93,4 +98,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,13 +33,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, layout: "vertical", top: 30, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "14dp" }, left: 30, top: 50, text: 'In TSS', id: "__alloyId0" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "14dp" }, left: 30, top: 50, text: 'In TSS' });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["topLabel0"] = Ti.UI.createLabel(
@@ -59,26 +63,27 @@ function Controller() {
 
   $.__views["index"].add($.__views["topLabel3"]);
   $.__views["__alloyId1"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "14dp" }, left: 30, top: 50, text: 'In XML', id: "__alloyId1" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "14dp" }, left: 30, top: 50, text: 'In XML' });
 
   $.__views["index"].add($.__views["__alloyId1"]);
   $.__views["__alloyId2"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'NO SLASH', id: "__alloyId2" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'NO SLASH' });
 
   $.__views["index"].add($.__views["__alloyId2"]);
   $.__views["__alloyId3"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'ONE \ SLASH, IGNORED', id: "__alloyId3" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'ONE \ SLASH, IGNORED' });
 
   $.__views["index"].add($.__views["__alloyId3"]);
   $.__views["__alloyId4"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'TWO \\ SLASHES, 1 SLASH APPEARS', id: "__alloyId4" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'TWO \\ SLASHES, 1 SLASH APPEARS' });
 
   $.__views["index"].add($.__views["__alloyId4"]);
   $.__views["__alloyId5"] = Ti.UI.createLabel(
-  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'LOOK HERE \u2764', id: "__alloyId5" });
+  { width: Ti.UI.FILL, height: Ti.UI.SIZE, color: "#000", textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT, font: { fontSize: "12dp" }, left: 30, text: 'LOOK HERE \u2764' });
 
   $.__views["index"].add($.__views["__alloyId5"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -100,4 +105,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

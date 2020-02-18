@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,40 +33,47 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  function __alloyId1() {
-    $.__views["index"].removeEventListener('open', __alloyId1);
-    if ($.__views["index"].activity) {
-      $.__views["index"].activity.actionBar.displayHomeAsUp = true;$.__views["index"].activity.actionBar.onHomeIconItemSelected = doHomeIcon;
-    } else {
-      Ti.API.warn('You attempted to access an Activity on a lightweight Window or other');
-      Ti.API.warn('UI component which does not have an Android activity. Android Activities');
-      Ti.API.warn('are valid with only windows in TabGroups or heavyweight Windows.');
-    }
+  if (true) {
+    const __alloyId1 = () => {
+      $.__views["index"].removeEventListener('open', __alloyId1);
+      if ($.__views["index"].activity) {
+        $.__views["index"].activity.actionBar.displayHomeAsUp = true;$.__views["index"].activity.actionBar.onHomeIconItemSelected = doHomeIcon;
+      } else {
+        Ti.API.warn('You attempted to access an Activity on a lightweight Window or other');
+        Ti.API.warn('UI component which does not have an Android activity. Android Activities');
+        Ti.API.warn('are valid with only windows in TabGroups or heavyweight Windows.');
+      }
+    };
+    $.__views["index"].addEventListener('open', __alloyId1);
   }
-  $.__views["index"].addEventListener('open', __alloyId1);
   $.__views["drawer"] = Ti.UI.Android.createDrawerLayout(
   { id: "drawer" });
 
   $.__views["index"].add($.__views["drawer"]);
   $.__views["__alloyId3"] = Ti.UI.createView(
-  { backgroundColor: "red", id: "__alloyId3" });
+  { backgroundColor: "red" });
 
   $.__views["drawer"].leftView = $.__views["__alloyId3"];$.__views["__alloyId5"] = Ti.UI.createView(
-  { backgroundColor: "yellow", id: "__alloyId5" });
+  { backgroundColor: "yellow" });
 
   $.__views["__alloyId6"] = Ti.UI.createButton(
-  { title: 'RIGHT', id: "__alloyId6" });
+  { title: 'RIGHT' });
 
   $.__views["__alloyId5"].add($.__views["__alloyId6"]);
   doButtonClick ? $.addListener($.__views["__alloyId6"], 'click', doButtonClick) : __defers['$.__views["__alloyId6"]!click!doButtonClick'] = true;$.__views["drawer"].centerView = $.__views["__alloyId5"];$.__views["__alloyId8"] = Ti.UI.createView(
-  { backgroundColor: "orange", id: "__alloyId8" });
+  { backgroundColor: "orange" });
 
   $.__views["drawer"].rightView = $.__views["__alloyId8"];exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -96,4 +103,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

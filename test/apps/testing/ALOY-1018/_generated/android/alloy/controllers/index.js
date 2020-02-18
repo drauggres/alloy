@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,20 +33,25 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
-  $.__views["index"] = (require("testmod").createWindow || Ti.UI.createWindow)(
+  $.__views["index"] = require("testmod").createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  $.__views["__alloyId0"] = (require("testmod").createCustomButton || Ti.UI.createCustomButton)(
-  { top: 100, title: "I am a CustomButton", id: "__alloyId0" });
+  $.__views["__alloyId0"] = require("testmod").createCustomButton(
+  { top: 100, title: "I am a CustomButton" });
 
   $.__views["index"].add($.__views["__alloyId0"]);
-  $.__views["__alloyId1"] = (require("testmod").createCustomLabel || Ti.UI.createCustomLabel)(
-  { bottom: 100, text: "I am a CustomLabel", id: "__alloyId1" });
+  $.__views["__alloyId1"] = require("testmod").createCustomLabel(
+  { bottom: 100, text: "I am a CustomLabel" });
 
   $.__views["index"].add($.__views["__alloyId1"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -68,4 +73,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map
