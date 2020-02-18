@@ -34,14 +34,14 @@ function Controller() {
 
 
   // Generated UI code
-  $.__views.index = Ti.UI.createWindow(
+  $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
 
-  $.__views.index && $.addTopLevelView($.__views.index);
-  $.__views.webview = Ti.UI.createWebView(
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  $.__views["webview"] = Ti.UI.createWebView(
   { id: "webview", onlink: onLinkHandler });
 
-  $.__views.index.add($.__views.webview);
+  $.__views["index"].add($.__views["webview"]);
   exports.destroy = function () {};
 
   // make all IDed elements in $.__views available right on the $ in a
@@ -86,4 +86,4 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///Users/eharris/Documents/git/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map
+//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -1,29 +1,49 @@
-var Alloy = require("/alloy"), _ = require("/alloy/underscore")._, model, collection;
+var Alloy = require('/alloy'),
+_ = require("/alloy/underscore")._,
+model,collection;
 
 exports.definition = {
-    configuration: {
-        columns: {
-            username: "string"
-        },
-        adapter: {
-            type: "sql",
-            collection_name: "test"
-        }
-    },
-    extendModel: function(Model) {
-        _.extend(Model.prototype, {});
-        return Model;
-    },
-    extendCollection: function(Collection) {
-        _.extend(Collection.prototype, {});
-        return Collection;
-    }
-};
+  configuration: {
+    'columns': {
+      'username': 'string' },
 
-model = Alloy.M("test", exports.definition, []);
+    'adapter': {
+      'type': 'sql',
+      'collection_name': 'test' } },
 
-collection = Alloy.C("test", exports.definition, model);
+
+
+  extendModel: function (Model) {
+    _.extend(Model.prototype, {});
+    return Model;
+  },
+
+  extendCollection: function (Collection) {
+    _.extend(Collection.prototype, {
+
+      // For Backbone v1.1.2, uncomment this to override the fetch method
+      /*
+      fetch: function(options) {
+      	options = options ? _.clone(options) : {};
+      	options.reset = true;
+      	return Backbone.Collection.prototype.fetch.call(this, options);
+      },
+      */});
+
+
+    return Collection;
+  } };
+
+
+model = Alloy.M('test',
+exports.definition,
+[]);
+
+
+collection = Alloy.C('test',
+exports.definition,
+model);
+
 
 exports.Model = model;
-
 exports.Collection = collection;

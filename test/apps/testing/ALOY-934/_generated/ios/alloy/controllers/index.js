@@ -1,59 +1,75 @@
+var Alloy = require('/alloy'),
+Backbone = Alloy.Backbone,
+_ = Alloy._;
+
+
+
+
 function __processArg(obj, key) {
-    var arg = null;
-    if (obj) {
-        arg = obj[key] || null;
-        delete obj[key];
-    }
-    return arg;
+  var arg = null;
+  if (obj) {
+    arg = obj[key] || null;
+  }
+  return arg;
 }
 
 function Controller() {
-    function showOptions() {
-        $.dialog.show();
-    }
-    require("/alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "index";
-    this.args = arguments[0] || {};
-    if (arguments[0]) {
-        __processArg(arguments[0], "__parentSymbol");
-        __processArg(arguments[0], "$model");
-        __processArg(arguments[0], "__itemTemplate");
-    }
-    var $ = this;
-    var exports = {};
-    var __defers = {};
-    $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "#fff",
-        fullscreen: false,
-        exitOnClose: true,
-        id: "index"
-    });
-    $.__views.index && $.addTopLevelView($.__views.index);
-    var __alloyId1 = [];
-    __alloyId1.push("Confirm");
-    __alloyId1.push("Help");
-    __alloyId1.push("Cancel");
-    var __alloyId6 = [];
-    __alloyId6.push("Help");
-    $.__views.dialog = Ti.UI.createOptionDialog({
-        options: __alloyId1,
-        buttonNames: __alloyId6,
-        id: "dialog",
-        title: "Delete File?"
-    });
-    $.__views.__alloyId9 = Ti.UI.createLabel({
-        text: "Click for OptionDialog",
-        id: "__alloyId9"
-    });
-    $.__views.index.add($.__views.__alloyId9);
-    showOptions ? $.addListener($.__views.__alloyId9, "click", showOptions) : __defers["$.__views.__alloyId9!click!showOptions"] = true;
-    exports.destroy = function() {};
-    _.extend($, $.__views);
-    $.index.open();
-    __defers["$.__views.__alloyId9!click!showOptions"] && $.addListener($.__views.__alloyId9, "click", showOptions);
-    _.extend($, exports);
+
+  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  this.__controllerPath = 'index';
+  this.args = arguments[0] || {};
+
+  if (arguments[0]) {
+    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
+    var $model = __processArg(arguments[0], '$model');
+    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
+  }
+  var $ = this;
+  var exports = {};
+  var __defers = {};
+
+  // Generated code that must be executed before all UI and/or
+  // controller code. One example is all model and collection
+  // declarations from markup.
+
+
+  // Generated UI code
+  $.__views["index"] = Ti.UI.createWindow(
+  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
+
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  ;;var __alloyId3 = [];__alloyId3.push("Confirm");if (true) {
+    __alloyId3.push("Help");}
+  __alloyId3.push("Cancel");var __alloyId8 = [];__alloyId8.push("Help");$.__views["dialog"] = Ti.UI.createOptionDialog(
+  { options: __alloyId3, buttonNames: __alloyId8, id: "dialog", title: "Delete File?" });
+
+  $.__views["__alloyId11"] = Ti.UI.createLabel(
+  { text: "Click for OptionDialog", id: "__alloyId11" });
+
+  $.__views["index"].add($.__views["__alloyId11"]);
+  showOptions ? $.addListener($.__views["__alloyId11"], 'click', showOptions) : __defers['$.__views["__alloyId11"]!click!showOptions'] = true;exports.destroy = function () {};
+
+  // make all IDed elements in $.__views available right on the $ in a
+  // controller's internal code. Externally the IDed elements will
+  // be accessed with getView().
+  _.extend($, $.__views);
+
+  // Controller code directly from the developer's controller file
+  function showOptions() {
+    $.dialog.show();
+  }
+  $.index.open();
+
+  // Generated code that must be executed after all UI and
+  // controller code. One example deferred event handlers whose
+  // functions are not defined until after the controller code
+  // is executed.
+  __defers['$.__views["__alloyId11"]!click!showOptions'] && $.addListener($.__views["__alloyId11"], 'click', showOptions);
+
+  // Extend the $ instance with all functions and properties
+  // defined on the exports object.
+  _.extend($, exports);
 }
 
-var Alloy = require("/alloy"), Backbone = Alloy.Backbone, _ = Alloy._;
-
 module.exports = Controller;
+//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

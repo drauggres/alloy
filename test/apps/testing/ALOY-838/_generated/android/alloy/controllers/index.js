@@ -1,49 +1,77 @@
+var Alloy = require('/alloy'),
+Backbone = Alloy.Backbone,
+_ = Alloy._;
+
+
+
+
 function __processArg(obj, key) {
-    var arg = null;
-    if (obj) {
-        arg = obj[key] || null;
-        delete obj[key];
-    }
-    return arg;
+  var arg = null;
+  if (obj) {
+    arg = obj[key] || null;
+  }
+  return arg;
 }
 
 function Controller() {
-    function doClick(e) {
-        alert("Check console output");
-        Ti.API.debug(JSON.stringify(Alloy.CFG, null, "	"));
-    }
-    require("/alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
-    this.__controllerPath = "index";
-    this.args = arguments[0] || {};
-    if (arguments[0]) {
-        __processArg(arguments[0], "__parentSymbol");
-        __processArg(arguments[0], "$model");
-        __processArg(arguments[0], "__itemTemplate");
-    }
-    var $ = this;
-    var exports = {};
-    var __defers = {};
-    $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "#fff",
-        id: "index"
-    });
-    $.__views.index && $.addTopLevelView($.__views.index);
-    $.__views.button = Ti.UI.createButton({
-        title: Alloy.CFG.button,
-        osOnly: Alloy.CFG.osOnly,
-        envOnly: Alloy.CFG.envOnly,
-        id: "button"
-    });
-    $.__views.index.add($.__views.button);
-    doClick ? $.addListener($.__views.button, "click", doClick) : __defers["$.__views.button!click!doClick"] = true;
-    exports.destroy = function() {};
-    _.extend($, $.__views);
-    $.index.open();
-    require("specs/index")($);
-    __defers["$.__views.button!click!doClick"] && $.addListener($.__views.button, "click", doClick);
-    _.extend($, exports);
+
+  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  this.__controllerPath = 'index';
+  this.args = arguments[0] || {};
+
+  if (arguments[0]) {
+    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
+    var $model = __processArg(arguments[0], '$model');
+    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
+  }
+  var $ = this;
+  var exports = {};
+  var __defers = {};
+
+  // Generated code that must be executed before all UI and/or
+  // controller code. One example is all model and collection
+  // declarations from markup.
+
+
+  // Generated UI code
+  $.__views["index"] = Ti.UI.createWindow(
+  { backgroundColor: "#fff", id: "index" });
+
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  $.__views["button"] = Ti.UI.createButton(
+  { title: Alloy.CFG.button, osOnly: Alloy.CFG.osOnly, envOnly: Alloy.CFG.envOnly, id: "button" });
+
+  $.__views["index"].add($.__views["button"]);
+  doClick ? $.addListener($.__views["button"], 'click', doClick) : __defers['$.__views["button"]!click!doClick'] = true;exports.destroy = function () {};
+
+  // make all IDed elements in $.__views available right on the $ in a
+  // controller's internal code. Externally the IDed elements will
+  // be accessed with getView().
+  _.extend($, $.__views);
+
+  // Controller code directly from the developer's controller file
+  function doClick(e) {
+    alert('Check console output');
+    Ti.API.debug(JSON.stringify(Alloy.CFG, null, '\t'));
+  }
+
+  $.index.open();
+
+  // runtime unit tests
+  if (!false) {
+    require('specs/index')($);
+  }
+
+  // Generated code that must be executed after all UI and
+  // controller code. One example deferred event handlers whose
+  // functions are not defined until after the controller code
+  // is executed.
+  __defers['$.__views["button"]!click!doClick'] && $.addListener($.__views["button"], 'click', doClick);
+
+  // Extend the $ instance with all functions and properties
+  // defined on the exports object.
+  _.extend($, exports);
 }
 
-var Alloy = require("/alloy"), Backbone = Alloy.Backbone, _ = Alloy._;
-
 module.exports = Controller;
+//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map
