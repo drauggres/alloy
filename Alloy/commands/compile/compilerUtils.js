@@ -153,11 +153,12 @@ exports.getParserArgs = function(node, state, opts) {
 		formFactor = node.getAttribute('formFactor'),
 		tssIf = node.getAttribute('if'),
 		platformObj;
-	if (!id) {
+	var hasGeneratedId = id.indexOf(alloyUniqueIdPrefix) === 0;
+	if (!id || hasGeneratedId) {
 		doSetId = true;
 		if (defaultId) {
 			id = defaultId;
-		} else {
+		} else if (!hasGeneratedId) {
 			id = exports.generateUniqueId();
 		}
 	}
