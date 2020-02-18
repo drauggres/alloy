@@ -1,0 +1,241 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BORDERSTYLE_ROUNDED"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BUTTONMODE_ALWAYS"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "headerTitle": "Login Id",
+      "id": "idSection"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "template": "inputTemplate",
+        "textfield": {
+          "value": ""
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\""
+      ],
+      "templates": {
+        "inputTemplate": {
+          "properties": {
+            "name": "inputTemplate"
+          },
+          "childTemplates": [
+            {
+              "type": "Ti.UI.TextField",
+              "bindId": "textfield",
+              "childTemplates": [
+                {
+                  "type": "Ti.UI.Button",
+                  "properties": {
+                    "height": "50dp",
+                    "width": "\"{Titanium.UI.SIZE}\"",
+                    "right": 0,
+                    "title": "Right"
+                  },
+                  "events": {}
+                }
+              ],
+              "properties": {
+                "width": "\"{Titanium.UI.FILL}\"",
+                "bottom": 0,
+                "font": {
+                  "fontSize": 12
+                },
+                "borderStyle": "\"{Titanium.UI.INPUT_BORDERSTYLE_ROUNDED}\"",
+                "rightButtonMode": "\"{Titanium.UI.INPUT_BUTTONMODE_ALWAYS}\"",
+                "rightButton": {
+                  "type": "Ti.UI.Button",
+                  "properties": {
+                    "height": "50dp",
+                    "width": "\"{Titanium.UI.SIZE}\"",
+                    "right": 0,
+                    "title": "Right"
+                  },
+                  "events": {}
+                },
+                "bindId": "textfield",
+                "autocorrect": false,
+                "hintText": "User name / e-mail address"
+              }
+            }
+          ]
+        }
+      },
+      "id": "listView"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

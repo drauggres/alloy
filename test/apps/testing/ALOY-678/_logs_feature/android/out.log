@@ -1,0 +1,412 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "section"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "ugly rows"
+        },
+        "button": {
+          "title": "Hi"
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "nested views"
+        },
+        "button": {
+          "title": "there"
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "\"colorful\""
+        },
+        "button": {
+          "title": "!"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\""
+      ],
+      "templates": {
+        "template1": {
+          "properties": {
+            "name": "template1",
+            "height": 70
+          },
+          "childTemplates": [
+            {
+              "type": "Ti.UI.View",
+              "childTemplates": [
+                {
+                  "type": "Ti.UI.ImageView",
+                  "bindId": "image",
+                  "properties": {
+                    "bindId": "image",
+                    "width": 60,
+                    "left": 10
+                  }
+                },
+                {
+                  "type": "Ti.UI.View",
+                  "childTemplates": [
+                    {
+                      "type": "Ti.UI.Label",
+                      "bindId": "label",
+                      "properties": {
+                        "width": "\"{Titanium.UI.SIZE}\"",
+                        "height": "\"{Titanium.UI.SIZE}\"",
+                        "color": "#000",
+                        "bindId": "label"
+                      }
+                    }
+                  ],
+                  "properties": {
+                    "backgroundColor": "#a00",
+                    "height": 50,
+                    "width": 130
+                  }
+                },
+                {
+                  "type": "Ti.UI.View",
+                  "childTemplates": [
+                    {
+                      "type": "Ti.UI.View",
+                      "childTemplates": [
+                        {
+                          "type": "Ti.UI.Button",
+                          "bindId": "button",
+                          "properties": {
+                            "bindId": "button",
+                            "height": 40,
+                            "width": 50
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "backgroundColor": "#0f0",
+                        "height": 50,
+                        "width": 60
+                      }
+                    }
+                  ],
+                  "properties": {
+                    "backgroundColor": "#00f",
+                    "height": 60,
+                    "width": 80,
+                    "right": 10
+                  }
+                }
+              ],
+              "properties": {
+                "backgroundColor": "#aa0"
+              }
+            }
+          ]
+        }
+      },
+      "defaultItemTemplate": "template1"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "items"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "ugly rows"
+        },
+        "button": {
+          "title": "Hi"
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "nested views"
+        },
+        "button": {
+          "title": "there"
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "\"colorful\""
+        },
+        "button": {
+          "title": "!"
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #1"
+        },
+        "button": {
+          "title": 1
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #2"
+        },
+        "button": {
+          "title": 2
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #3"
+        },
+        "button": {
+          "title": 3
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #4"
+        },
+        "button": {
+          "title": 4
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #5"
+        },
+        "button": {
+          "title": 5
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #6"
+        },
+        "button": {
+          "title": 6
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #7"
+        },
+        "button": {
+          "title": 7
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #8"
+        },
+        "button": {
+          "title": 8
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #9"
+        },
+        "button": {
+          "title": 9
+        }
+      },
+      {
+        "image": {
+          "image": "/appc.png"
+        },
+        "label": {
+          "text": "auto-row #10"
+        },
+        "button": {
+          "title": 10
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

@@ -1,0 +1,362 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "debug"
+  ]
+}
+{
+  "name": "Titanium.API.debug",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Installing sql database \"/my_custom_db_file.sqlite\" with name \"my_custom_db_file\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "install"
+  ]
+}
+{
+  "name": "Titanium.Database.install",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "/my_custom_db_file.sqlite",
+    "my_custom_db_file"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "pragma table_info(\"test\");"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute).close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.install).execute)}\")"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "No config.adapter.idAttribute specified for table \"test\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Adding \"alloy_id\" to uniquely identify rows"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "ALTER TABLE test RENAME TO test_temp;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "CREATE TABLE test(username text,alloy_id TEXT UNIQUE);"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "INSERT INTO test(username,alloy_id) SELECT username,CAST(_ROWID_ AS TEXT) FROM test_temp;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "DROP TABLE test_temp;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "CREATE TABLE IF NOT EXISTS test ( username TEXT,alloy_id TEXT UNIQUE)"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "SELECT * FROM test"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.install).execute)<#6>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.install).execute)<#6>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#6>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.install).execute)<#6>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

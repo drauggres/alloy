@@ -1,0 +1,169 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "button"
+  ]
+}
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "osOnly"
+  ]
+}
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "envOnly"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "\"{/CFG.button}\"",
+      "osOnly": "\"{/CFG.osOnly}\"",
+      "envOnly": "\"{/CFG.envOnly}\"",
+      "id": "button"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createButton)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+require('specs/index'). Not found. Return ScopeLogger
+{
+  "name": "specs/index",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "__iamalloy": true,
+      "__views": {
+        "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+        "button": "\"{[apply](Titanium.UI.createButton)}\""
+      },
+      "__events": [
+        {
+          "id": "\"{[apply](Titanium.UI.createButton).id}\"",
+          "view": "\"{[apply](Titanium.UI.createButton)}\"",
+          "type": "click"
+        }
+      ],
+      "__proxyProperties": {},
+      "UI": {},
+      "__controllerPath": "index",
+      "args": {},
+      "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+      "button": "\"{[apply](Titanium.UI.createButton)}\""
+    }
+  ]
+}
