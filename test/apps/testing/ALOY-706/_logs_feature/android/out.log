@@ -1,0 +1,200 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#eee",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#a00",
+      "font": {
+        "fontSize": "48dp",
+        "fontWeight": "bold"
+      },
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "shadowColor": "#999",
+      "shadowOffset": {
+        "x": 3,
+        "y": 3
+      },
+      "text": "some text",
+      "id": "label"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+require('/styles/index'). Not found. Return ScopeLogger
+{
+  "name": "/styles/index",
+  "trap": "get",
+  "args": [
+    "length"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "newLabel",
+      "bottom": 0,
+      "text": "$.UI.create() Label",
+      "textAlign": "center",
+      "classes": [
+        "main"
+      ],
+      "apiName": "Ti.UI.Label"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+require('specs/index'). Not found. Return ScopeLogger
+{
+  "name": "specs/index",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "__iamalloy": true,
+      "__views": {
+        "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+        "label": "\"{[apply](Titanium.UI.createLabel)}\""
+      },
+      "__events": [],
+      "__proxyProperties": {},
+      "UI": {},
+      "__controllerPath": "index",
+      "args": {},
+      "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+      "label": "\"{[apply](Titanium.UI.createLabel)}\"",
+      "newLabel": "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+    }
+  ]
+}

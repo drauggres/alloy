@@ -1,0 +1,355 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-817/alloy.js')
+require('ti.map'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "ti.map",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "ti.map.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{ti.map}\")",
+    {
+      "id": "map2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](ti.map.createView)}\""
+  ]
+}
+{
+  "name": "[apply](ti.map.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](ti.map.createView)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "useless button",
+      "bottom": 50,
+      "id": "empty"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "fireEvent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).fireEvent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click"
+  ]
+}
+{
+  "name": "setTimeout",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    "[object Function]",
+    2000
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "parent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView)",
+  "trap": "get",
+  "args": [
+    "fireEvent"
+  ]
+}
+{
+  "name": "[apply](ti.map.createView).fireEvent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](ti.map.createView)}\")",
+    "click"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "collection change"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "model change"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "another model change"
+  ]
+}

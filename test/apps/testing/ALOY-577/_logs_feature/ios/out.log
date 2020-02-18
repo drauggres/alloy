@@ -1,0 +1,128 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#f00",
+      "modal": false,
+      "exitOnClose": true,
+      "layout": "vertical",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": "10dp",
+      "height": "150dp",
+      "width": "150dp",
+      "image": "/red.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createImageView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": "10dp",
+      "height": "150dp",
+      "width": "150dp",
+      "image": "/blue.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#1>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

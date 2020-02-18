@@ -1,0 +1,256 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/grammar/alloy.js')
+{
+  "name": "/CFG",
+  "trap": "set",
+  "args": [
+    "someText",
+    "hi there!"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#ff0",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "someText"
+  ]
+}
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "someText"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "TEXT_ALIGNMENT_LEFT"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "black",
+      "text": "hi there!",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "font": {
+        "fontSize": 24,
+        "fontWeight": "bold"
+      },
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "color": "red",
+      "top": 10,
+      "textAlign": "\"{Titanium.UI.TEXT_ALIGNMENT_LEFT}\"",
+      "id": "label"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundImage": "/com.test.hellobutton/hello.png",
+      "height": 135,
+      "width": 233,
+      "id": "helloButton"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "parent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

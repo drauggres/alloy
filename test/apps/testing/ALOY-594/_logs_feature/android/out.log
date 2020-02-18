@@ -1,0 +1,786 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-594/alloy.js')
+{
+  "name": "/CFG",
+  "trap": "get",
+  "args": [
+    "useAlloyModel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Using full Alloy model"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "No config.adapter.idAttribute specified for table \"collection\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Adding \"alloy_id\" to uniquely identify rows"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "Titanium.Database.open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "_alloy_"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS migrations (latest TEXT, model TEXT);"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT latest FROM migrations where model = ?;",
+    "collection"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#1>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "BEGIN;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS collection ( text TEXT,alloy_id TEXT UNIQUE)"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 1",
+      "65c7d249-b017-316b-e086-1a2d8d0ff9bd"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 2",
+      "f1107c72-1799-54b3-c384-e25a5a5c70ea"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 3",
+      "77ca52f9-dc07-24bb-de2e-bcc99c50c834"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 4",
+      "13fc1ca6-d8f6-7934-c57a-9962352bf63e"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 5",
+      "26f5c343-e83e-ffa0-bfa8-987406cbda8a"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 6",
+      "3bfc321e-f617-7273-9a30-638d167fd9ff"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 7",
+      "a2086062-c00e-ad9e-c101-cf4bd83a8078"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 8",
+      "ea78b0d1-c2b9-834a-b522-1ea67038caae"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 9",
+      "a71ae859-97e4-28a4-6fb6-ec6ef29b640e"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 10",
+      "df713c38-b68e-c43f-f01e-736be306f766"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 11",
+      "1f8ff8d6-3e13-fe3b-985b-da26b8f3ef83"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 12",
+      "90fb36b0-0ced-b9e5-e3e9-d0fd9be810f0"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 13",
+      "3d9cc0d7-60e4-bc54-720a-1c5393ce37d3"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 14",
+      "78b88c1f-549a-9104-bbdc-91594885757e"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 15",
+      "889c7914-cae1-86eb-6360-e21052281735"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 16",
+      "f2ff5cb1-46a6-8d5a-ea9a-6b0257774e8c"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 17",
+      "90d1f895-c2ea-9771-11bb-b96f4f157e23"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 18",
+      "e203e8db-4cb7-7d88-454c-745a04b452ab"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 19",
+      "7d8edb50-a178-23fe-f8ad-7d323b17379d"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
+    [
+      "label 20",
+      "0c7a61b1-82b6-2427-47ee-ac24b469371c"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "DELETE FROM migrations where model = ?",
+    "collection"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "INSERT INTO migrations VALUES (?,?)",
+    "201306200000000",
+    "collection"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "COMMIT;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT * FROM collection"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#27>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.open).execute)<#27>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#27>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#27>}\")"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "setData"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView).setData",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableView)}\")",
+    []
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

@@ -1,0 +1,402 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "FIXED_SPACE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.FIXED_SPACE}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iPhone"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone.SystemButton",
+  "trap": "get",
+  "args": [
+    "EDIT"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.EDIT}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "FIXED_SPACE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.FIXED_SPACE}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iPhone"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone.SystemButton",
+  "trap": "get",
+  "args": [
+    "ADD"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.ADD}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "FIXED_SPACE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.FIXED_SPACE}\"",
+      "width": "100"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iPhone"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iPhone.SystemButton",
+  "trap": "get",
+  "args": [
+    "DONE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.DONE}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createToolbar"
+  ]
+}
+{
+  "name": "Titanium.UI.createToolbar",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "items": [
+        "\"{[apply](Titanium.UI.createButton)}\"",
+        "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#2>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#3>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#4>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#5>}\""
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createToolbar)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

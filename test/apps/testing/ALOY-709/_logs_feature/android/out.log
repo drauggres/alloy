@@ -1,0 +1,771 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#eee",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "layout": "vertical",
+      "apiName": "Ti.UI.Window",
+      "id": "index",
+      "classes": []
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#a00",
+      "font": {
+        "fontSize": "48dp",
+        "fontWeight": "bold"
+      },
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "shadowColor": "#999",
+      "shadowOffset": {
+        "x": 3,
+        "y": 3
+      },
+      "text": "some text",
+      "apiName": "Ti.UI.Label",
+      "id": "label",
+      "classes": [
+        "main",
+        "shadow"
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "apiName": "Ti.UI.View",
+      "backgroundColor": "#fcc",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "layout": "vertical",
+      "id": "labels",
+      "classes": []
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#000",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "top": 15,
+      "backgroundColor": "#ccf",
+      "text": "label 1",
+      "apiName": "Ti.UI.Label",
+      "classes": [
+        "someClass"
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#000",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "top": 15,
+      "backgroundColor": "#ccf",
+      "text": "label 2",
+      "apiName": "Ti.UI.Label",
+      "classes": [
+        "someClass"
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#000",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "top": 15,
+      "backgroundColor": "#ccf",
+      "text": "label 3",
+      "apiName": "Ti.UI.Label",
+      "classes": [
+        "someClass"
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+  ]
+}
+require('specs/labels'). Not found. Return ScopeLogger
+{
+  "name": "specs/labels",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "__iamalloy": true,
+      "__views": {
+        "labels": "\"{[apply](Titanium.UI.createView)}\"",
+        "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+        "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+        "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+      },
+      "__events": [],
+      "__proxyProperties": {},
+      "UI": {},
+      "__controllerPath": "labels",
+      "args": {
+        "apiName": "Alloy.Require",
+        "classes": [],
+        "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+      },
+      "labels": "\"{[apply](Titanium.UI.createView)}\"",
+      "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+      "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+      "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "parent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "button 1",
+      "apiName": "Ti.UI.Button",
+      "id": "button1",
+      "classes": [
+        "bob",
+        "lou"
+      ]
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "button 2",
+      "apiName": "Ti.UI.Button",
+      "id": "button2",
+      "classes": [
+        "bob",
+        "lou"
+      ]
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "button 3",
+      "id": "button3"
+    }
+  ]
+}
+require('specs/buttons'). Not found. Return ScopeLogger
+{
+  "name": "specs/buttons",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "__iamalloy": true,
+      "__views": {
+        "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+        "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+        "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\""
+      },
+      "__events": [],
+      "__proxyProperties": {},
+      "UI": {},
+      "__controllerPath": "buttons",
+      "args": {
+        "apiName": "Alloy.Require",
+        "classes": [],
+        "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+      },
+      "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+      "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+      "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "parent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#1>",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#1>",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#1>.setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)<#1>}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>.setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)<#2>}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+require('specs/index'). Not found. Return ScopeLogger
+{
+  "name": "specs/index",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "__iamalloy": true,
+      "__views": {
+        "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+        "label": "\"{[apply](Titanium.UI.createLabel)}\"",
+        "__alloyId0": {
+          "__iamalloy": true,
+          "__views": {
+            "labels": "\"{[apply](Titanium.UI.createView)}\"",
+            "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+            "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+            "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+          },
+          "__events": [],
+          "__proxyProperties": {},
+          "UI": {},
+          "__controllerPath": "labels",
+          "args": {
+            "apiName": "Alloy.Require",
+            "classes": [],
+            "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+          },
+          "labels": "\"{[apply](Titanium.UI.createView)}\"",
+          "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+          "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+          "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\"",
+          "parent": "\"{[apply](Titanium.UI.createWindow).parent}\""
+        },
+        "__alloyId1": {
+          "__iamalloy": true,
+          "__views": {
+            "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+            "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+            "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\""
+          },
+          "__events": [],
+          "__proxyProperties": {},
+          "UI": {},
+          "__controllerPath": "buttons",
+          "args": {
+            "apiName": "Alloy.Require",
+            "classes": [],
+            "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+          },
+          "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+          "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+          "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\"",
+          "parent": "\"{[apply](Titanium.UI.createWindow).parent}\""
+        }
+      },
+      "__events": [],
+      "__proxyProperties": {},
+      "UI": {},
+      "__controllerPath": "index",
+      "args": {},
+      "index": "\"{[apply](Titanium.UI.createWindow)}\"",
+      "label": "\"{[apply](Titanium.UI.createLabel)}\"",
+      "__alloyId0": {
+        "__iamalloy": true,
+        "__views": {
+          "labels": "\"{[apply](Titanium.UI.createView)}\"",
+          "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+          "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+          "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+        },
+        "__events": [],
+        "__proxyProperties": {},
+        "UI": {},
+        "__controllerPath": "labels",
+        "args": {
+          "apiName": "Alloy.Require",
+          "classes": [],
+          "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+        },
+        "labels": "\"{[apply](Titanium.UI.createView)}\"",
+        "__alloyId2": "\"{[apply](Titanium.UI.createLabel)<#1>}\"",
+        "__alloyId3": "\"{[apply](Titanium.UI.createLabel)<#2>}\"",
+        "__alloyId4": "\"{[apply](Titanium.UI.createLabel)<#3>}\"",
+        "parent": "\"{[apply](Titanium.UI.createWindow).parent}\""
+      },
+      "__alloyId1": {
+        "__iamalloy": true,
+        "__views": {
+          "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+          "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+          "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\""
+        },
+        "__events": [],
+        "__proxyProperties": {},
+        "UI": {},
+        "__controllerPath": "buttons",
+        "args": {
+          "apiName": "Alloy.Require",
+          "classes": [],
+          "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
+        },
+        "button1": "\"{[apply](Titanium.UI.createButton)}\"",
+        "button2": "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+        "button3": "\"{[apply](Titanium.UI.createButton)<#2>}\"",
+        "parent": "\"{[apply](Titanium.UI.createWindow).parent}\""
+      }
+    }
+  ]
+}

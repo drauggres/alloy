@@ -1,0 +1,586 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "No config.adapter.idAttribute specified for table \"book\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Adding \"alloy_id\" to uniquely identify rows"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "Titanium.Database.open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "_alloy_"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS book ( title TEXT,author TEXT,genre TEXT,alloy_id TEXT UNIQUE)"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "white",
+      "layout": "vertical",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "title": "Click Me",
+      "id": "theButton"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createButton)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "layout": "vertical",
+      "id": "theView"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "color": "#000",
+      "top": 10,
+      "id": "title"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createLabel)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "color": "#000",
+      "top": 10,
+      "id": "author"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createLabel)<#1>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "color": "#000",
+      "top": 10,
+      "id": "genre"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#2>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createLabel)<#2>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
