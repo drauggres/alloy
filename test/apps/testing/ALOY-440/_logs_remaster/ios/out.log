@@ -1,0 +1,687 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-440/alloy.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "version"
+  ]
+}
+{
+  "name": "Titanium.Platform.version",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "set",
+  "args": [
+    "backgroundColor",
+    "#fff"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "No config.adapter.idAttribute specified for table \"fruits\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Adding \"alloy_id\" to uniquely identify rows"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "Titanium.Database.open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "_alloy_"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS fruits ( name TEXT,alloy_id TEXT UNIQUE)"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "No config.adapter.idAttribute specified for table \"colors\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Adding \"alloy_id\" to uniquely identify rows"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS colors ( color TEXT,alloy_id TEXT UNIQUE)"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createPicker"
+  ]
+}
+{
+  "name": "Titanium.UI.createPicker",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "picker",
+      "top": 50,
+      "useSpinner": true
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createPicker)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createPickerColumn"
+  ]
+}
+{
+  "name": "Titanium.UI.createPickerColumn",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "column1"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createPickerColumn"
+  ]
+}
+{
+  "name": "Titanium.UI.createPickerColumn",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "column2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createPicker)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createPicker).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createPicker)}\")",
+    [
+      "\"{[apply](Titanium.UI.createPickerColumn)}\"",
+      "\"{[apply](Titanium.UI.createPickerColumn)<#1>}\""
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
+    [
+      "banana",
+      "518f40a7-7207-79d3-453b-907addeb33eb"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
+    [
+      "yellow",
+      "f0b38b81-75cf-a162-2652-9378ff2b7ff8"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
+    [
+      "cherry",
+      "d21f4227-7775-9ad2-cb80-3b61a55ac302"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
+    [
+      "blue",
+      "9ffaa886-5cfe-5f07-ffb4-2ba6fad57f97"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
+    [
+      "blueberry",
+      "b4fcb8fa-9269-1a97-0913-2a2cabcd2540"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
+    [
+      "orange",
+      "91658943-1981-e4b3-6f4b-939b651bed19"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
+    [
+      "orange",
+      "b93767fa-a802-af86-0912-5d6178df6bf4"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
+    [
+      "green",
+      "13c3c7fc-60d7-ce60-9949-d825a6ed53e5"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
+    [
+      "pear",
+      "c6652834-193c-d823-662c-9edf2b45f4ab"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
+    [
+      "white",
+      "095a0aa2-57ac-a83c-0f39-c081a8f2db5b"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT * FROM fruits"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#12>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.open).execute)<#12>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#12>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#12>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT * FROM colors"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#13>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.open).execute)<#13>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#13>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#13>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

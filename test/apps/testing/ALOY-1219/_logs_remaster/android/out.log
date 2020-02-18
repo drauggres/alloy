@@ -1,0 +1,1732 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1219/alloy.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "navBarHidden": true,
+      "id": "__alloyId2"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "50dp",
+      "width": "\"{Titanium.UI.FILL}\"",
+      "top": 0,
+      "textAlign": "center",
+      "color": "#fff",
+      "font": {
+        "fontSize": "32dp",
+        "fontWeight": "bold"
+      },
+      "text": "Model",
+      "id": "__alloyId3"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "font": {
+        "fontSize": "160dp",
+        "fontWeight": "bold"
+      },
+      "id": "counter"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createLabel)<#1>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTab"
+  ]
+}
+{
+  "name": "Titanium.UI.createTab",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "window": "\"{[apply](Titanium.UI.createWindow)}\"",
+      "title": "model",
+      "id": "__alloyId1"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "navBarHidden": true,
+      "id": "__alloyId5"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "50dp",
+      "width": "\"{Titanium.UI.FILL}\"",
+      "top": 0,
+      "textAlign": "center",
+      "color": "#fff",
+      "font": {
+        "fontSize": "32dp",
+        "fontWeight": "bold"
+      },
+      "text": "Collection",
+      "id": "__alloyId6"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": "50dp",
+      "id": "table"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableView)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTab"
+  ]
+}
+{
+  "name": "Titanium.UI.createTab",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "window": "\"{[apply](Titanium.UI.createWindow)<#1>}\"",
+      "title": "collection",
+      "id": "__alloyId4"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTabGroup"
+  ]
+}
+{
+  "name": "Titanium.UI.createTabGroup",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "tabs": [
+        "\"{[apply](Titanium.UI.createTab)}\"",
+        "\"{[apply](Titanium.UI.createTab)<#1>}\""
+      ],
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "set",
+  "args": [
+    "backgroundColor",
+    "#00f"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "set",
+  "args": [
+    "text",
+    1
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#1>",
+  "trap": "set",
+  "args": [
+    "color",
+    "#00f"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)<#2>",
+  "trap": "set",
+  "args": [
+    "backgroundColor",
+    "#00f"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Ironman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Ironman, by Ironman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Ironman Ironman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Superman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Superman, by Superman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Superman Superman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Thor"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Thor, by Thor"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Thor Thor"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Captain America"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Captain America, by Captain America"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Captain America Captain America"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Hulk"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Hulk, by Hulk"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Hulk Hulk"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Green Lantern"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Green Lantern, by Green Lantern"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Green Lantern Green Lantern"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Punisher"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Punisher, by Punisher"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Punisher Punisher"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Spiderman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Spiderman, by Spiderman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Spiderman Spiderman"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Wolverine"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Wolverine, by Wolverine"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Wolverine Wolverine"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Cyclops"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "My hero is {{name}}"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Cyclops, by Cyclops"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Cyclops Cyclops"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "{{name}}"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "setData"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView).setData",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableView)}\")",
+    [
+      "\"{[apply](Titanium.UI.createTableViewRow)}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#1>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#2>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#3>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#4>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#5>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#6>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#7>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#8>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#9>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#10>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#11>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#12>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#13>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#14>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#15>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#16>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#17>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#18>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#19>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#20>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#21>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#22>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#23>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#24>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#25>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#26>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#27>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#28>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#29>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#30>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#31>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#32>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#33>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#34>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#35>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#36>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#37>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#38>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#39>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#40>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#41>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#42>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#43>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#44>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#45>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#46>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#47>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#48>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#49>}\""
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTabGroup)}\")"
+  ]
+}

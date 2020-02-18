@@ -1,0 +1,224 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": 100,
+      "width": 100,
+      "backgroundColor": "#f00",
+      "top": 15,
+      "opacity": 0,
+      "id": "view1"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": 100,
+      "width": 100,
+      "backgroundColor": "#00f",
+      "bottom": 15,
+      "opacity": 1,
+      "id": "view2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createView)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": 60,
+      "width": 200,
+      "backgroundColor": "#0f0",
+      "opacity": 1,
+      "id": "view3"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createView)<#2>}\""
+  ]
+}
+require('alloy/animation'). Not found. Return ScopeLogger
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+{
+  "name": "alloy/animation",
+  "trap": "get",
+  "args": [
+    "fadeIn"
+  ]
+}
+{
+  "name": "alloy/animation.fadeIn",
+  "trap": "apply",
+  "args": [
+    "(this: \"{alloy/animation}\")",
+    "\"{[apply](Titanium.UI.createView)}\"",
+    1000,
+    "[object Function]"
+  ]
+}
+{
+  "name": "alloy/animation",
+  "trap": "get",
+  "args": [
+    "fadeOut"
+  ]
+}
+{
+  "name": "alloy/animation.fadeOut",
+  "trap": "apply",
+  "args": [
+    "(this: \"{alloy/animation}\")",
+    "\"{[apply](Titanium.UI.createView)<#1>}\"",
+    1000,
+    "[object Function]"
+  ]
+}
+{
+  "name": "alloy/animation",
+  "trap": "get",
+  "args": [
+    "fadeIn"
+  ]
+}
+{
+  "name": "alloy/animation.fadeIn",
+  "trap": "apply",
+  "args": [
+    "(this: \"{alloy/animation}\")",
+    "\"{[apply](Titanium.UI.createView)<#2>}\"",
+    2000,
+    "[object Function]"
+  ]
+}

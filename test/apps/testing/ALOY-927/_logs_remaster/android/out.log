@@ -1,0 +1,543 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "title": "Keyboard Types",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createScrollView"
+  ]
+}
+{
+  "name": "Titanium.UI.createScrollView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "layout": "vertical",
+      "id": "scrolly"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createScrollView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BORDERSTYLE_ROUNDED"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "KEYBOARD_DEFAULT"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "RETURNKEY_DEFAULT"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "TEXT_AUTOCAPITALIZATION_WORDS"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 40,
+      "width": "85%",
+      "height": "40dp",
+      "borderStyle": "\"{Titanium.UI.INPUT_BORDERSTYLE_ROUNDED}\"",
+      "keyboardType": "\"{Titanium.UI.KEYBOARD_DEFAULT}\"",
+      "returnKeyType": "\"{Titanium.UI.RETURNKEY_DEFAULT}\"",
+      "autocorrect": true,
+      "autocapitalization": "\"{Titanium.UI.TEXT_AUTOCAPITALIZATION_WORDS}\"",
+      "hintText": "default",
+      "id": "normal"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createTextField)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BORDERSTYLE_ROUNDED"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "KEYBOARD_NUMBERS_PUNCTUATION"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "RETURNKEY_DONE"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 40,
+      "width": "85%",
+      "height": "40dp",
+      "borderStyle": "\"{Titanium.UI.INPUT_BORDERSTYLE_ROUNDED}\"",
+      "hintText": "numbers_punctuation / done",
+      "id": "numeric",
+      "keyboardType": "\"{Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION}\"",
+      "returnKeyType": "\"{Titanium.UI.RETURNKEY_DONE}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createTextField)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BORDERSTYLE_ROUNDED"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "KEYBOARD_URL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "RETURNKEY_GO"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 40,
+      "width": "85%",
+      "height": "40dp",
+      "borderStyle": "\"{Titanium.UI.INPUT_BORDERSTYLE_ROUNDED}\"",
+      "hintText": "url / go",
+      "id": "web",
+      "keyboardType": "\"{Titanium.UI.KEYBOARD_URL}\"",
+      "returnKeyType": "\"{Titanium.UI.RETURNKEY_GO}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createTextField)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "INPUT_BORDERSTYLE_ROUNDED"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "KEYBOARD_DEFAULT"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "TEXT_AUTOCAPITALIZATION_NONE"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 40,
+      "width": "85%",
+      "height": "40dp",
+      "borderStyle": "\"{Titanium.UI.INPUT_BORDERSTYLE_ROUNDED}\"",
+      "keyboardType": "\"{Titanium.UI.KEYBOARD_DEFAULT}\"",
+      "hintText": "password",
+      "passwordMask": true,
+      "autocorrect": false,
+      "autocapitalization": "\"{Titanium.UI.TEXT_AUTOCAPITALIZATION_NONE}\"",
+      "id": "password"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createTextField)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextArea"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "KEYBOARD_NUMBERS_PUNCTUATION"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "RETURNKEY_SEND"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "TEXT_AUTOCAPITALIZATION_ALL"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextArea",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 40,
+      "width": "85%",
+      "height": "40dp",
+      "borderWidth": 1,
+      "borderColor": "#999",
+      "keyboardType": "\"{Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION}\"",
+      "returnKeyType": "\"{Titanium.UI.RETURNKEY_SEND}\"",
+      "id": "textarea",
+      "autocapitalization": "\"{Titanium.UI.TEXT_AUTOCAPITALIZATION_ALL}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createTextArea)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

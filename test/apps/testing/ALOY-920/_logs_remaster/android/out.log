@@ -1,0 +1,18 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+require('should'). Not found. Return ScopeLogger
+{
+  "name": "should",
+  "trap": "get",
+  "args": [
+    "exist"
+  ]
+}
+{
+  "name": "should.exist",
+  "trap": "apply",
+  "args": [
+    "(this: \"{should}\")",
+    123
+  ]
+}

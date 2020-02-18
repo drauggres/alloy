@@ -1,0 +1,403 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "headerTitle": "Fruit / Frutas",
+      "id": "__alloyId8"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "info": {
+          "text": "Apple"
+        },
+        "es_info": {
+          "text": "Manzana"
+        },
+        "properties": {
+          "id": "__alloyId11"
+        }
+      },
+      {
+        "info": {
+          "text": "Banana"
+        },
+        "es_info": {
+          "text": "Banana"
+        },
+        "properties": {
+          "id": "__alloyId12"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "headerTitle": "Vegetables / Verduras",
+      "id": "__alloyId14"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#1>",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "info": {
+          "text": "Carrot"
+        },
+        "es_info": {
+          "text": "Zanahoria"
+        },
+        "properties": {
+          "id": "__alloyId17"
+        }
+      },
+      {
+        "info": {
+          "text": "Potato"
+        },
+        "es_info": {
+          "text": "Patata"
+        },
+        "properties": {
+          "id": "__alloyId18"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "headerTitle": "Grains / Granos",
+      "id": "__alloyId19"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#2>",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "info": {
+          "text": "Corn"
+        },
+        "es_info": {
+          "text": "Maiz"
+        },
+        "properties": {
+          "id": "__alloyId22"
+        }
+      },
+      {
+        "info": {
+          "text": "Rice"
+        },
+        "es_info": {
+          "text": "Arroz"
+        },
+        "properties": {
+          "id": "__alloyId23"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\"",
+        "\"{[apply](Titanium.UI.createListSection)<#1>}\"",
+        "\"{[apply](Titanium.UI.createListSection)<#2>}\""
+      ],
+      "templates": {
+        "template": {
+          "properties": {
+            "name": "template"
+          },
+          "childTemplates": [
+            {
+              "type": "Ti.UI.Label",
+              "bindId": "info",
+              "properties": {
+                "color": "black",
+                "font": {
+                  "fontFamily": "Arial",
+                  "fontSize": "20dp",
+                  "fontWeight": "bold"
+                },
+                "left": "10dp",
+                "top": 0,
+                "bindId": "info"
+              }
+            },
+            {
+              "type": "Ti.UI.Label",
+              "bindId": "es_info",
+              "properties": {
+                "color": "gray",
+                "font": {
+                  "fontFamily": "Arial",
+                  "fontSize": "14dp"
+                },
+                "left": "10dp",
+                "top": "25dp",
+                "bindId": "es_info"
+              }
+            }
+          ]
+        }
+      },
+      "id": "listView",
+      "defaultItemTemplate": "template"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "__alloyId24"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#3>",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "properties": {
+          "title": "List item 1",
+          "id": "__alloyId27"
+        }
+      },
+      {
+        "properties": {
+          "title": "List item 2",
+          "id": "__alloyId28"
+        }
+      },
+      {
+        "properties": {
+          "title": "List item 3",
+          "id": "__alloyId29"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)<#3>}\""
+      ],
+      "id": "list"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createScrollableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createScrollableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "showPagingControl": true,
+      "pagingControlColor": "black",
+      "views": [
+        "\"{[apply](Titanium.UI.createListView)}\"",
+        "\"{[apply](Titanium.UI.createListView)<#1>}\""
+      ],
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createScrollableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

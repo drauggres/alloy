@@ -1,0 +1,85 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "App"
+  ]
+}
+{
+  "name": "Titanium.App",
+  "trap": "get",
+  "args": [
+    "Properties"
+  ]
+}
+{
+  "name": "Titanium.App.Properties",
+  "trap": "get",
+  "args": [
+    "listProperties"
+  ]
+}
+{
+  "name": "Titanium.App.Properties.listProperties",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.App.Properties}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.App.Properties.listProperties)",
+  "trap": "get",
+  "args": [
+    "length"
+  ]
+}
+{
+  "name": "[apply](Titanium.App.Properties.listProperties)",
+  "trap": "get",
+  "args": [
+    "length"
+  ]
+}

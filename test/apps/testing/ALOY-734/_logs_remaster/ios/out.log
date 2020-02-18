@@ -1,0 +1,209 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createCoverFlowView"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createCoverFlowView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "images": [
+        {
+          "image": "appc1.png"
+        },
+        {
+          "image": "appc1.png"
+        },
+        {
+          "image": "appc1.png"
+        },
+        {
+          "image": "/appc1.png"
+        }
+      ],
+      "id": "coverflow"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.iOS.createCoverFlowView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButtonBar"
+  ]
+}
+{
+  "name": "Titanium.UI.createButtonBar",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "bottom": 10,
+      "left": 15,
+      "right": 15,
+      "labels": [
+        {
+          "title": "button 1"
+        },
+        {
+          "title": "button 2"
+        },
+        {
+          "title": "hi there"
+        }
+      ],
+      "id": "buttonbar"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createButtonBar)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTabbedBar"
+  ]
+}
+{
+  "name": "Titanium.UI.createTabbedBar",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 10,
+      "left": 15,
+      "right": 15,
+      "labels": [
+        {
+          "title": "button 1"
+        },
+        {
+          "title": "button 2"
+        },
+        {
+          "title": "hi there"
+        }
+      ],
+      "id": "tabbedbar"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTabbedBar)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

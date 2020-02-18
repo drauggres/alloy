@@ -1,0 +1,526 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "white",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "CANCEL"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.CANCEL}\"",
+      "title": "Cancel",
+      "id": "__alloyId4"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "FLEXIBLE_SPACE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.FLEXIBLE_SPACE}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "CAMERA"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.CAMERA}\"",
+      "title": "Camera",
+      "id": "__alloyId6"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)<#2>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButton"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButton",
+  "trap": "get",
+  "args": [
+    "FLEXIBLE_SPACE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.FLEXIBLE_SPACE}\""
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createButton"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "SystemButtonStyle"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.SystemButtonStyle",
+  "trap": "get",
+  "args": [
+    "DONE"
+  ]
+}
+{
+  "name": "Titanium.UI.createButton",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "Send",
+      "style": "\"{Titanium.UI.iOS.SystemButtonStyle.DONE}\"",
+      "id": "__alloyId8"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#4>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#4>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#4>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createButton)<#4>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#4>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createButton)<#4>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createToolbar"
+  ]
+}
+{
+  "name": "Titanium.UI.createToolbar",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "items": [
+        "\"{[apply](Titanium.UI.createButton)}\"",
+        "\"{[apply](Titanium.UI.createButton)<#1>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#2>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#3>}\"",
+        "\"{[apply](Titanium.UI.createButton)<#4>}\""
+      ],
+      "id": "__alloyId1"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextArea"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextArea",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "keyboardToolbarColor": "#999",
+      "keyboardToolbarHeight": "40",
+      "height": "30dp",
+      "width": "80%",
+      "top": 30,
+      "borderWidth": "1",
+      "borderRadius": "3",
+      "borderColor": "#bbb",
+      "font": {
+        "fontSize": 12
+      },
+      "value": "Focus to see keyboard with toolbar",
+      "keyboardToolbar": "\"{[apply](Titanium.UI.createToolbar)}\"",
+      "id": "textArea"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTextArea)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createToolbar"
+  ]
+}
+{
+  "name": "Titanium.UI.createToolbar",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "keyboardToolbar": "\"{[apply](Titanium.UI.createToolbar)}\"",
+      "id": "textArea"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
