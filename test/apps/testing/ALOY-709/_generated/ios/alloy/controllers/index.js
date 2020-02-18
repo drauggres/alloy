@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#eee", fullscreen: false, exitOnClose: true, layout: "vertical", apiName: "Ti.UI.Window", id: "index", classes: [] });
@@ -42,11 +46,12 @@ function Controller() {
   { color: "#a00", font: { fontSize: "48dp", fontWeight: "bold" }, height: Ti.UI.SIZE, width: Ti.UI.SIZE, shadowColor: "#999", shadowOffset: { x: 3, y: 3 }, text: 'some text', apiName: "Ti.UI.Label", id: "label", classes: ["main", "shadow"] });
 
   $.__views["index"].add($.__views["label"]);
-  $.__views["__alloyId0"] = Alloy.createController('labels', { apiName: "Alloy.Require", id: "__alloyId0", classes: [], __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId0"] = Alloy.createController('labels', { apiName: "Alloy.Require", classes: [], __parentSymbol: $.__views["index"] });
   $.__views["__alloyId0"].setParent($.__views["index"]);
-  $.__views["__alloyId1"] = Alloy.createController('buttons', { apiName: "Alloy.Require", id: "__alloyId1", classes: [], __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId1"] = Alloy.createController('buttons', { apiName: "Alloy.Require", classes: [], __parentSymbol: $.__views["index"] });
   $.__views["__alloyId1"].setParent($.__views["index"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -74,4 +79,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

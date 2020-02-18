@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'popover';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["popover"] = Ti.UI.iPad.createPopover(
   { id: "popover", height: 100, width: 250 });
@@ -42,10 +46,11 @@ function Controller() {
   { id: "popView", backgroundColor: "green", height: 100, width: 250 });
 
   $.__views["__alloyId1"] = Ti.UI.createLabel(
-  { text: 'Popover with a View', id: "__alloyId1" });
+  { text: 'Popover with a View' });
 
   $.__views["popView"].add($.__views["__alloyId1"]);
   $.__views["popover"].contentView = $.__views["popView"];exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -67,4 +72,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/popover.js.map

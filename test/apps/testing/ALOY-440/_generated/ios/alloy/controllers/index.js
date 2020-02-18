@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,22 @@ function Controller() {
   // declarations from markup.
   Alloy.Collections.instance('fruits');Alloy.Collections.instance('colors');
 
+  // <dataFunctions>
+  var __alloyId7 = Alloy.Collections['fruits'] || fruits;function __alloyId8(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId8.opts || {};var models = __alloyId7.models;var len = models.length;var rows = [];
+    _.each($.__views["column1"].getRows(), function (r) {$.__views["column1"].removeRow(r);});
+    for (var i = 0; i < len; i++) {var __alloyId5 = models[i];__alloyId5.__transform = _.isFunction(__alloyId5.transform) ? __alloyId5.transform() : __alloyId5.toJSON();$.__views["__alloyId6"] = Ti.UI.createPickerRow(
+      { title: __alloyId5.__transform.name });
+
+      rows.push($.__views["__alloyId6"]);
+    }_.each(rows, function (row) {$.__views["column1"].addRow(row);});};__alloyId7.on('fetch destroy change add remove reset', __alloyId8);var __alloyId11 = Alloy.Collections['colors'] || colors;function __alloyId12(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId12.opts || {};var models = __alloyId11.models;var len = models.length;var rows = [];
+    _.each($.__views["column2"].getRows(), function (r) {$.__views["column2"].removeRow(r);});
+    for (var i = 0; i < len; i++) {var __alloyId9 = models[i];__alloyId9.__transform = doTransform(__alloyId9);$.__views["__alloyId10"] = Ti.UI.createPickerRow(
+      { title: __alloyId9.__transform.color });
+
+      rows.push($.__views["__alloyId10"]);
+    }_.each(rows, function (row) {$.__views["column2"].addRow(row);});};__alloyId11.on('fetch destroy change add remove reset', __alloyId12);
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -46,24 +62,13 @@ function Controller() {
   { id: "column1" });
 
   __alloyId4.push($.__views["column1"]);
-  var __alloyId7 = Alloy.Collections['fruits'] || fruits;function __alloyId8(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId8.opts || {};var models = __alloyId7.models;var len = models.length;var rows = [];
-    _.each($.__views["column1"].getRows(), function (r) {$.__views["column1"].removeRow(r);});
-    for (var i = 0; i < len; i++) {var __alloyId5 = models[i];__alloyId5.__transform = _.isFunction(__alloyId5.transform) ? __alloyId5.transform() : __alloyId5.toJSON();$.__views["__alloyId6"] = Ti.UI.createPickerRow(
-      { title: __alloyId5.__transform.name, id: "__alloyId6" });
-
-      rows.push($.__views["__alloyId6"]);
-    }_.each(rows, function (row) {$.__views["column1"].addRow(row);});};__alloyId7.on('fetch destroy change add remove reset', __alloyId8);$.__views["column2"] = Ti.UI.createPickerColumn(
+  $.__views["column2"] = Ti.UI.createPickerColumn(
   { id: "column2" });
 
   __alloyId4.push($.__views["column2"]);
-  var __alloyId11 = Alloy.Collections['colors'] || colors;function __alloyId12(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId12.opts || {};var models = __alloyId11.models;var len = models.length;var rows = [];
-    _.each($.__views["column2"].getRows(), function (r) {$.__views["column2"].removeRow(r);});
-    for (var i = 0; i < len; i++) {var __alloyId9 = models[i];__alloyId9.__transform = doTransform(__alloyId9);$.__views["__alloyId10"] = Ti.UI.createPickerRow(
-      { title: __alloyId9.__transform.color, id: "__alloyId10" });
-
-      rows.push($.__views["__alloyId10"]);
-    }_.each(rows, function (row) {$.__views["column2"].addRow(row);});};__alloyId11.on('fetch destroy change add remove reset', __alloyId12);$.__views["picker"].add(__alloyId4);
+  $.__views["picker"].add(__alloyId4);
   exports.destroy = function () {__alloyId7 && __alloyId7.off('fetch destroy change add remove reset', __alloyId8);__alloyId11 && __alloyId11.off('fetch destroy change add remove reset', __alloyId12);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -101,4 +106,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

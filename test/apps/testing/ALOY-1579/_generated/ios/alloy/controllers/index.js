@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -43,19 +47,20 @@ function Controller() {
 
   $.__views["index"].add($.__views["drawer"]);
   $.__views["__alloyId2"] = Ti.UI.createView(
-  { backgroundColor: "red", id: "__alloyId2" });
+  { backgroundColor: "red" });
 
   $.__views["drawer"].leftView = $.__views["__alloyId2"];$.__views["__alloyId4"] = Ti.UI.createView(
-  { backgroundColor: "yellow", id: "__alloyId4" });
+  { backgroundColor: "yellow" });
 
   $.__views["__alloyId5"] = Ti.UI.createButton(
-  { title: 'RIGHT', id: "__alloyId5" });
+  { title: 'RIGHT' });
 
   $.__views["__alloyId4"].add($.__views["__alloyId5"]);
   doButtonClick ? $.addListener($.__views["__alloyId5"], 'click', doButtonClick) : __defers['$.__views["__alloyId5"]!click!doButtonClick'] = true;$.__views["drawer"].centerView = $.__views["__alloyId4"];$.__views["__alloyId7"] = Ti.UI.createView(
-  { backgroundColor: "orange", id: "__alloyId7" });
+  { backgroundColor: "orange" });
 
   $.__views["drawer"].rightView = $.__views["__alloyId7"];exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -85,4 +90,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

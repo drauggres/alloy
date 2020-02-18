@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('com.foo.widget');this.__widgetId = 'com.foo.widget';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('com.foo.widget');this.__widgetId = 'com.foo.widget';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'image';
   this.args = arguments[0] || {};
 
@@ -40,12 +40,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["image"] = Ti.UI.createImageView(
   { image: "/com.foo.widget/back.jpg", height: Ti.UI.FILL, width: Ti.UI.FILL, id: "image" });
 
   $.__views["image"] && $.addTopLevelView($.__views["image"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -67,4 +72,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/widgets/com.foo.widget/controllers/image.js.map

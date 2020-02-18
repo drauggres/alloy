@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'win2';
   this.args = arguments[0] || {};
 
@@ -33,12 +33,16 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["win2"] = Ti.UI.createWindow(
   { backgroundColor: "#000", modal: false, id: "win2" });
 
   $.__views["win2"] && $.addTopLevelView($.__views["win2"]);
-  function __alloyId17() {
+  const __alloyId17 = () => {
     $.__views["win2"].removeEventListener('open', __alloyId17);
     if ($.__views["win2"].activity) {
       $.__views["win2"].activity.actionBar.backgroundImage = "/actionbackground.png";$.__views["win2"].activity.actionBar.displayHomeAsUp = true;$.__views["win2"].activity.actionBar.icon = "/actionicon.png";$.__views["win2"].activity.actionBar.onHomeIconItemSelected = doHomeIcon;
@@ -47,19 +51,20 @@ function Controller() {
       Ti.API.warn('UI component which does not have an Android activity. Android Activities');
       Ti.API.warn('are valid with only windows in TabGroups or heavyweight Windows.');
     }
-  }
+  };
   $.__views["win2"].addEventListener('open', __alloyId17);
-  $.__views["__alloyId18"] = Alloy.createController('menu', { id: "__alloyId18", __parentSymbol: $.__views["win2"] });
+  $.__views["__alloyId18"] = Alloy.createController('menu', { __parentSymbol: $.__views["win2"] });
   $.__views["__alloyId18"].setParent($.__views["win2"]);
   $.__views["__alloyId19"] = Ti.UI.createLabel(
-  { color: "#fff", font: { fontSize: "18dp", fontWeight: "bold" }, height: Ti.UI.SIZE, width: Ti.UI.SIZE, text: 'Window 2', id: "__alloyId19" });
+  { color: "#fff", font: { fontSize: "18dp", fontWeight: "bold" }, height: Ti.UI.SIZE, width: Ti.UI.SIZE, text: 'Window 2' });
 
   $.__views["win2"].add($.__views["__alloyId19"]);
   $.__views["__alloyId20"] = Ti.UI.createLabel(
-  { color: "#fff", font: { fontSize: "18dp", fontWeight: "bold" }, height: Ti.UI.SIZE, width: Ti.UI.SIZE, text: 'Press the menu button', bottom: "20dp", id: "__alloyId20" });
+  { color: "#fff", font: { fontSize: "18dp", fontWeight: "bold" }, height: Ti.UI.SIZE, width: Ti.UI.SIZE, text: 'Press the menu button', bottom: "20dp" });
 
   $.__views["win2"].add($.__views["__alloyId20"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -89,4 +94,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/win2.js.map

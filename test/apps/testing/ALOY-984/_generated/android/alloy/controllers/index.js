@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (true || false) {
     $.__views["index"] = Ti.UI.createWindow(
@@ -40,11 +44,12 @@ function Controller() {
 
     $.__views["index"] && $.addTopLevelView($.__views["index"]);
     $.__views["__alloyId0"] = Ti.UI.createLabel(
-    { text: "This example is meant for iOS only", id: "__alloyId0" });
+    { text: "This example is meant for iOS only" });
 
     $.__views["index"].add($.__views["__alloyId0"]);
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -66,4 +71,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

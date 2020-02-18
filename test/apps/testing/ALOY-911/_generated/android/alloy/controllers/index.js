@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -42,31 +46,31 @@ function Controller() {
   { backgroundColor: "#3498db", height: "50dp", width: Ti.UI.FILL, color: "#fff", font: { fontSize: "32dp", fontWeight: "bold" }, textAlign: "center", text: 'header view', id: "headerView" });
 
   var __alloyId1 = [];$.__views["__alloyId2"] = Ti.UI.createTableViewRow(
-  { id: "__alloyId2" });
+  {});
 
   __alloyId1.push($.__views["__alloyId2"]);$.__views["__alloyId3"] = Ti.UI.createLabel(
-  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 1', id: "__alloyId3" });
+  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 1' });
 
   $.__views["__alloyId2"].add($.__views["__alloyId3"]);
   $.__views["__alloyId4"] = Ti.UI.createTableViewRow(
-  { id: "__alloyId4" });
+  {});
 
   __alloyId1.push($.__views["__alloyId4"]);$.__views["__alloyId5"] = Ti.UI.createLabel(
-  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 2', id: "__alloyId5" });
+  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 2' });
 
   $.__views["__alloyId4"].add($.__views["__alloyId5"]);
   $.__views["__alloyId6"] = Ti.UI.createTableViewRow(
-  { id: "__alloyId6" });
+  {});
 
   __alloyId1.push($.__views["__alloyId6"]);$.__views["__alloyId7"] = Ti.UI.createLabel(
-  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 3', id: "__alloyId7" });
+  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 3' });
 
   $.__views["__alloyId6"].add($.__views["__alloyId7"]);
   $.__views["__alloyId8"] = Ti.UI.createTableViewRow(
-  { id: "__alloyId8" });
+  {});
 
   __alloyId1.push($.__views["__alloyId8"]);$.__views["__alloyId9"] = Ti.UI.createLabel(
-  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 4', id: "__alloyId9" });
+  { left: "15dp", height: "46dp", font: { fontSize: "24dp", fontWeight: "bold" }, color: "#2c3e50", text: 'row 4' });
 
   $.__views["__alloyId8"].add($.__views["__alloyId9"]);
   $.__views["table"] = Ti.UI.createTableView(
@@ -82,6 +86,7 @@ function Controller() {
 
   $.__views["untouchable"].add($.__views["untouchableLabel"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -107,4 +112,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,21 +33,26 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["__alloyId0"] = Ti.UI.createWindow(
-  { title: "Proxy Shorthands", id: "__alloyId0" });
+  { title: "Proxy Shorthands" });
 
   $.__views["__alloyId2"] = Ti.UI.createButton(
-  { title: "Left", id: "__alloyId2" });
+  { title: "Left" });
 
   doLeftClick ? $.addListener($.__views["__alloyId2"], 'click', doLeftClick) : __defers['$.__views["__alloyId2"]!click!doLeftClick'] = true;$.__views["__alloyId0"].leftNavButton = $.__views["__alloyId2"];$.__views["__alloyId3"] = Ti.UI.createButton(
-  { title: "Right", id: "__alloyId3" });
+  { title: "Right" });
 
   $.__views["__alloyId0"].rightNavButton = $.__views["__alloyId3"];doRightClick ? $.addListener($.__views["__alloyId3"], 'click', doRightClick) : __defers['$.__views["__alloyId3"]!click!doRightClick'] = true;$.__views["index"] = Ti.UI.createNavigationWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, window: $.__views["__alloyId0"], id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -76,4 +81,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

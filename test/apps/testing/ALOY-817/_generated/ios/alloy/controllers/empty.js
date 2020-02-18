@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'empty';
   this.args = arguments[0] || {};
 
@@ -33,12 +33,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["empty"] = Ti.UI.createButton(
   { title: 'useless button', bottom: 50, id: "empty" });
 
   $.__views["empty"] && $.addTopLevelView($.__views["empty"]);
   buttonClick ? $.addListener($.__views["empty"], 'click', buttonClick) : __defers['$.__views["empty"]!click!buttonClick'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -69,4 +74,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/empty.js.map

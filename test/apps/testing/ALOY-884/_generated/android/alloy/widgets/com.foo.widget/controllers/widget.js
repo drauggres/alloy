@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('com.foo.widget');this.__widgetId = 'com.foo.widget';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('com.foo.widget');this.__widgetId = 'com.foo.widget';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'widget';
   this.args = arguments[0] || {};
 
@@ -39,6 +39,10 @@ function Controller() {
   // controller code. One example is all model and collection
   // declarations from markup.
 
+
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
 
   // Generated UI code
   $.__views["widget"] = Ti.UI.createView(
@@ -66,6 +70,7 @@ function Controller() {
 
   $.__views["hl"].add($.__views["c"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -108,4 +113,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/widgets/com.foo.widget/controllers/widget.js.map

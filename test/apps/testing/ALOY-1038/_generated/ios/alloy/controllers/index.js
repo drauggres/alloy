@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, layout: "vertical", id: "index" });
@@ -44,42 +48,42 @@ function Controller() {
   $.__views["index"].add($.__views["explain"]);
   if (true) {
     $.__views["__alloyId0"] = Ti.UI.createLabel(
-    { text: 'ios', id: "__alloyId0" });
+    { text: 'ios' });
 
     $.__views["index"].add($.__views["__alloyId0"]);
   }
   if (true || false) {
     $.__views["__alloyId1"] = Ti.UI.createLabel(
-    { text: 'ios,mobileweb', id: "__alloyId1" });
+    { text: 'ios,mobileweb' });
 
     $.__views["index"].add($.__views["__alloyId1"]);
   }
   if (true || false) {
     $.__views["__alloyId2"] = Ti.UI.createLabel(
-    { text: 'ios,android', id: "__alloyId2" });
+    { text: 'ios,android' });
 
     $.__views["index"].add($.__views["__alloyId2"]);
   }
   if (true || false || false) {
     $.__views["__alloyId3"] = Ti.UI.createLabel(
-    { text: '!android', id: "__alloyId3" });
+    { text: '!android' });
 
     $.__views["index"].add($.__views["__alloyId3"]);
   }
   if (false || true || false) {
     $.__views["__alloyId4"] = Ti.UI.createLabel(
-    { text: '!mobileweb', id: "__alloyId4" });
+    { text: '!mobileweb' });
 
     $.__views["index"].add($.__views["__alloyId4"]);
   }
   if (false || true || false) {
     $.__views["__alloyId5"] = Ti.UI.createLabel(
-    { text: 'mobileweb,!android', id: "__alloyId5" });
+    { text: 'mobileweb,!android' });
 
     $.__views["index"].add($.__views["__alloyId5"]);
   }
   $.__views["__alloyId6"] = Ti.UI.createView(
-  { height: 1, width: Ti.UI.FILL, backgroundColor: "black", top: 10, id: "__alloyId6" });
+  { height: 1, width: Ti.UI.FILL, backgroundColor: "black", top: 10 });
 
   $.__views["index"].add($.__views["__alloyId6"]);
   $.__views["ios"] = Ti.UI.createLabel(
@@ -128,6 +132,7 @@ function Controller() {
   $.__views["index"].add($.__views["mobilewebNotandroid"]);
   exports.destroy = function () {};
 
+
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
   // be accessed with getView().
@@ -148,4 +153,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,26 +33,31 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
-  var __alloyId1 = [];$.__views["__alloyId3"] = Alloy.createWidget('alloy.window', 'widget', { id: "__alloyId3" });
+  var __alloyId1 = [];$.__views["__alloyId3"] = Alloy.createWidget('alloy.window', 'widget', {});
   $.__views["__alloyId2"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId3"].getViewEx({ recurse: true }), title: "tab 1", id: "__alloyId2" });
+  { window: $.__views["__alloyId3"].getViewEx({ recurse: true }), title: "tab 1" });
 
   __alloyId1.push($.__views["__alloyId2"]);$.__views["__alloyId6"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", modal: false, title: "window 2", id: "__alloyId6" });
+  { backgroundColor: "#fff", modal: false, title: "window 2" });
 
   $.__views["__alloyId7"] = Ti.UI.createLabel(
-  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#000", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'label 2', id: "__alloyId7" });
+  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#000", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'label 2' });
 
   $.__views["__alloyId6"].add($.__views["__alloyId7"]);
   $.__views["__alloyId5"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId6"], title: "tab 2", id: "__alloyId5" });
+  { window: $.__views["__alloyId6"], title: "tab 2" });
 
   __alloyId1.push($.__views["__alloyId5"]);$.__views["index"] = Ti.UI.createTabGroup(
   { backgroundColor: "#fff", tabs: __alloyId1, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -74,4 +79,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

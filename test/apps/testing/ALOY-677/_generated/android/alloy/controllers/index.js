@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,23 +33,28 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", text: '\'Hello foo & bar"', id: "__alloyId0" });
+  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", text: '\'Hello foo & bar"' });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   $.__views["__alloyId1"] = Ti.UI.createButton(
-  { title: '\'Hello foo & bar"', bottom: 50, id: "__alloyId1" });
+  { title: '\'Hello foo & bar"', bottom: 50 });
 
   $.__views["index"].add($.__views["__alloyId1"]);
   var __alloyId2 = 2;var __alloyId3 = 3;var __alloyId5 = [];__alloyId5.push("option &1");__alloyId5.push("option 2");__alloyId5.push("cancel &");__alloyId5.push("destructive");$.__views["options"] = Ti.UI.createOptionDialog(
   { options: __alloyId5, id: "options", title: "App Options", destructive: 3, cancel: 2 });
 
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -73,4 +78,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

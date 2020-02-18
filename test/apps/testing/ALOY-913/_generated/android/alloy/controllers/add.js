@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'add';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["addWin"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", layout: "vertical", barColor: "#a00", id: "addWin", title: "Add Item", modal: true });
@@ -43,14 +47,15 @@ function Controller() {
 
   $.__views["addWin"].add($.__views["itemField"]);
   closeKeyboard ? $.addListener($.__views["itemField"], 'return', closeKeyboard) : __defers['$.__views["itemField"]!return!closeKeyboard'] = true;$.__views["__alloyId0"] = Ti.UI.createButton(
-  { width: "50%", top: "20dp", title: 'Add Item', id: "__alloyId0" });
+  { width: "50%", top: "20dp", title: 'Add Item' });
 
   $.__views["addWin"].add($.__views["__alloyId0"]);
   addItem ? $.addListener($.__views["__alloyId0"], 'click', addItem) : __defers['$.__views["__alloyId0"]!click!addItem'] = true;$.__views["__alloyId1"] = Ti.UI.createButton(
-  { width: "50%", top: "20dp", title: 'Cancel', id: "__alloyId1" });
+  { width: "50%", top: "20dp", title: 'Cancel' });
 
   $.__views["addWin"].add($.__views["__alloyId1"]);
   closeWindow ? $.addListener($.__views["__alloyId1"], 'click', closeWindow) : __defers['$.__views["__alloyId1"]!click!closeWindow'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -103,4 +108,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/add.js.map

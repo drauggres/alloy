@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,20 +33,25 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   var __alloyId0 = [];$.__views["index"] = Ti.UI.createWindow(
   { id: "index", backgroundColor: "#fff" });
 
-  $.__views["__alloyId2"] = Alloy.createController('next', { id: "__alloyId2", __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId2"] = Alloy.createController('next', { __parentSymbol: $.__views["index"] });
   $.__views["__alloyId2"].setParent($.__views["index"]);
   $.__views["__alloyId1"] = Ti.UI.createTab(
-  { window: $.__views["index"], id: "__alloyId1" });
+  { window: $.__views["index"] });
 
   __alloyId0.push($.__views["__alloyId1"]);$.__views["index"] = Ti.UI.createTabGroup(
   { tabs: __alloyId0, id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -68,4 +73,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('alloy.button');this.__widgetId = 'alloy.button';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('alloy.button');this.__widgetId = 'alloy.button';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'widget';
   this.args = arguments[0] || {};
 
@@ -40,18 +40,26 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   if (true) {
     var __alloyId0 = { id: "button" };
     if (false) {
       __alloyId0.actionView = false;
     }
-    $.__views["button"] = __parentSymbol.add(_.pick(__alloyId0, Alloy.Android.menuItemCreateArgs));
-    $.__views["button"].applyProperties(_.omit(__alloyId0, Alloy.Android.menuItemCreateArgs));
-    $.button = $.__views["button"];
+    if (__parentSymbol) {
+      $.__views["button"] = __parentSymbol.add(_.pick(__alloyId0, Alloy.Android.menuItemCreateArgs));
+    }
+    if ($.__views["button"]) {
+      $.__views["button"].applyProperties(_.omit(__alloyId0, Alloy.Android.menuItemCreateArgs));
+    }
     $.__views["button"] && $.addTopLevelView($.__views["button"]);
     doClick ? $.addListener($.__views["button"], 'click', doClick) : __defers['$.__views["button"]!click!doClick'] = true;}
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -78,4 +86,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/widgets/alloy.button/controllers/widget.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
   Alloy.Models.instance('Big');Alloy.Models.instance('small');
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", layout: "vertical", exitOnClose: true, fullscreen: false, id: "index" });
@@ -46,7 +50,14 @@ function Controller() {
   { id: "lbl2" });
 
   $.__views["index"].add($.__views["lbl2"]);
-  var __alloyId4 = function () {Alloy['Models']['Big'].__transform = _.isFunction(Alloy['Models']['Big'].transform) ? Alloy['Models']['Big'].transform() : Alloy['Models']['Big'].toJSON();$.lbl1.text = Alloy['Models']['Big']['__transform']['name'];};Alloy['Models']['Big'].on('fetch change destroy', __alloyId4);var __alloyId5 = function () {Alloy['Models']['small'].__transform = _.isFunction(Alloy['Models']['small'].transform) ? Alloy['Models']['small'].transform() : Alloy['Models']['small'].toJSON();$.lbl2.text = Alloy['Models']['small']['__transform']['name'];};Alloy['Models']['small'].on('fetch change destroy', __alloyId5);exports.destroy = function () {Alloy['Models']['Big'] && Alloy['Models']['Big'].off('fetch change destroy', __alloyId4);Alloy['Models']['small'] && Alloy['Models']['small'].off('fetch change destroy', __alloyId5);};
+  this.__alloyId4 = function () {
+    Alloy['Models']['Big'].__transform = _.isFunction(Alloy['Models']['Big'].transform) ? Alloy['Models']['Big'].transform() : Alloy['Models']['Big'].toJSON();this.lbl1.text = Alloy['Models']['Big']['__transform']['name'];
+  }.bind(this);
+  Alloy['Models']['Big'].on('fetch change destroy', this.__alloyId4);this.__alloyId5 = function () {
+    Alloy['Models']['small'].__transform = _.isFunction(Alloy['Models']['small'].transform) ? Alloy['Models']['small'].transform() : Alloy['Models']['small'].toJSON();this.lbl2.text = Alloy['Models']['small']['__transform']['name'];
+  }.bind(this);
+  Alloy['Models']['small'].on('fetch change destroy', this.__alloyId5);exports.destroy = function () {Alloy['Models']['Big'] && Alloy['Models']['Big'].off('fetch change destroy', this.__alloyId4);Alloy['Models']['small'] && Alloy['Models']['small'].off('fetch change destroy', this.__alloyId5);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -71,4 +82,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

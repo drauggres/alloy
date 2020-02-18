@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "white", id: "index" });
@@ -40,16 +44,16 @@ function Controller() {
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   if (true) {
     var __alloyId3 = [];$.__views["__alloyId4"] = Ti.UI.createButton(
-    { systemButton: Ti.UI.iOS.SystemButton.CANCEL, title: "Cancel", id: "__alloyId4" });
+    { systemButton: Ti.UI.iOS.SystemButton.CANCEL, title: "Cancel" });
 
     __alloyId3.push($.__views["__alloyId4"]);btnClick ? $.addListener($.__views["__alloyId4"], 'click', btnClick) : __defers['$.__views["__alloyId4"]!click!btnClick'] = true;$.__views["__alloyId5"] = Ti.UI.createButton({ systemButton: Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE });__alloyId3.push($.__views["__alloyId5"]);$.__views["__alloyId6"] = Ti.UI.createButton(
-    { systemButton: Ti.UI.iOS.SystemButton.CAMERA, title: "Camera", id: "__alloyId6" });
+    { systemButton: Ti.UI.iOS.SystemButton.CAMERA, title: "Camera" });
 
     __alloyId3.push($.__views["__alloyId6"]);btnClick ? $.addListener($.__views["__alloyId6"], 'click', btnClick) : __defers['$.__views["__alloyId6"]!click!btnClick'] = true;$.__views["__alloyId7"] = Ti.UI.createButton({ systemButton: Ti.UI.iOS.SystemButton.FLEXIBLE_SPACE });__alloyId3.push($.__views["__alloyId7"]);$.__views["__alloyId8"] = Ti.UI.createButton(
-    { title: 'Send', style: Ti.UI.iOS.SystemButtonStyle.DONE, id: "__alloyId8" });
+    { title: 'Send', style: Ti.UI.iOS.SystemButtonStyle.DONE });
 
     __alloyId3.push($.__views["__alloyId8"]);btnClick ? $.addListener($.__views["__alloyId8"], 'click', btnClick) : __defers['$.__views["__alloyId8"]!click!btnClick'] = true;$.__views["__alloyId1"] = Ti.UI.createToolbar(
-    { items: __alloyId3, id: "__alloyId1" });
+    { items: __alloyId3 });
 
     $.__views["textArea"] = Ti.UI.createTextArea(
     { keyboardToolbarColor: "#999", keyboardToolbarHeight: "40", height: "30dp", width: "80%", top: 30, borderWidth: "1", borderRadius: "3", borderColor: "#bbb", font: { fontSize: 12 }, value: "Focus to see keyboard with toolbar", keyboardToolbar: $.__views["__alloyId1"], id: "textArea" });
@@ -60,6 +64,7 @@ function Controller() {
 
   }
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -91,4 +96,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

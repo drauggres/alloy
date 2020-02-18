@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
   Alloy.Collections.instance('empty');Alloy.Models.instance('empty');$.anotherModel = Alloy.createModel('empty');
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   collectionChange ? Alloy.Collections.empty.on('change', collectionChange) : __defers['Alloy.Collections.empty!change!collectionChange'] = true;modelChange ? Alloy.Models.empty.on('change', modelChange) : __defers['Alloy.Models.empty!change!modelChange'] = true;anotherModelChange ? $.anotherModel.on('change', anotherModelChange) : __defers['$.anotherModel!change!anotherModelChange'] = true;$.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
@@ -42,9 +46,10 @@ function Controller() {
   { id: "map2" });
 
   $.__views["index"].add($.__views["map2"]);
-  mapClick ? $.addListener($.__views["map2"], 'click', mapClick) : __defers['$.__views["map2"]!click!mapClick'] = true;$.__views["__alloyId4"] = Alloy.createController('empty', { id: "__alloyId4", __parentSymbol: $.__views["index"] });
+  mapClick ? $.addListener($.__views["map2"], 'click', mapClick) : __defers['$.__views["map2"]!click!mapClick'] = true;$.__views["__alloyId4"] = Alloy.createController('empty', { __parentSymbol: $.__views["index"] });
   $.__views["__alloyId4"].setParent($.__views["index"]);
   emptyInit ? $.__views["__alloyId4"].on('init', emptyInit) : __defers['$.__views["__alloyId4"]!init!emptyInit'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -95,4 +100,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

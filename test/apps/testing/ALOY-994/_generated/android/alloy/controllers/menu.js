@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'menu';
   this.args = arguments[0] || {};
 
@@ -33,25 +33,35 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
-  function __alloyId15() {
+  const __alloyId15 = () => {
     __parentSymbol.removeEventListener('open', __alloyId15);
     if (__parentSymbol.activity) {
-      __parentSymbol.activity.onCreateOptionsMenu = function (e) {
-        var __alloyId12 = { title: "require 1", icon: "/ic_menu_goto.png", id: "__alloyId11" };
+      __parentSymbol.activity.onCreateOptionsMenu = e => {
+        var __alloyId12 = { title: "require 1", icon: "/ic_menu_goto.png" };
         if (false) {
           __alloyId12.actionView = false;
         }
-        $.__views["__alloyId11"] = e.menu.add(_.pick(__alloyId12, Alloy.Android.menuItemCreateArgs));
-        $.__views["__alloyId11"].applyProperties(_.omit(__alloyId12, Alloy.Android.menuItemCreateArgs));
-        $.__alloyId11 = $.__views["__alloyId11"];
-        doClick ? $.addListener($.__views["__alloyId11"], 'click', doClick) : __defers['$.__views["__alloyId11"]!click!doClick'] = true;var __alloyId14 = { title: "require 2", icon: "/ic_menu_manage.png", id: "__alloyId13" };
+        if (e.menu) {
+          $.__views["__alloyId11"] = e.menu.add(_.pick(__alloyId12, Alloy.Android.menuItemCreateArgs));
+        }
+        if ($.__views["__alloyId11"]) {
+          $.__views["__alloyId11"].applyProperties(_.omit(__alloyId12, Alloy.Android.menuItemCreateArgs));
+        }
+        doClick ? $.addListener($.__views["__alloyId11"], 'click', doClick) : __defers['$.__views["__alloyId11"]!click!doClick'] = true;var __alloyId14 = { title: "require 2", icon: "/ic_menu_manage.png" };
         if (false) {
           __alloyId14.actionView = false;
         }
-        $.__views["__alloyId13"] = e.menu.add(_.pick(__alloyId14, Alloy.Android.menuItemCreateArgs));
-        $.__views["__alloyId13"].applyProperties(_.omit(__alloyId14, Alloy.Android.menuItemCreateArgs));
-        $.__alloyId13 = $.__views["__alloyId13"];
+        if (e.menu) {
+          $.__views["__alloyId13"] = e.menu.add(_.pick(__alloyId14, Alloy.Android.menuItemCreateArgs));
+        }
+        if ($.__views["__alloyId13"]) {
+          $.__views["__alloyId13"].applyProperties(_.omit(__alloyId14, Alloy.Android.menuItemCreateArgs));
+        }
         doClick ? $.addListener($.__views["__alloyId13"], 'click', doClick) : __defers['$.__views["__alloyId13"]!click!doClick'] = true;
       };
     } else {
@@ -59,9 +69,11 @@ function Controller() {
       Ti.API.warn('or other UI component which does not have an Android activity.');
       Ti.API.warn('Android Menus can only be opened on TabGroups and heavyweight Windows.');
     }
-  }
-  __parentSymbol.addEventListener('open', __alloyId15);$.__views["menu"] && $.addTopLevelView($.__views["menu"]);
+  };
+  __parentSymbol.addEventListener('open', __alloyId15);
+  $.__views["menu"] && $.addTopLevelView($.__views["menu"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -85,4 +97,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/menu.js.map

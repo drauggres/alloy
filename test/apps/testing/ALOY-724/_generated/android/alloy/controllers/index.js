@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,58 +33,68 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   var __alloyId0 = [];$.__views["__alloyId2"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", modal: false, title: "window 1", id: "__alloyId2" });
+  { backgroundColor: "#fff", modal: false, title: "window 1" });
 
   $.__views["__alloyId3"] = Ti.UI.createLabel(
-  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 1', id: "__alloyId3" });
+  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 1' });
 
   $.__views["__alloyId2"].add($.__views["__alloyId3"]);
   $.__views["__alloyId1"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId2"], title: "tab 1", id: "__alloyId1" });
+  { window: $.__views["__alloyId2"], title: "tab 1" });
 
   __alloyId0.push($.__views["__alloyId1"]);$.__views["__alloyId5"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", modal: false, title: "window 2", id: "__alloyId5" });
+  { backgroundColor: "#fff", modal: false, title: "window 2" });
 
   $.__views["__alloyId6"] = Ti.UI.createLabel(
-  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 2', id: "__alloyId6" });
+  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 2' });
 
   $.__views["__alloyId5"].add($.__views["__alloyId6"]);
   $.__views["__alloyId4"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId5"], title: "tab 2", id: "__alloyId4" });
+  { window: $.__views["__alloyId5"], title: "tab 2" });
 
   __alloyId0.push($.__views["__alloyId4"]);$.__views["__alloyId8"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", modal: false, title: "window 3", id: "__alloyId8" });
+  { backgroundColor: "#fff", modal: false, title: "window 3" });
 
   $.__views["__alloyId9"] = Ti.UI.createLabel(
-  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 3', id: "__alloyId9" });
+  { height: Ti.UI.SIZE, width: Ti.UI.SIZE, color: "#111", textAlign: "center", font: { fontSize: "48dp", fontWeight: "bold" }, text: 'Label 3' });
 
   $.__views["__alloyId8"].add($.__views["__alloyId9"]);
   $.__views["__alloyId7"] = Ti.UI.createTab(
-  { window: $.__views["__alloyId8"], title: "tab 3", id: "__alloyId7" });
+  { window: $.__views["__alloyId8"], title: "tab 3" });
 
   __alloyId0.push($.__views["__alloyId7"]);$.__views["index"] = Ti.UI.createTabGroup(
   { backgroundColor: "#fff", tabs: __alloyId0, id: "index" });
 
-  function __alloyId15() {
+  const __alloyId15 = () => {
     $.__views["index"].removeEventListener('open', __alloyId15);
     if ($.__views["index"].activity) {
-      $.__views["index"].activity.onCreateOptionsMenu = function (e) {
-        var __alloyId12 = { title: "help", icon: "/ic_menu_help.png", id: "__alloyId11" };
+      $.__views["index"].activity.onCreateOptionsMenu = e => {
+        var __alloyId12 = { title: "help", icon: "/ic_menu_help.png" };
         if (false) {
           __alloyId12.actionView = false;
         }
-        $.__views["__alloyId11"] = e.menu.add(_.pick(__alloyId12, Alloy.Android.menuItemCreateArgs));
-        $.__views["__alloyId11"].applyProperties(_.omit(__alloyId12, Alloy.Android.menuItemCreateArgs));
-        $.__alloyId11 = $.__views["__alloyId11"];
-        doClick ? $.addListener($.__views["__alloyId11"], 'click', doClick) : __defers['$.__views["__alloyId11"]!click!doClick'] = true;var __alloyId14 = { title: "home", icon: "/ic_menu_home.png", id: "__alloyId13" };
+        if (e.menu) {
+          $.__views["__alloyId11"] = e.menu.add(_.pick(__alloyId12, Alloy.Android.menuItemCreateArgs));
+        }
+        if ($.__views["__alloyId11"]) {
+          $.__views["__alloyId11"].applyProperties(_.omit(__alloyId12, Alloy.Android.menuItemCreateArgs));
+        }
+        doClick ? $.addListener($.__views["__alloyId11"], 'click', doClick) : __defers['$.__views["__alloyId11"]!click!doClick'] = true;var __alloyId14 = { title: "home", icon: "/ic_menu_home.png" };
         if (false) {
           __alloyId14.actionView = false;
         }
-        $.__views["__alloyId13"] = e.menu.add(_.pick(__alloyId14, Alloy.Android.menuItemCreateArgs));
-        $.__views["__alloyId13"].applyProperties(_.omit(__alloyId14, Alloy.Android.menuItemCreateArgs));
-        $.__alloyId13 = $.__views["__alloyId13"];
+        if (e.menu) {
+          $.__views["__alloyId13"] = e.menu.add(_.pick(__alloyId14, Alloy.Android.menuItemCreateArgs));
+        }
+        if ($.__views["__alloyId13"]) {
+          $.__views["__alloyId13"].applyProperties(_.omit(__alloyId14, Alloy.Android.menuItemCreateArgs));
+        }
         doClick ? $.addListener($.__views["__alloyId13"], 'click', doClick) : __defers['$.__views["__alloyId13"]!click!doClick'] = true;
       };
     } else {
@@ -92,9 +102,11 @@ function Controller() {
       Ti.API.warn('or other UI component which does not have an Android activity.');
       Ti.API.warn('Android Menus can only be opened on TabGroups and heavyweight Windows.');
     }
-  }
-  $.__views["index"].addEventListener('open', __alloyId15);$.__views["index"] && $.addTopLevelView($.__views["index"]);
+  };
+  $.__views["index"].addEventListener('open', __alloyId15);
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
   setCurrentTab ? $.addListener($.__views["index"], 'focus', setCurrentTab) : __defers['$.__views["index"]!focus!setCurrentTab'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -125,4 +137,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

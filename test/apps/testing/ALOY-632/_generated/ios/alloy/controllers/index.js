@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,6 +33,10 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", id: "index" });
@@ -41,10 +45,11 @@ function Controller() {
   $.__views["opt"] = Alloy.createWidget('optionDialog', 'widget', { id: "opt", __parentSymbol: $.__views["index"] });
   $.__views["opt"].setParent($.__views["index"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", text: 'As long as you don\'t see a red screen of death, this is working as expected', id: "__alloyId0" });
+  { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", text: 'As long as you don\'t see a red screen of death, this is working as expected' });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -72,4 +77,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

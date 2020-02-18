@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('tony.section');this.__widgetId = 'tony.section';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('tony.section');this.__widgetId = 'tony.section';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'widget';
   this.args = arguments[0] || {};
 
@@ -40,27 +40,32 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["widget"] = Ti.UI.createTableViewSection(
   { id: "widget" });
 
   $.__views["__alloyId0"] = Ti.UI.createTableViewRow(
-  { title: "row 1", id: "__alloyId0" });
+  { title: "row 1" });
 
   $.__views["widget"].add($.__views["__alloyId0"]);$.__views["__alloyId1"] = Ti.UI.createTableViewRow(
-  { title: "row 2", id: "__alloyId1" });
+  { title: "row 2" });
 
   $.__views["widget"].add($.__views["__alloyId1"]);$.__views["__alloyId2"] = Ti.UI.createTableViewRow(
-  { title: "row 3", id: "__alloyId2" });
+  { title: "row 3" });
 
   $.__views["widget"].add($.__views["__alloyId2"]);$.__views["__alloyId3"] = Ti.UI.createTableViewRow(
-  { title: "row 4", id: "__alloyId3" });
+  { title: "row 4" });
 
   $.__views["widget"].add($.__views["__alloyId3"]);$.__views["__alloyId4"] = Ti.UI.createTableViewRow(
-  { title: "row 5", id: "__alloyId4" });
+  { title: "row 5" });
 
   $.__views["widget"].add($.__views["__alloyId4"]);$.__views["widget"] && $.addTopLevelView($.__views["widget"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -82,4 +87,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/widgets/tony.section/controllers/widget.js.map

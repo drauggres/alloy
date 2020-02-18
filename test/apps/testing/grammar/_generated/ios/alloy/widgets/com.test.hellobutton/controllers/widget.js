@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('com.test.hellobutton');this.__widgetId = 'com.test.hellobutton';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('com.test.hellobutton');this.__widgetId = 'com.test.hellobutton';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'widget';
   this.args = arguments[0] || {};
 
@@ -40,12 +40,17 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["helloButton"] = Ti.UI.createButton(
   { backgroundImage: WPATH('hello.png'), height: 135, width: 233, id: "helloButton" });
 
   $.__views["helloButton"] && $.addTopLevelView($.__views["helloButton"]);
   sayHello ? $.addListener($.__views["helloButton"], 'click', sayHello) : __defers['$.__views["helloButton"]!click!sayHello'] = true;exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -77,4 +82,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/widgets/com.test.hellobutton/controllers/widget.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,19 +33,7 @@ function Controller() {
   // declarations from markup.
   Alloy.Collections.instance('heroes');
 
-  // Generated UI code
-  $.__views["index"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, title: "data switches", id: "index" });
-
-  $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  $.__views["__alloyId4"] = Ti.UI.createButton(
-  { title: "toggle", top: 5, id: "__alloyId4" });
-
-  $.__views["index"].add($.__views["__alloyId4"]);
-  toggleState ? $.addListener($.__views["__alloyId4"], 'click', toggleState) : __defers['$.__views["__alloyId4"]!click!toggleState'] = true;$.__views["table"] = Ti.UI.createTableView(
-  { id: "table", top: 40 });
-
-  $.__views["index"].add($.__views["table"]);
+  // <dataFunctions>
   var __alloyId12 = Alloy.Collections['heroes'] || heroes;function __alloyId13(e) {if (e && e.fromAdapter) {return;}var opts = __alloyId13.opts || {};var models = __alloyId12.models;var len = models.length;var rows = [];for (var i = 0; i < len; i++) {var __alloyId5 = models[i];__alloyId5.__transform = _.isFunction(__alloyId5.transform) ? __alloyId5.transform() : __alloyId5.toJSON();var __alloyId7 = Ti.UI.createTableViewRow(
       {});
 
@@ -58,7 +46,24 @@ function Controller() {
       { right: 5, value: __alloyId5.__transform.status });
 
       __alloyId7.add(__alloyId11);
-    }$.__views["table"].setData(rows);};__alloyId12.on('fetch destroy change add remove reset', __alloyId13);exports.destroy = function () {__alloyId12 && __alloyId12.off('fetch destroy change add remove reset', __alloyId13);};
+    }$.__views["table"].setData(rows);};__alloyId12.on('fetch destroy change add remove reset', __alloyId13);
+  // </dataFunctionsCode>
+
+  // Generated UI code
+  $.__views["index"] = Ti.UI.createWindow(
+  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, title: "data switches", id: "index" });
+
+  $.__views["index"] && $.addTopLevelView($.__views["index"]);
+  $.__views["__alloyId4"] = Ti.UI.createButton(
+  { title: "toggle", top: 5 });
+
+  $.__views["index"].add($.__views["__alloyId4"]);
+  toggleState ? $.addListener($.__views["__alloyId4"], 'click', toggleState) : __defers['$.__views["__alloyId4"]!click!toggleState'] = true;$.__views["table"] = Ti.UI.createTableView(
+  { id: "table", top: 40 });
+
+  $.__views["index"].add($.__views["table"]);
+  exports.destroy = function () {__alloyId12 && __alloyId12.off('fetch destroy change add remove reset', __alloyId13);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -116,4 +121,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map

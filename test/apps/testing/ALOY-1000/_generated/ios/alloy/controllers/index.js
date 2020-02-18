@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -32,6 +32,10 @@ function Controller() {
   // controller code. One example is all model and collection
   // declarations from markup.
   Alloy.Models.instance('book');
+
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
 
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
@@ -58,7 +62,13 @@ function Controller() {
   { width: Ti.UI.SIZE, height: Ti.UI.SIZE, color: "#000", top: 10, id: "genre" });
 
   $.__views["theView"].add($.__views["genre"]);
-  doClick ? $.addListener($.__views["genre"], 'click', doClick) : __defers['$.__views["genre"]!click!doClick'] = true;var __alloyId2 = function () {Alloy['Models']['book'].__transform = _.isFunction(Alloy['Models']['book'].transform) ? Alloy['Models']['book'].transform() : Alloy['Models']['book'].toJSON();$.title.text = Alloy['Models']['book']['__transform']['title'];$.author.text = Alloy['Models']['book']['__transform']['author'];$.genre.text = Alloy['Models']['book']['__transform']['genre'];};Alloy['Models']['book'].on('fetch change destroy', __alloyId2);exports.destroy = function () {Alloy['Models']['book'] && Alloy['Models']['book'].off('fetch change destroy', __alloyId2);};
+  doClick ? $.addListener($.__views["genre"], 'click', doClick) : __defers['$.__views["genre"]!click!doClick'] = true;this.__alloyId2 = function () {
+    Alloy['Models']['book'].__transform = _.isFunction(Alloy['Models']['book'].transform) ? Alloy['Models']['book'].transform() : Alloy['Models']['book'].toJSON();this.title.text = Alloy['Models']['book']['__transform']['title'];
+    this.author.text = Alloy['Models']['book']['__transform']['author'];
+    this.genre.text = Alloy['Models']['book']['__transform']['genre'];
+  }.bind(this);
+  Alloy['Models']['book'].on('fetch change destroy', this.__alloyId2);exports.destroy = function () {Alloy['Models']['book'] && Alloy['Models']['book'].off('fetch change destroy', this.__alloyId2);};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -87,4 +97,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

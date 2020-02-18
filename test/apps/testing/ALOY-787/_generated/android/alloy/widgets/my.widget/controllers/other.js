@@ -21,8 +21,8 @@ function __processArg(obj, key) {
 }
 
 function Controller() {
-  var Widget = new (require('/alloy/widget'))('my.widget');this.__widgetId = 'my.widget';
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  var Widget = new (require('/widget'))('my.widget');this.__widgetId = 'my.widget';
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'other';
   this.args = arguments[0] || {};
 
@@ -40,16 +40,21 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["other"] = Ti.UI.createView(
   { id: "other" });
 
   $.__views["other"] && $.addTopLevelView($.__views["other"]);
   $.__views["__alloyId0"] = Ti.UI.createLabel(
-  { text: 'my.widget loaded', id: "__alloyId0" });
+  { text: 'my.widget loaded' });
 
   $.__views["other"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -71,4 +76,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/widgets/my.widget/controllers/other.js.map

@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,58 +33,63 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
   var __alloyId1 = [];$.__views["__alloyId4"] = Ti.UI.createView(
-  { backgroundColor: "#a00", height: "50dp", id: "__alloyId4" });
+  { backgroundColor: "#a00", height: "50dp" });
 
   $.__views["__alloyId6"] = Ti.UI.createView(
-  { backgroundColor: "#0a0", height: "50dp", id: "__alloyId6" });
+  { backgroundColor: "#0a0", height: "50dp" });
 
   $.__views["__alloyId2"] = Ti.UI.createTableViewSection(
-  { headerView: $.__views["__alloyId4"], footerView: $.__views["__alloyId6"], id: "__alloyId2" });
+  { headerView: $.__views["__alloyId4"], footerView: $.__views["__alloyId6"] });
 
   __alloyId1.push($.__views["__alloyId2"]);$.__views["__alloyId7"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 1", id: "__alloyId7" });
+  { height: "50dp", title: "Row 1" });
 
   $.__views["__alloyId2"].add($.__views["__alloyId7"]);$.__views["__alloyId8"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 2", id: "__alloyId8" });
+  { height: "50dp", title: "Row 2" });
 
   $.__views["__alloyId2"].add($.__views["__alloyId8"]);$.__views["__alloyId9"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 3", id: "__alloyId9" });
+  { height: "50dp", title: "Row 3" });
 
   $.__views["__alloyId2"].add($.__views["__alloyId9"]);$.__views["__alloyId10"] = Ti.UI.createTableViewSection(
-  { headerTitle: "Section 2", id: "__alloyId10" });
+  { headerTitle: "Section 2" });
 
   __alloyId1.push($.__views["__alloyId10"]);$.__views["__alloyId11"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 1", id: "__alloyId11" });
+  { height: "50dp", title: "Row 1" });
 
   $.__views["__alloyId10"].add($.__views["__alloyId11"]);$.__views["__alloyId12"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 2", id: "__alloyId12" });
+  { height: "50dp", title: "Row 2" });
 
   $.__views["__alloyId10"].add($.__views["__alloyId12"]);$.__views["__alloyId13"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 3", id: "__alloyId13" });
+  { height: "50dp", title: "Row 3" });
 
   $.__views["__alloyId10"].add($.__views["__alloyId13"]);$.__views["__alloyId14"] = Ti.UI.createTableViewSection(
-  { headerTitle: "Section 3", id: "__alloyId14" });
+  { headerTitle: "Section 3" });
 
   __alloyId1.push($.__views["__alloyId14"]);$.__views["__alloyId15"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 1", id: "__alloyId15" });
+  { height: "50dp", title: "Row 1" });
 
   $.__views["__alloyId14"].add($.__views["__alloyId15"]);$.__views["__alloyId16"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 2", id: "__alloyId16" });
+  { height: "50dp", title: "Row 2" });
 
   $.__views["__alloyId14"].add($.__views["__alloyId16"]);$.__views["__alloyId17"] = Ti.UI.createTableViewRow(
-  { height: "50dp", title: "Row 3", id: "__alloyId17" });
+  { height: "50dp", title: "Row 3" });
 
   $.__views["__alloyId14"].add($.__views["__alloyId17"]);$.__views["__alloyId0"] = Ti.UI.createTableView(
-  { data: __alloyId1, filterAttribute: "title", id: "__alloyId0" });
+  { data: __alloyId1, filterAttribute: "title" });
 
   $.__views["index"].add($.__views["__alloyId0"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -106,4 +111,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/iphone/alloy/controllers/index.js.map

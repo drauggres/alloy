@@ -15,7 +15,7 @@ function __processArg(obj, key) {
 
 function Controller() {
 
-  require('/alloy/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
+  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
   this.__controllerPath = 'index';
   this.args = arguments[0] || {};
 
@@ -33,18 +33,23 @@ function Controller() {
   // declarations from markup.
 
 
+  // <dataFunctions>
+
+  // </dataFunctionsCode>
+
   // Generated UI code
   $.__views["index"] = Ti.UI.createWindow(
   { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, layout: "vertical", id: "index" });
 
   $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  $.__views["__alloyId0"] = Alloy.createWidget('widget1', 'widget', { id: "__alloyId0", __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId0"] = Alloy.createWidget('widget1', 'widget', { __parentSymbol: $.__views["index"] });
   $.__views["__alloyId0"].setParent($.__views["index"]);
-  $.__views["__alloyId1"] = Alloy.createWidget('widget2', 'widget', { id: "__alloyId1", __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId1"] = Alloy.createWidget('widget2', 'widget', { __parentSymbol: $.__views["index"] });
   $.__views["__alloyId1"].setParent($.__views["index"]);
-  $.__views["__alloyId2"] = Alloy.createController('widget', { id: "__alloyId2", __parentSymbol: $.__views["index"] });
+  $.__views["__alloyId2"] = Alloy.createController('widget', { __parentSymbol: $.__views["index"] });
   $.__views["__alloyId2"].setParent($.__views["index"]);
   exports.destroy = function () {};
+
 
   // make all IDed elements in $.__views available right on the $ in a
   // controller's internal code. Externally the IDed elements will
@@ -66,4 +71,3 @@ function Controller() {
 }
 
 module.exports = Controller;
-//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/alloy/controllers/index.js.map
