@@ -607,6 +607,7 @@ function matchesRestriction(files, fileRestriction) {
 
 function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	var parseType = noView ? 'controller' : 'view';
+	var ext = noView ? CONST.FILE_EXT.JS_CONTROLLER : CONST.FILE_EXT.VIEW;
 	fileRestriction = fileRestriction || null;
 
 	// validate parameters
@@ -614,7 +615,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 	if (!dir) { U.die('Failed to parse ' + parseType + ' "' + view + '", no directory given'); }
 
 	var dirRegex = new RegExp('^(?:' + CONST.PLATFORM_FOLDERS_ALLOY.join('|') + ')[\\\\\\/]*');
-	var basename = path.basename(view, '.' + CONST.FILE_EXT[parseType.toUpperCase()]),
+	var basename = path.basename(view, '.' + ext),
 		dirname = path.dirname(view).replace(dirRegex, ''),
 		viewName = basename,
 		template = {
