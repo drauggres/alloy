@@ -1,0 +1,224 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "tab 1",
+      "backgroundColor": "#fff",
+      "id": "__alloyId2"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTab"
+  ]
+}
+{
+  "name": "Titanium.UI.createTab",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "window": "\"{[apply](Titanium.UI.createWindow)}\"",
+      "title": "tab 1",
+      "id": "__alloyId1"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "tab 2",
+      "backgroundColor": "#fff",
+      "id": "__alloyId4"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTab"
+  ]
+}
+{
+  "name": "Titanium.UI.createTab",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "window": "\"{[apply](Titanium.UI.createWindow)<#1>}\"",
+      "title": "tab 2",
+      "id": "__alloyId3"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTabGroup"
+  ]
+}
+{
+  "name": "Titanium.UI.createTabGroup",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "tabs": [
+        "\"{[apply](Titanium.UI.createTab)}\"",
+        "\"{[apply](Titanium.UI.createTab)<#1>}\""
+      ],
+      "id": "ScheduleGroup",
+      "activeTabIconTint": "yellow",
+      "tabsBackgroundSelectedColor": "yellow"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTabGroup)}\")",
+    "open",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTabGroup)}\")",
+    "focus",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTabGroup).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTabGroup)}\")"
+  ]
+}

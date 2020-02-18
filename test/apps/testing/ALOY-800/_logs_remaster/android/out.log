@@ -1,0 +1,137 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-800/alloy.js')
+require('ti.map'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "ti.map",
+  "trap": "get",
+  "args": [
+    "createAnnotation"
+  ]
+}
+{
+  "name": "ti.map.createAnnotation",
+  "trap": "apply",
+  "args": [
+    "(this: \"{ti.map}\")",
+    {
+      "latitude": 37.389569,
+      "longitude": -122.050212,
+      "title": "XML Annotation",
+      "id": "__alloyId1"
+    }
+  ]
+}
+{
+  "name": "ti.map",
+  "trap": "get",
+  "args": [
+    "createAnnotation"
+  ]
+}
+{
+  "name": "ti.map.createAnnotation",
+  "trap": "apply",
+  "args": [
+    "(this: \"{ti.map}\")",
+    {
+      "title": "TSS Annotation",
+      "latitude": 37.392,
+      "longitude": -122.061,
+      "id": "annotation2"
+    }
+  ]
+}
+{
+  "name": "ti.map",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "ti.map",
+  "trap": "get",
+  "args": [
+    "SATELLITE_TYPE"
+  ]
+}
+{
+  "name": "ti.map.createView",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "userLocation": false,
+      "mapType": "\"{ti.map.SATELLITE_TYPE}\"",
+      "animate": true,
+      "region": {
+        "latitude": 37.38,
+        "latitudeDelta": 0.2,
+        "longitude": -122.05,
+        "longitudeDelta": 0.2
+      },
+      "annotations": [
+        "\"{[apply](ti.map.createAnnotation)}\"",
+        "\"{[apply](ti.map.createAnnotation)<#1>}\""
+      ],
+      "id": "map"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](ti.map.createView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

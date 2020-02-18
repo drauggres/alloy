@@ -1,0 +1,2610 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-829/alloy.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "Titanium.Database.open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "name"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "CREATE TABLE IF NOT EXISTS name ( id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "Titanium.Database.open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "info"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "CREATE TABLE IF NOT EXISTS info ( id INTEGER PRIMARY KEY AUTOINCREMENT,info TEXT)"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT * FROM name"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#1>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.open).execute)<#1>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#1>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#1>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      1,
+      "name 1"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      1,
+      "info 1"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      2,
+      "name 2"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      2,
+      "info 2"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      3,
+      "name 3"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      3,
+      "info 3"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      4,
+      "name 4"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      4,
+      "info 4"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      5,
+      "name 5"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      5,
+      "info 5"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      6,
+      "name 6"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      6,
+      "info 6"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      7,
+      "name 7"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      7,
+      "info 7"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      8,
+      "name 8"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      8,
+      "info 8"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      9,
+      "name 9"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      9,
+      "info 9"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      10,
+      "name 10"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      10,
+      "info 10"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      11,
+      "name 11"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      11,
+      "info 11"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      12,
+      "name 12"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      12,
+      "info 12"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      13,
+      "name 13"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      13,
+      "info 13"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      14,
+      "name 14"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      14,
+      "info 14"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      15,
+      "name 15"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      15,
+      "info 15"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      16,
+      "name 16"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      16,
+      "info 16"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      17,
+      "name 17"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      17,
+      "info 17"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      18,
+      "name 18"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      18,
+      "info 18"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      19,
+      "name 19"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      19,
+      "info 19"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "REPLACE INTO name (id,name) VALUES (?,?);",
+    [
+      20,
+      "name 20"
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)<#1>.execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)<#1>}\")",
+    "REPLACE INTO info (id,info) VALUES (?,?);",
+    [
+      20,
+      "info 20"
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "section"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\""
+      ],
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListView)}\")",
+    "itemclick",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.open).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.open)}\")",
+    "SELECT * FROM name"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>",
+  "trap": "get",
+  "args": [
+    "fieldCount"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>.fieldCount",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#22>}\")"
+  ]
+}
+{
+  "name": "[apply]([apply]([apply](Titanium.Database.open).execute)<#22>.fieldCount)",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.open).execute)<#22>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.open).execute)<#22>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 2",
+          "modelId": 2
+        }
+      },
+      {
+        "properties": {
+          "title": "name 3",
+          "modelId": 3
+        }
+      },
+      {
+        "properties": {
+          "title": "name 4",
+          "modelId": 4
+        }
+      },
+      {
+        "properties": {
+          "title": "name 5",
+          "modelId": 5
+        }
+      },
+      {
+        "properties": {
+          "title": "name 6",
+          "modelId": 6
+        }
+      },
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 3",
+          "modelId": 3
+        }
+      },
+      {
+        "properties": {
+          "title": "name 4",
+          "modelId": 4
+        }
+      },
+      {
+        "properties": {
+          "title": "name 5",
+          "modelId": 5
+        }
+      },
+      {
+        "properties": {
+          "title": "name 6",
+          "modelId": 6
+        }
+      },
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 4",
+          "modelId": 4
+        }
+      },
+      {
+        "properties": {
+          "title": "name 5",
+          "modelId": 5
+        }
+      },
+      {
+        "properties": {
+          "title": "name 6",
+          "modelId": 6
+        }
+      },
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 5",
+          "modelId": 5
+        }
+      },
+      {
+        "properties": {
+          "title": "name 6",
+          "modelId": 6
+        }
+      },
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 6",
+          "modelId": 6
+        }
+      },
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 7",
+          "modelId": 7
+        }
+      },
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 8",
+          "modelId": 8
+        }
+      },
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 9",
+          "modelId": 9
+        }
+      },
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 10",
+          "modelId": 10
+        }
+      },
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 11",
+          "modelId": 11
+        }
+      },
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 12",
+          "modelId": 12
+        }
+      },
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 13",
+          "modelId": 13
+        }
+      },
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 14",
+          "modelId": 14
+        }
+      },
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 15",
+          "modelId": 15
+        }
+      },
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 16",
+          "modelId": 16
+        }
+      },
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 17",
+          "modelId": 17
+        }
+      },
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 18",
+          "modelId": 18
+        }
+      },
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 19",
+          "modelId": 19
+        }
+      },
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    [
+      {
+        "properties": {
+          "title": "name 20",
+          "modelId": 20
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "get",
+  "args": [
+    "setItems"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection).setItems",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)}\")",
+    []
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

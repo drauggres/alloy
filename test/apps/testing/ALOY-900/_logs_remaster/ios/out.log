@@ -1,0 +1,275 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "osname"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "debug"
+  ]
+}
+{
+  "name": "Titanium.API.debug",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    "Installing sql database \"/weather.sqlite\" with name \"weather\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Database"
+  ]
+}
+{
+  "name": "Titanium.Database",
+  "trap": "get",
+  "args": [
+    "install"
+  ]
+}
+{
+  "name": "Titanium.Database.install",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.Database}\")",
+    "/weather.sqlite",
+    "weather"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "pragma table_info(\"cities\");"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute).close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.install).execute)}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "CREATE TABLE IF NOT EXISTS migrations (latest TEXT, model TEXT);"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "SELECT latest FROM migrations where model = ?;",
+    "cities"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#2>",
+  "trap": "get",
+  "args": [
+    "isValidRow"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#2>",
+  "trap": "get",
+  "args": [
+    "close"
+  ]
+}
+{
+  "name": "[apply]([apply](Titanium.Database.install).execute)<#2>.close",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply]([apply](Titanium.Database.install).execute)<#2>}\")"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "BEGIN;"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "CREATE TABLE IF NOT EXISTS weather (city TEXT, id INTEGER NOT NULL, bogusField TEXT);"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "DELETE FROM migrations where model = ?",
+    "cities"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "INSERT INTO migrations VALUES (?,?)",
+    "201403121234567",
+    "cities"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install)",
+  "trap": "get",
+  "args": [
+    "execute"
+  ]
+}
+{
+  "name": "[apply](Titanium.Database.install).execute",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.Database.install)}\")",
+    "COMMIT;"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

@@ -1,0 +1,200 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "__alloyId2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "properties": {
+          "title": "One",
+          "id": "__alloyId5"
+        }
+      },
+      {
+        "properties": {
+          "title": "Two",
+          "id": "__alloyId6"
+        }
+      },
+      {
+        "properties": {
+          "title": "Three",
+          "id": "__alloyId7"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "section"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#1>",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "properties": {
+          "title": "Required",
+          "id": "__alloyId14"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#1>",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#1>",
+  "trap": "get",
+  "args": [
+    "getViewEx"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)<#1>.getViewEx",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createListSection)<#1>}\")",
+    {
+      "recurse": true
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\"",
+        "\"{[apply]([apply](Titanium.UI.createListSection)<#1>.getViewEx)}\""
+      ],
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

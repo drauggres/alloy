@@ -1,0 +1,105 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+require('testmod'). Not found. Return ScopeLogger
+{
+  "name": "testmod",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "testmod.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "testmod",
+  "trap": "get",
+  "args": [
+    "createCustomButton"
+  ]
+}
+{
+  "name": "testmod.createCustomButton",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "top": 100,
+      "title": "I am a CustomButton",
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](testmod.createWindow)}\")",
+    "\"{[apply](testmod.createCustomButton)}\""
+  ]
+}
+{
+  "name": "testmod",
+  "trap": "get",
+  "args": [
+    "createCustomLabel"
+  ]
+}
+{
+  "name": "testmod.createCustomLabel",
+  "trap": "apply",
+  "args": [
+    "(this: undefined)",
+    {
+      "bottom": 100,
+      "text": "I am a CustomLabel",
+      "id": "__alloyId1"
+    }
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](testmod.createWindow)}\")",
+    "\"{[apply](testmod.createCustomLabel)}\""
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](testmod.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](testmod.createWindow)}\")"
+  ]
+}

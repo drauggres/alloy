@@ -1,0 +1,367 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "top": "20dp",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "__alloyId20"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "properties": {
+          "itemId": "liMessage",
+          "id": "__alloyId23"
+        },
+        "template": "tMsg",
+        "cMsg": {
+          "value": "TEXTAREA"
+        },
+        "lHintText": {
+          "text": "CHILD LABEL"
+        }
+      },
+      {
+        "properties": {
+          "itemId": "liMessage",
+          "id": "__alloyId24"
+        },
+        "template": "fMsg",
+        "cMsg": {
+          "value": "TEXTFIELD"
+        },
+        "lHintText": {
+          "text": "CHILD LABEL"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\""
+      ],
+      "templates": {
+        "tMsg": {
+          "properties": {
+            "name": "tMsg"
+          },
+          "childTemplates": [
+            {
+              "type": "Ti.UI.TextArea",
+              "bindId": "cMsg",
+              "childTemplates": [
+                {
+                  "type": "Ti.UI.Label",
+                  "bindId": "lHintText",
+                  "properties": {
+                    "height": "\"{Titanium.UI.SIZE}\"",
+                    "width": "\"{Titanium.UI.FILL}\"",
+                    "textAlign": "left",
+                    "color": "#000",
+                    "bottom": 0,
+                    "font": {
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    "bindId": "lHintText"
+                  }
+                }
+              ],
+              "properties": {
+                "height": "30",
+                "width": "\"{Titanium.UI.FILL}\"",
+                "textAlign": "left",
+                "left": 10,
+                "font": {
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                },
+                "bindId": "cMsg"
+              }
+            }
+          ]
+        },
+        "fMsg": {
+          "properties": {
+            "name": "fMsg"
+          },
+          "childTemplates": [
+            {
+              "type": "Ti.UI.TextField",
+              "bindId": "cMsg",
+              "childTemplates": [
+                {
+                  "type": "Ti.UI.Label",
+                  "bindId": "lHintText",
+                  "properties": {
+                    "height": "\"{Titanium.UI.SIZE}\"",
+                    "width": "\"{Titanium.UI.FILL}\"",
+                    "textAlign": "left",
+                    "color": "#000",
+                    "bottom": 0,
+                    "font": {
+                      "fontSize": 10,
+                      "fontWeight": "bold"
+                    },
+                    "bindId": "lHintText"
+                  }
+                }
+              ],
+              "properties": {
+                "height": "30",
+                "width": "\"{Titanium.UI.FILL}\"",
+                "textAlign": "left",
+                "left": 10,
+                "font": {
+                  "fontSize": 12,
+                  "fontWeight": "bold"
+                },
+                "bindId": "cMsg"
+              }
+            }
+          ]
+        }
+      },
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

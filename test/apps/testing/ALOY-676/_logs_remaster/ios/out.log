@@ -1,0 +1,151 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/alloy/CFG'). Not found. Return ScopeLogger
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#eee",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createScrollView"
+  ]
+}
+{
+  "name": "Titanium.UI.createScrollView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "__alloyId0"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createScrollView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "#222",
+      "font": {
+        "fontSize": "14dp",
+        "fontWeight": "normal"
+      },
+      "top": "15dp",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "width": "90%",
+      "id": "constantsLabel"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createScrollView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createScrollView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createLabel)",
+  "trap": "set",
+  "args": [
+    "text",
+    "{\n\t\"Collection\": \"Alloy\",\n\t\"Model\": \"Alloy\",\n\t\"Module\": \"Alloy\",\n\t\"Require\": \"Alloy\",\n\t\"Widget\": \"Alloy\",\n\t\"ButtonNames\": \"Alloy.Abstract\",\n\t\"ButtonName\": \"Alloy.Abstract\",\n\t\"BarItemTypes\": \"Alloy.Abstract\",\n\t\"BarItemType\": \"Alloy.Abstract\",\n\t\"CoverFlowImageTypes\": \"Alloy.Abstract\",\n\t\"CoverFlowImageType\": \"Alloy.Abstract\",\n\t\"FlexSpace\": \"Alloy.Abstract\",\n\t\"FixedSpace\": \"Alloy.Abstract\",\n\t\"Images\": \"Alloy.Abstract\",\n\t\"Item\": \"Alloy.Abstract\",\n\t\"Items\": \"Alloy.Abstract\",\n\t\"ItemTemplate\": \"Alloy.Abstract\",\n\t\"Labels\": \"Alloy.Abstract\",\n\t\"Option\": \"Alloy.Abstract\",\n\t\"Options\": \"Alloy.Abstract\",\n\t\"Templates\": \"Alloy.Abstract\",\n\t\"Preview\": \"Alloy.Abstract\",\n\t\"Actions\": \"Alloy.Abstract\",\n\t\"Menu\": \"Ti.Android\",\n\t\"MenuItem\": \"Ti.Android\",\n\t\"ActionBar\": \"Ti.Android\",\n\t\"CardView\": \"Ti.UI.Android\",\n\t\"Annotation\": \"Ti.Map\",\n\t\"VideoPlayer\": \"Ti.Media\",\n\t\"MusicPlayer\": \"Ti.Media\",\n\t\"AudioPlayer\": \"Ti.Media\",\n\t\"AdView\": \"Ti.UI.iOS\",\n\t\"BlurView\": \"Ti.UI.iOS\",\n\t\"CoverFlowView\": \"Ti.UI.iOS\",\n\t\"DocumentViewer\": \"Ti.UI.iOS\",\n\t\"LivePhotoView\": \"Ti.UI.iOS\",\n\t\"SplitWindow\": \"Ti.UI.iOS\",\n\t\"PreviewContext\": \"Ti.UI.iOS\",\n\t\"PreviewAction\": \"Ti.UI.iOS\",\n\t\"PreviewActionGroup\": \"Ti.UI.iOS\",\n\t\"MenuPopup\": \"Ti.UI.iOS\",\n\t\"Stepper\": \"Ti.UI.iOS\",\n\t\"Popover\": \"Ti.UI.iPad\",\n\t\"NavigationGroup\": \"Ti.UI.iPhone\",\n\t\"StatusBar\": \"Ti.UI.iPhone\",\n\t\"CommandBar\": \"Ti.UI.Windows\",\n\t\"AppBarButton\": \"Ti.UI.Windows\",\n\t\"AppBarToggleButton\": \"Ti.UI.Windows\",\n\t\"AppBarSeparator\": \"Ti.UI.Windows\",\n\t\"LeftNavButton\": \"Ti.UI.Window\",\n\t\"RightNavButton\": \"Ti.UI.Window\",\n\t\"LeftNavButtons\": \"Ti.UI.Window\",\n\t\"RightNavButtons\": \"Ti.UI.Window\",\n\t\"TitleControl\": \"Ti.UI.Window\",\n\t\"WindowToolbar\": \"Ti.UI.Window\",\n\t\"ContentView\": \"Ti.UI.iPad.Popover\",\n\t\"DrawerLayout\": \"Ti.UI.Android\",\n\t\"LeftView\": \"Ti.UI.Android.DrawerLayout\",\n\t\"CenterView\": \"Ti.UI.Android.DrawerLayout\",\n\t\"RightView\": \"Ti.UI.Android.DrawerLayout\",\n\t\"FooterView\": \"_ProxyProperty._Lists\",\n\t\"HeaderView\": \"_ProxyProperty._Lists\",\n\t\"HeaderPullView\": \"_ProxyProperty._Lists\",\n\t\"PullView\": \"_ProxyProperty._Lists\",\n\t\"Search\": \"_ProxyProperty._Lists\",\n\t\"SearchView\": \"_ProxyProperty._Lists\",\n\t\"RightButton\": \"_ProxyProperty\",\n\t\"LeftButton\": \"_ProxyProperty\",\n\t\"KeyboardToolbar\": \"_ProxyProperty\",\n\t\"ActionView\": \"_ProxyProperty\"\n}"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
