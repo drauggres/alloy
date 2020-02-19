@@ -188,11 +188,16 @@ try {
 	if (process.argv.length === 4) {
 		const platform = process.argv[2];
 		appDir = process.argv[3];
-		const appFile = path.join(appDir, '../../alloy.js');
+		const appFile = path.join(appDir, 'app.js');
 		if (fs.existsSync(appFile)) {
-			logRequire(appFile);
+			logRequire(alloyJs);
+		} else {
+			const alloyJs = path.join(appDir, '../../alloy.js');
+			if (fs.existsSync(alloyJs)) {
+				logRequire(alloyJs);
+			}
+			Alloy.createController('index');
 		}
-		Alloy.createController('index');
 	}
 } catch (e) {
 	console.error(e.message);
