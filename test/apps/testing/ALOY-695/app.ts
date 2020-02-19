@@ -1,3 +1,5 @@
+import * as Alloy from 'alloy';
+
 Alloy.Globals.classes = [
 	[],
 	['big'],
