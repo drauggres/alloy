@@ -440,7 +440,6 @@ module.exports = function(args, program) {
 	var tracker = {};
 	_.each(widgetDirs, function(collection) {
 		generateControllersFromViews(collection);
-		generateControllersWithoutView(collection, 'TS_CONTROLLER');
 		generateControllersWithoutView(collection, 'JS_CONTROLLER');
 	});
 
