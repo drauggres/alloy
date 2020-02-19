@@ -619,6 +619,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 		dirname = path.dirname(view).replace(dirRegex, ''),
 		viewName = basename,
 		template = {
+			__views: '',
 			abstractMethods: '',
 			dataFunctionsCode: '',
 			destroyCode: '',
@@ -1021,6 +1022,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 			access = 'private';
 		}
 		template.properties += `    ${pre}${access} ${p}${conditional ? '?' : ''}: ${type}${value};${post}\n`;
+		template.__views += `        this.__views["${p}"] = this.${p};\n`;
 	}
 
 	if (CU.preCode) {
