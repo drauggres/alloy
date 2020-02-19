@@ -1,0 +1,45 @@
+{
+	"compilerOptions": {
+		"incremental": true,
+		"tsBuildInfoFile": "./build/.tsbuildinfo.json",
+		"baseUrl": ".",
+		"paths": {
+			"*": [
+				"../../../Alloy/template/lib/*",
+				"../../../node_modules/@ti.types/*",
+				"./app/gen/*",
+				"./app/*",
+				"./app/src/*"
+			]
+		},
+		"rootDirs": [
+			"app/gen",
+			"app/src",
+			"app"
+		],
+		"target": "es5",
+		"module": "commonjs",
+		"outDir": "./build/TypeScript",
+		"lib": [
+			"dom",
+			"es2015",
+			"es2015.iterable"
+		],
+		"typeRoots": [
+			"../../../node_modules/@ti.types",
+			"../../../node_modules/@types"
+		],
+		"noImplicitAny": true,
+		"downlevelIteration": true,
+		"strict": true,
+		"esModuleInterop": true
+	},
+	"include": [
+		"app/app.ts",
+		"app/controllers/**/*",
+		"app/lib/**/*",
+		"app/src/**/*",
+		"app/models/**/*",
+		"app/gen/**/*"
+	]
+}
