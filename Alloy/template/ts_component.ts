@@ -32,6 +32,11 @@ export abstract class <%= className %> extends BaseController {
 <%= viewCode %>
         // </viewCode>
 
+        // Populating $.__views for backward compatibility
+        // <__views>
+<%= __views %>
+        // </__view>
+
         // Generated code that must be executed after all UI and
         // controller code. One example deferred event handlers whose
         // functions are not defined until after the controller code
