@@ -1,4 +1,5 @@
 var _ = require('lodash'),
+	logger = require('../../../logger'),
 	styler = require('../styler'),
 	CU = require('../compilerUtils'),
 	U = require('../../../utils'),
@@ -32,6 +33,17 @@ function parse(node, state, args) {
 	}
 
 	var systemButton = node.getAttribute('systemButton');
+	var RE = /(?:Ti|Titanium)\.UI\.(iPhone|iOS)\.SystemButton\.(.*)/;
+	var match = systemButton.match(RE);
+	if (match) {
+		if (match[1] === 'iPhone') {
+			logger.warn([
+				'Ti.UI.iPhone.SystemButton (line ' + node.lineNumber + ') is deprecated as of Titanium ' + MIN_VERSION,
+				'Use Ti.UI.iOS.SystemButton instead'
+			]);
+		}
+		systemButton = match[2];
+	}
 	if (_.includes(systemButtons, systemButton)) {
 		node.setAttribute('systemButton', 'Ti.UI.' + iOSProxy + '.SystemButton.' + systemButton);
 	}
