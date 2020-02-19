@@ -1,3 +1,12 @@
+/**
+ * Alloy for Titanium by Appcelerator
+ * This is generated code, DO NOT MODIFY - changes will be lost!
+ * Copyright (c) 2012 by Appcelerator, Inc.
+ */
+var Alloy = require('/alloy'),
+_ = Alloy._,
+Backbone = Alloy.Backbone;
+
 // The contents of this file will be executed before any of
 // your view controllers are ever executed, including the index.
 // You have access to all functionality on the `Alloy` namespace.
@@ -9,5 +18,7 @@
 // object. For example:
 //
 // Alloy.Globals.someGlobalFunction = function(){};
-Alloy.Globals.winTop = (OS_IOS && parseInt(Ti.Platform.version, 10) >= 7) ? 20 : 0;
+Alloy.Globals.winTop = false && parseInt(Ti.Platform.version, 10) >= 7 ? 20 : 0;
 Ti.UI.backgroundColor = '#fff';
+Alloy.createController('index');
+//# sourceMappingURL=file:///home/s.volkov/Proj/alloy/test/projects/Harness/build/map/Resources/android/app.js.map

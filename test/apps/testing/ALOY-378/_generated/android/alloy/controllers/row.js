@@ -1,68 +1,29 @@
-var Alloy = require('/alloy'),
-Backbone = Alloy.Backbone,
-_ = Alloy._;
-
-
-
-
-function __processArg(obj, key) {
-  var arg = null;
-  if (obj) {
-    arg = obj[key] || null;
-  }
-  return arg;
-}
-
-function Controller() {
-
-  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
-  this.__controllerPath = 'row';
-  this.args = arguments[0] || {};
-
-  if (arguments[0]) {
-    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
-    var $model = __processArg(arguments[0], '$model');
-    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
-  }
-  var $ = this;
-  var exports = {};
-  var __defers = {};
-
-  // Generated code that must be executed before all UI and/or
-  // controller code. One example is all model and collection
-  // declarations from markup.
-
-
-  // <dataFunctions>
-
-  // </dataFunctionsCode>
-
-  // Generated UI code
-  $.__views["row"] = Ti.UI.createTableViewRow(
-  { color: "blue", height: "50dp", id: "row" });
-
-  $.__views["row"] && $.addTopLevelView($.__views["row"]);
-  exports.destroy = function () {};
-
-
-  // make all IDed elements in $.__views available right on the $ in a
-  // controller's internal code. Externally the IDed elements will
-  // be accessed with getView().
-  _.extend($, $.__views);
-
-  // Controller code directly from the developer's controller file
-  var args = arguments[0] || {};
-  $.row.title = args.title;
-
-  // Generated code that must be executed after all UI and
-  // controller code. One example deferred event handlers whose
-  // functions are not defined until after the controller code
-  // is executed.
-
-
-  // Extend the $ instance with all functions and properties
-  // defined on the exports object.
-  _.extend($, exports);
-}
-
-module.exports = Controller;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var rowAbstract_1 = require("/controllers/rowAbstract");
+var row = /** @class */ (function (_super) {
+    __extends(row, _super);
+    function row(args) {
+        if (args === void 0) { args = {}; }
+        var _this = _super.call(this) || this;
+        // Here was incorrect assignment in the original code
+        // We keeping it with explicit  type casting
+        _this.row.title = args.title;
+        return _this;
+    }
+    return row;
+}(rowAbstract_1.rowAbstract));
+exports.default = row;
