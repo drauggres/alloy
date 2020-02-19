@@ -1,93 +1,51 @@
-var Alloy = require('/alloy'),
-Backbone = Alloy.Backbone,
-_ = Alloy._;
-
-
-
-
-function __processArg(obj, key) {
-  var arg = null;
-  if (obj) {
-    arg = obj[key] || null;
-  }
-  return arg;
-}
-
-function Controller() {
-
-  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
-  this.__controllerPath = 'index';
-  this.args = arguments[0] || {};
-
-  if (arguments[0]) {
-    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
-    var $model = __processArg(arguments[0], '$model');
-    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
-  }
-  var $ = this;
-  var exports = {};
-  var __defers = {};
-
-  // Generated code that must be executed before all UI and/or
-  // controller code. One example is all model and collection
-  // declarations from markup.
-
-
-  // <dataFunctions>
-
-  // </dataFunctionsCode>
-
-  // Generated UI code
-  $.__views["index"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
-
-  $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  addLabels ? $.addListener($.__views["index"], 'click', addLabels) : __defers['$.__views["index"]!click!addLabels'] = true;$.__views["scroller"] = Ti.UI.createScrollView(
-  { layout: "vertical", height: Ti.UI.FILL, width: Ti.UI.FILL, id: "scroller" });
-
-  $.__views["index"].add($.__views["scroller"]);
-  exports.destroy = function () {};
-
-
-  // make all IDed elements in $.__views available right on the $ in a
-  // controller's internal code. Externally the IDed elements will
-  // be accessed with getView().
-  _.extend($, $.__views);
-
-  // Controller code directly from the developer's controller file
-  function addLabels(e) {
-    $.scroller.add(Ti.UI.createLabel(Alloy.createStyle('index', {
-      apiName: 'Ti.UI.Label',
-      text: 'Alloy.createStyle() + Ti.UI.createLabel()' })));
-
-
-    $.scroller.add(Ti.UI.createLabel($.createStyle({
-      apiName: 'Ti.UI.Label',
-      text: '$.createStyle() + Ti.UI.createLabel()' })));
-
-
-    $.scroller.add(Alloy.UI.create('index', 'Ti.UI.Label', {
-      text: 'Alloy.UI.create()' }));
-
-
-    $.scroller.add($.UI.create('Ti.UI.Label', {
-      text: '$.UI.create()' }));
-
-
-    $.scroller.add(Alloy.createWidget('alloy.testWidget', 'labelmaker').createLabels());
-  }
-
-  $.index.open();
-
-  // Generated code that must be executed after all UI and
-  // controller code. One example deferred event handlers whose
-  // functions are not defined until after the controller code
-  // is executed.
-  __defers['$.__views["index"]!click!addLabels'] && $.addListener($.__views["index"], 'click', addLabels);
-
-  // Extend the $ instance with all functions and properties
-  // defined on the exports object.
-  _.extend($, exports);
-}
-
-module.exports = Controller;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var Alloy = __importStar(require("alloy"));
+var indexAbstract_1 = require("/controllers/indexAbstract");
+var index = /** @class */ (function (_super) {
+    __extends(index, _super);
+    function index() {
+        var _this = _super.call(this) || this;
+        _this.index.open();
+        return _this;
+    }
+    index.prototype.addLabels = function (e) {
+        this.scroller.add(Ti.UI.createLabel(Alloy.createStyle('index', {
+            apiName: 'Ti.UI.Label',
+            text: 'Alloy.createStyle() + Ti.UI.createLabel()'
+        })));
+        this.scroller.add(Ti.UI.createLabel(this.createStyle({
+            apiName: 'Ti.UI.Label',
+            text: '$.createStyle() + Ti.UI.createLabel()'
+        })));
+        this.scroller.add(Alloy.UI.create('index', 'Ti.UI.Label', {
+            text: 'Alloy.UI.create()'
+        }));
+        this.scroller.add(this.UI.create('Ti.UI.Label', {
+            text: '$.UI.create()'
+        }));
+        this.scroller.add(Alloy.createWidget('alloy.testWidget', 'labelmaker').createLabels());
+    };
+    return index;
+}(indexAbstract_1.indexAbstract));
+exports.default = index;
