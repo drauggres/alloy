@@ -3,7 +3,7 @@ import Backbone from 'backbone';
 
 declare class BaseController extends Backbone.EventsMixin implements Alloy.Controller {
     protected readonly roots: Ti.Proxy[];
-    protected readonly __views: Record<string, Ti.UI.View|Alloy.Controller|undefined>;
+    protected readonly __views: Record<string, Ti.Proxy|Alloy.Controller|undefined>;
     protected readonly __events: Array<{view: Ti.Proxy, type: string, handler: (e: any) => void}>;
     protected __proxyProperties: Record<string, any>;
     protected __widgetId: string|null;
