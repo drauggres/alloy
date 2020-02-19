@@ -39,7 +39,7 @@ declare module Alloy {
      * @param callback Callback function to invoke when the event is fired.
      * @returns ID attribute of the view object. If one does not exist, Alloy will create a unique ID.
      */
-    addListener(proxy: Titanium.Proxy, type: string, callback: (e: any) => void): string;
+    addListener(proxy: Titanium.Proxy, type: string, callback: (e: any) => void): string | undefined;
 
     /**
      * Creates a dictionary of properties based on the specified styles.
