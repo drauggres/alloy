@@ -1170,7 +1170,9 @@ protected ${handlerFunc}(e?: any): void {
   if (e && e.fromAdapter) {
     return;
   }
-  const opts: any = /*${handlerFunc}.opts ||*/ {};
+  // FIXME: set object on function, seriously ?!
+  // https://jira.appcelerator.org/browse/ALOY-648
+  const opts: any = (this.${handlerFunc} as any).opts || {};
   const models = ${whereCode};
   const len = models.length;
   <%= pre %>
