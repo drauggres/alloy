@@ -539,7 +539,7 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 		}
 		if (propertyDeclaration) {
 			propertyDeclaration.access = exports.ACCESS_LEVEL.PUBLIC;
-			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || parentIsConditional || !isForCurrentPlatform;
+			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || !!propertyDeclaration.conditional, parentIsConditional || !isForCurrentPlatform;
 			var list = exports.propertiesMap[property] || [];
 			if (!isForCurrentPlatform) {
 				propertyDeclaration.value = 'void 0';
