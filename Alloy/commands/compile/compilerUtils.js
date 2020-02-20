@@ -239,11 +239,6 @@ exports.getParserArgs = function(node, state, opts) {
 		}
 	})();
 
-	// TODO: Add the apiName until TIMOB-12553 is resolved
-	if (autoStyle) {
-		createArgs[CONST.APINAME_PROPERTY] = fullname;
-	}
-
 	_.each(node.attributes, function(attr) {
 		var attrName = attr.nodeName;
 		if (_.includes(attrs, attrName)) { return; }
