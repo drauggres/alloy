@@ -137,6 +137,15 @@ exports.isNodeForCurrentPlatform = function(node) {
 			isForCurrentPlatform = true;
 		}
 	});
+	if (!isForCurrentPlatform) {
+		return isForCurrentPlatform;
+	}
+	var document = node.ownerDocument;
+	node = node.parentNode;
+	while (node !== document && isForCurrentPlatform) {
+		isForCurrentPlatform = exports.isNodeForCurrentPlatform(node);
+		node = node.parentNode;
+	}
 	return isForCurrentPlatform;
 };
 exports.getParserArgs = function(node, state, opts) {
@@ -317,13 +326,15 @@ exports.getParserArgs = function(node, state, opts) {
 };
 
 exports.generateNodeExtended = function(node, state, newState) {
-	return exports.generateNode(node, _.extend(_.clone(state), newState));
+	return exports.generateNode(node, _.extend(_.clone(state), newState,
+		(state.condition ? { parentCondition: true } : {}) ));
 };
 
 exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCollection) {
-	var parentIsConditional = state.parentCondition;
 	if (node.nodeType != 1) return '';
-	if (state.outputFormat !== 'TS' && !exports.isNodeForCurrentPlatform(node)) {
+	var isForCurrentPlatform = exports.isNodeForCurrentPlatform(node);
+	var parentIsConditional = state.parentCondition;
+	if (state.outputFormat !== 'TS' && !isForCurrentPlatform) {
 		return '';
 	}
 
@@ -533,14 +544,17 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 		}
 		if (propertyDeclaration) {
 			propertyDeclaration.access = exports.ACCESS_LEVEL.PUBLIC;
-			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || !!propertyDeclaration.conditional;
+			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || parentIsConditional || !isForCurrentPlatform;
 			var list = exports.propertiesMap[property] || [];
+			if (!isForCurrentPlatform) {
+				propertyDeclaration.value = 'void 0';
+			}
 			list.push(propertyDeclaration);
 			exports.propertiesMap[property] = list;
 		}
 	}
 	if (!isModelOrCollection) {
-		if (!exports.isNodeForCurrentPlatform(node)) {
+		if (!isForCurrentPlatform) {
 			return '';
 		}
 		return code.condition ? _.template(codeTemplate)(code) : code.content;
