@@ -242,9 +242,25 @@ declare global {
    */
   const OS_IOS: boolean;
 
+  /**
+   * @deprecated Not supported platform.
+   */
   const OS_MOBILEWEB: boolean;
 
+  /**
+   * @deprecated Not supported platform.
+   */
   const OS_WINDOWS: boolean;
+
+  const ENV_TEST: boolean;
+
+  const ENV_PROD: boolean;
+
+  const ENV_DEV: boolean;
+
+  const DIST_ADHOC: boolean;
+
+  const DIST_STORE: boolean;
 }
 
 export = Alloy;
