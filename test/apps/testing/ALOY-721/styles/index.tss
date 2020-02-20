@@ -1,7 +1,7 @@
 'Label': {
 	textAlign: 'center',
-	left: null,
-	right: null,
+	left: undefined,
+	right: undefined,
 	height: Ti.UI.SIZE,
 	width: Ti.UI.SIZE,
 	shadowOffset: {x:0,y:0}
