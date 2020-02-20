@@ -27,6 +27,7 @@ function parse(node, state, args) {
 		androidView = null,
 		extras = [],
 		code = '';
+	var tsOutput = state.outputFormat === 'TS';
 
 	_.each(U.XML.getElementsFromNodes(node.childNodes), function(child) {
 		var childArgs = CU.getParserArgs(child, state);
@@ -92,6 +93,13 @@ function parse(node, state, args) {
 						warningLog.push('To get rid of this warning, remove any other platforms from your child elements');
 					}
 					logger.warn(warningLog);
+				} else if (tsOutput) {
+					// We need to generate properties, but don't need the code
+					CU.generateNodeExtended(child, state, {
+						parent: {},
+						post: function(node, state, args) {
+						}
+					});
 				}
 			} else {
 				U.die(theNode + ' can only have one androidView');
