@@ -1,83 +1,32 @@
-var Alloy = require('/alloy'),
-Backbone = Alloy.Backbone,
-_ = Alloy._;
-
-
-
-
-function __processArg(obj, key) {
-  var arg = null;
-  if (obj) {
-    arg = obj[key] || null;
-  }
-  return arg;
-}
-
-function Controller() {
-
-  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
-  this.__controllerPath = 'index';
-  this.args = arguments[0] || {};
-
-  if (arguments[0]) {
-    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
-    var $model = __processArg(arguments[0], '$model');
-    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
-  }
-  var $ = this;
-  var exports = {};
-  var __defers = {};
-
-  // Generated code that must be executed before all UI and/or
-  // controller code. One example is all model and collection
-  // declarations from markup.
-
-
-  // <dataFunctions>
-
-  // </dataFunctionsCode>
-
-  // Generated UI code
-  $.__views["__alloyId0"] = Ti.UI.createWindow(
-  { title: "Proxy Shorthands" });
-
-  $.__views["__alloyId2"] = Ti.UI.createButton(
-  { title: "Left" });
-
-  doLeftClick ? $.addListener($.__views["__alloyId2"], 'click', doLeftClick) : __defers['$.__views["__alloyId2"]!click!doLeftClick'] = true;$.__views["__alloyId0"].leftNavButton = $.__views["__alloyId2"];$.__views["__alloyId3"] = Ti.UI.createButton(
-  { title: "Right" });
-
-  $.__views["__alloyId0"].rightNavButton = $.__views["__alloyId3"];doRightClick ? $.addListener($.__views["__alloyId3"], 'click', doRightClick) : __defers['$.__views["__alloyId3"]!click!doRightClick'] = true;$.__views["index"] = Ti.UI.createNavigationWindow(
-  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, window: $.__views["__alloyId0"], id: "index" });
-
-  $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  exports.destroy = function () {};
-
-
-  // make all IDed elements in $.__views available right on the $ in a
-  // controller's internal code. Externally the IDed elements will
-  // be accessed with getView().
-  _.extend($, $.__views);
-
-  // Controller code directly from the developer's controller file
-  function doLeftClick() {
-    alert('Left button clicked');
-  }
-  function doRightClick() {
-    alert('Right button clicked');
-  }
-
-  $.index.open();
-
-  // Generated code that must be executed after all UI and
-  // controller code. One example deferred event handlers whose
-  // functions are not defined until after the controller code
-  // is executed.
-  __defers['$.__views["__alloyId2"]!click!doLeftClick'] && $.addListener($.__views["__alloyId2"], 'click', doLeftClick);__defers['$.__views["__alloyId3"]!click!doRightClick'] && $.addListener($.__views["__alloyId3"], 'click', doRightClick);
-
-  // Extend the $ instance with all functions and properties
-  // defined on the exports object.
-  _.extend($, exports);
-}
-
-module.exports = Controller;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var indexAbstract_1 = require("/controllers/indexAbstract");
+var index = /** @class */ (function (_super) {
+    __extends(index, _super);
+    function index() {
+        var _this = _super.call(this) || this;
+        _this.index.open();
+        return _this;
+    }
+    index.prototype.doLeftClick = function () {
+        alert('Left button clicked');
+    };
+    index.prototype.doRightClick = function () {
+        alert('Right button clicked');
+    };
+    return index;
+}(indexAbstract_1.indexAbstract));
+exports.default = index;
