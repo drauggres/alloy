@@ -999,13 +999,16 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 				}
 			}
 			if (property.value) {
-				if (value) {
+				const currentIsVoid = value === ' = void 0';
+				if (value && !currentIsVoid) {
 					U.die([
 						'Value defined more than once.',
 						'Error occurred during processing XML for view "' + view + '"'
 					]);
 				}
-				value = ` = ${property.value}`;
+				if (!value || currentIsVoid) {
+					value = ` = ${property.value}`;
+				}
 			}
 			if (type) {
 				type = type + ' | ';

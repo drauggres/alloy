@@ -9,6 +9,7 @@ exports.parse = function(node, state) {
 };
 
 function parse(node, state, args) {
+	var tsOutput = state.outputFormat === 'TS';
 	var eventObject = 'e',
 		code = '';
 
@@ -70,7 +71,7 @@ function parse(node, state, args) {
 		navigationMode: node.getAttribute('navigationMode') ? node.getAttribute('navigationMode') : undefined,
 		onHomeIconItemSelected: node.getAttribute('onHomeIconItemSelected') ? node.getAttribute('onHomeIconItemSelected') : undefined
 	};
-	if (state.outputFormat === 'TS' && xmlStyles.onHomeIconItemSelected) {
+	if (tsOutput && xmlStyles.onHomeIconItemSelected) {
 		var value = xmlStyles.onHomeIconItemSelected;
 		var match = value.match(CU.BINDING_REGEX);
 		if (match) {
@@ -102,14 +103,15 @@ function parse(node, state, args) {
 		if (xmlStyles.navigationMode)  { code += state.parent.symbol + '.activity.actionBar.navigationMode = ' + xmlStyles.navigationMode + ';'; }
 		if (xmlStyles.onHomeIconItemSelected)  { code += state.parent.symbol + '.activity.actionBar.onHomeIconItemSelected = ' + xmlStyles.onHomeIconItemSelected + ';'; }
 	}
+	var templateName = tsOutput ? 'ts_Ti.Android.Menu.ts' : 'Ti.Android.Menu.js';
 	// Update the parsing state
 	return {
 		// we don't need it
 		propertyDeclaration: '',
 		parent: {},
 		styles: state.styles,
-		code: U.evaluateTemplate('Ti.Android.Menu.js', {
-			returnType: state.outputFormat === 'TS' ? ': void' : '',
+		code: U.evaluateTemplate(templateName, {
+			returnType: tsOutput ? ': void' : '',
 			parent: state.parent.symbol || CU.getParentSymbol(state),
 			code: code,
 			eventObject: eventObject,
