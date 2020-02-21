@@ -1,7 +1,7 @@
 <Alloy>
 	<Window>
-		<TableView id="jobList">
-        	<SearchBar platform="ios" filterAttribute="title"/>
+		<TableView id="jobList" filterAttribute="title">
+        	<SearchBar platform="ios"/>
         	<RefreshControl id="ptr" tintColor="#008"/>
         	<TableViewRow title="tableview"/>
         	<TableViewRow title="drag down to show refreshControl"/>
