@@ -4,7 +4,8 @@
 	<Model src="empty" instance="true" id="anotherModel" onChange="anotherModelChange"/>
 
 	<Window onClick="windowClick">
-		<View id="map2" ns="Alloy.Globals.Map" onClick="mapClick"/>
+		<!--		<View id="map2" ns="Alloy.Globals.Map" onClick="mapClick"/>-->
+		<View id="map2" module="ti.map" onClick="mapClick"/>
 		<Require src="empty" onInit="emptyInit"/>
 	</Window>
 </Alloy>
