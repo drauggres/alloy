@@ -526,7 +526,7 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 	if (state.importCode && exports.importCode.indexOf(state.importCode) === -1) {
 		exports.importCode += state.importCode;
 	}
-	if (!isLocal) {
+	if (!isLocal && !state.isProxyProperty) {
 		var propertyDeclaration = state.propertyDeclaration;
 		var conditional = !!state.condition || !!code.condition || parentIsConditional;
 		var property = args.id;
