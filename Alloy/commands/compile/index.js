@@ -988,8 +988,10 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 		var type = '';
 		var accessNumber = 0;
 		var value = '';
+		var isModelOrCollection = false;
 		for (var i = 0, l = declarations.length; i < l; i++) {
 			property = declarations[i];
+			isModelOrCollection = property.isModelOrCollection;
 			pre = property.pre || '';
 			post = property.post || '';
 			conditional = conditional || !!property.condition || !!property.conditional;
@@ -1024,7 +1026,10 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 			access = 'private';
 		}
 		template.properties += `    ${pre}${access} ${p}${conditional ? '?' : ''}: ${type}${value};${post}\n`;
-		template.__views += `        this.__views["${p}"] = this.${p};\n`;
+
+		if (!isModelOrCollection) {
+			template.__views += `        this.__views["${p}"] = this.${p};\n`;
+		}
 	}
 
 	if (CU.preCode) {
