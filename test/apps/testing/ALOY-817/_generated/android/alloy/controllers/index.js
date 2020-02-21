@@ -1,102 +1,56 @@
-var Alloy = require('/alloy'),
-Backbone = Alloy.Backbone,
-_ = Alloy._;
-
-
-
-
-function __processArg(obj, key) {
-  var arg = null;
-  if (obj) {
-    arg = obj[key] || null;
-  }
-  return arg;
-}
-
-function Controller() {
-
-  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
-  this.__controllerPath = 'index';
-  this.args = arguments[0] || {};
-
-  if (arguments[0]) {
-    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
-    var $model = __processArg(arguments[0], '$model');
-    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
-  }
-  var $ = this;
-  var exports = {};
-  var __defers = {};
-
-  // Generated code that must be executed before all UI and/or
-  // controller code. One example is all model and collection
-  // declarations from markup.
-  Alloy.Collections.instance('empty');Alloy.Models.instance('empty');$.anotherModel = Alloy.createModel('empty');
-
-  // <dataFunctions>
-
-  // </dataFunctionsCode>
-
-  // Generated UI code
-  collectionChange ? Alloy.Collections.empty.on('change', collectionChange) : __defers['Alloy.Collections.empty!change!collectionChange'] = true;modelChange ? Alloy.Models.empty.on('change', modelChange) : __defers['Alloy.Models.empty!change!modelChange'] = true;anotherModelChange ? $.anotherModel.on('change', anotherModelChange) : __defers['$.anotherModel!change!anotherModelChange'] = true;$.__views["index"] = Ti.UI.createWindow(
-  { backgroundColor: "#fff", fullscreen: false, exitOnClose: true, id: "index" });
-
-  $.__views["index"] && $.addTopLevelView($.__views["index"]);
-  windowClick ? $.addListener($.__views["index"], 'click', windowClick) : __defers['$.__views["index"]!click!windowClick'] = true;$.__views["map2"] = Alloy.Globals.Map.createView(
-  { id: "map2" });
-
-  $.__views["index"].add($.__views["map2"]);
-  mapClick ? $.addListener($.__views["map2"], 'click', mapClick) : __defers['$.__views["map2"]!click!mapClick'] = true;$.__views["__alloyId4"] = Alloy.createController('empty', { __parentSymbol: $.__views["index"] });
-  $.__views["__alloyId4"].setParent($.__views["index"]);
-  emptyInit ? $.__views["__alloyId4"].on('init', emptyInit) : __defers['$.__views["__alloyId4"]!init!emptyInit'] = true;exports.destroy = function () {};
-
-
-  // make all IDed elements in $.__views available right on the $ in a
-  // controller's internal code. Externally the IDed elements will
-  // be accessed with getView().
-  _.extend($, $.__views);
-
-  // Controller code directly from the developer's controller file
-  function mapClick(e) {
-    Ti.API.info('map clicked');
-  }
-
-  function windowClick(e) {
-    Ti.API.info('window clicked');
-  }
-
-  function modelChange(e) {
-    Ti.API.info('model change');
-  }
-
-  function anotherModelChange(e) {
-    Ti.API.info('another model change');
-  }
-
-  function collectionChange(e) {
-    Ti.API.info('collection change');
-  }
-
-  function emptyInit(e) {
-    Ti.API.info('empty controller init');
-  }
-
-  $.index.open();
-
-  $.map2.fireEvent('click');
-  Alloy.Collections.empty.trigger('change');
-  Alloy.Models.empty.trigger('change');
-  $.anotherModel.trigger('change');
-
-  // Generated code that must be executed after all UI and
-  // controller code. One example deferred event handlers whose
-  // functions are not defined until after the controller code
-  // is executed.
-  __defers['Alloy.Collections.empty!change!collectionChange'] && Alloy.Collections.empty.on('change', collectionChange);__defers['Alloy.Models.empty!change!modelChange'] && Alloy.Models.empty.on('change', modelChange);__defers['$.anotherModel!change!anotherModelChange'] && $.anotherModel.on('change', anotherModelChange);__defers['$.__views["index"]!click!windowClick'] && $.addListener($.__views["index"], 'click', windowClick);__defers['$.__views["map2"]!click!mapClick'] && $.addListener($.__views["map2"], 'click', mapClick);__defers['$.__views["__alloyId4"]!init!emptyInit'] && $.__views["__alloyId4"].on('init', emptyInit);
-
-  // Extend the $ instance with all functions and properties
-  // defined on the exports object.
-  _.extend($, exports);
-}
-
-module.exports = Controller;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var Alloy = __importStar(require("alloy"));
+var indexAbstract_1 = require("/controllers/indexAbstract");
+var index = /** @class */ (function (_super) {
+    __extends(index, _super);
+    function index() {
+        var _this = _super.call(this) || this;
+        _this.index.open();
+        _this.map2.fireEvent('click');
+        Alloy.Collections.empty.trigger('change');
+        Alloy.Models.empty.trigger('change');
+        _this.anotherModel.trigger('change');
+        return _this;
+    }
+    index.prototype.mapClick = function () {
+        Ti.API.info('map clicked');
+    };
+    index.prototype.windowClick = function () {
+        Ti.API.info('window clicked');
+    };
+    index.prototype.modelChange = function () {
+        Ti.API.info('model change');
+    };
+    index.prototype.anotherModelChange = function () {
+        Ti.API.info('another model change');
+    };
+    index.prototype.collectionChange = function () {
+        Ti.API.info('collection change');
+    };
+    index.prototype.emptyInit = function () {
+        Ti.API.info('empty controller init');
+    };
+    return index;
+}(indexAbstract_1.indexAbstract));
+exports.default = index;

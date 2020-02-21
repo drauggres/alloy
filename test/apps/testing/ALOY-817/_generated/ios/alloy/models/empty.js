@@ -13,21 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var emptyAbstract_1 = require("/controllers/emptyAbstract");
-var empty = /** @class */ (function (_super) {
-    __extends(empty, _super);
-    function empty(args) {
-        var _this = _super.call(this, args) || this;
-        _this.empty.fireEvent('click');
-        setTimeout(function () {
-            _this.trigger('init');
-        }, 2000);
-        return _this;
+var Base_1 = require("/model/Base");
+var Model = /** @class */ (function (_super) {
+    __extends(Model, _super);
+    function Model() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    empty.prototype.buttonClick = function (e) {
-        e.cancelBubble = true;
-        Ti.API.info('button clicked');
-    };
-    return empty;
-}(emptyAbstract_1.emptyAbstract));
-exports.default = empty;
+    return Model;
+}(Base_1.BaseModel));
+exports.Model = Model;
+var Collection = /** @class */ (function (_super) {
+    __extends(Collection, _super);
+    function Collection() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Collection;
+}(Base_1.BaseCollection));
+exports.Collection = Collection;

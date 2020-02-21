@@ -1,76 +1,33 @@
-var Alloy = require('/alloy'),
-Backbone = Alloy.Backbone,
-_ = Alloy._;
-
-
-
-
-function __processArg(obj, key) {
-  var arg = null;
-  if (obj) {
-    arg = obj[key] || null;
-  }
-  return arg;
-}
-
-function Controller() {
-
-  require('/controllers/' + 'BaseController').apply(this, Array.prototype.slice.call(arguments));
-  this.__controllerPath = 'empty';
-  this.args = arguments[0] || {};
-
-  if (arguments[0]) {
-    var __parentSymbol = __processArg(arguments[0], '__parentSymbol');
-    var $model = __processArg(arguments[0], '$model');
-    var __itemTemplate = __processArg(arguments[0], '__itemTemplate');
-  }
-  var $ = this;
-  var exports = {};
-  var __defers = {};
-
-  // Generated code that must be executed before all UI and/or
-  // controller code. One example is all model and collection
-  // declarations from markup.
-
-
-  // <dataFunctions>
-
-  // </dataFunctionsCode>
-
-  // Generated UI code
-  $.__views["empty"] = Ti.UI.createButton(
-  { title: 'useless button', bottom: 50, id: "empty" });
-
-  $.__views["empty"] && $.addTopLevelView($.__views["empty"]);
-  buttonClick ? $.addListener($.__views["empty"], 'click', buttonClick) : __defers['$.__views["empty"]!click!buttonClick'] = true;exports.destroy = function () {};
-
-
-  // make all IDed elements in $.__views available right on the $ in a
-  // controller's internal code. Externally the IDed elements will
-  // be accessed with getView().
-  _.extend($, $.__views);
-
-  // Controller code directly from the developer's controller file
-  function buttonClick(e) {
-    e.cancelBubble = true;
-    Ti.API.info('button clicked');
-  }
-
-  $.empty.fireEvent('click');
-
-  setTimeout(function () {
-    $.trigger('init');
-  }, 2000);
-
-  // Generated code that must be executed after all UI and
-  // controller code. One example deferred event handlers whose
-  // functions are not defined until after the controller code
-  // is executed.
-  __defers['$.__views["empty"]!click!buttonClick'] && $.addListener($.__views["empty"], 'click', buttonClick);
-
-  // Extend the $ instance with all functions and properties
-  // defined on the exports object.
-  _.extend($, exports);
-}
-
-module.exports = Controller;
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+Object.defineProperty(exports, "__esModule", { value: true });
+var emptyAbstract_1 = require("/controllers/emptyAbstract");
+var empty = /** @class */ (function (_super) {
+    __extends(empty, _super);
+    function empty(args) {
+        var _this = _super.call(this, args) || this;
+        _this.empty.fireEvent('click');
+        setTimeout(function () {
+            _this.trigger('init');
+        }, 2000);
+        return _this;
+    }
+    empty.prototype.buttonClick = function (e) {
+        e.cancelBubble = true;
+        Ti.API.info('button clicked');
+    };
+    return empty;
+}(emptyAbstract_1.emptyAbstract));
+exports.default = empty;
