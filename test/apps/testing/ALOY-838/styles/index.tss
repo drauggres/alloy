@@ -3,6 +3,6 @@
 },
 "Button": {
     title: Alloy.CFG.button,
-    osOnly: Alloy.CFG.osOnly,
-    envOnly: Alloy.CFG.envOnly,
+    backgroundColor: Alloy.CFG.osOnly,
+    borderColor: Alloy.CFG.envOnly,
 } 

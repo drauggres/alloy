@@ -19,8 +19,8 @@ module.exports = function($) {
 			api: 'Ti.UI.Button',
 			style: {
 				title: 'os:' + os + ' env:' + env,
-				osOnly: os,
-				envOnly: env,
+				backgroundColor: os,
+				borderColor: env,
 				id: 'button'
 			}
 		});
