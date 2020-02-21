@@ -456,7 +456,8 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 					typeName = state.propertyDeclaration.type;
 				}
 				var eventType;
-				if (CONST.CONTROLLER_NODES.indexOf(args.fullname) === -1) {
+				if (CONST.CONTROLLER_NODES.indexOf(args.fullname) === -1 &&
+					CONST.MODEL_ELEMENTS.indexOf(args.fullname) === -1 ) {
 					eventType = `${typeName}_${ev.name.replace(':', '_')}_Event`;
 				} else {
 					eventType = 'any';
@@ -538,6 +539,7 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 			};
 		}
 		if (propertyDeclaration) {
+			propertyDeclaration.isModelOrCollection = isModelOrCollection;
 			propertyDeclaration.access = exports.ACCESS_LEVEL.PUBLIC;
 			propertyDeclaration.conditional = conditional || !!propertyDeclaration.condition || !!propertyDeclaration.conditional, parentIsConditional || !isForCurrentPlatform;
 			var list = exports.propertiesMap[property] || [];
