@@ -104,7 +104,7 @@ function parse(node, state, args) {
 		if (children.length > 0) {
 			childTemplates = CU.generateUniqueId();
 
-			code += 'childTemplates: (function() {';
+			code += 'childTemplates: (() => {';
 			code += 'var ' + childTemplates + '=[];';
 
 			_.each(children, function(child) {

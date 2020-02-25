@@ -683,7 +683,7 @@ exports.generateStyleParams = function(styles, classes, id, apiName, extraStyle,
 		}
 	} else if (styleCollection.length > 1) {
 		// construct self-executing function to merge styles based on runtime conditionals
-		code += '(function (){\n';
+		code += '(() => {\n';
 		code += 'var o = {};\n';
 
 		for (var i = 0, l = styleCollection.length; i < l; i++) {
