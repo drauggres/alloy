@@ -1,3 +1,6 @@
+import * as Alloy from 'alloy';
+import index from '/controllers/index';
+
 // The contents of this file will be executed before any of
 // your view controllers are ever executed, including the index.
 // You have access to all functionality on the `Alloy` namespace.
@@ -11,3 +14,5 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Globals.winTop = (OS_IOS && parseInt(Ti.Platform.version, 10) >= 7) ? 20 : 0;
 Ti.UI.backgroundColor = '#fff';
+
+new index();
