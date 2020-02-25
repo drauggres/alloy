@@ -77,11 +77,13 @@ function parse(node, state, args) {
 
 	// abort if there's no view to be found
 	if (!found) {
-		U.die([
-			type + ' "' + src + '" ' + (type === 'widget' ? 'view "' + name + '" ' : '') +
+		if (CU.isNodeForCurrentPlatform(node)) {
+			U.die([
+				type + ' "' + src + '" ' + (type === 'widget' ? 'view "' + name + '" ' : '') +
 				'does not exist.',
-			'The following paths were inspected:'
-		].concat(viewPaths));
+				'The following paths were inspected:'
+			].concat(viewPaths));
+		}
 	}
 
 	var importCode;
