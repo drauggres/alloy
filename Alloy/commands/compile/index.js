@@ -1027,8 +1027,8 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 		}
 		template.properties += `    ${pre}${access} ${p}${conditional ? '?' : ''}: ${type}${value};${post}\n`;
 
-		if (!isModelOrCollection) {
-			template.__views += `        this.__views["${p}"] = this.${p};\n`;
+		if (!isModelOrCollection && accessNumber === CU.ACCESS_LEVEL.PUBLIC) {
+			template.__views += `        ${pre}this.__views["${p}"] = this.${p};\n`;
 		}
 	}
 
