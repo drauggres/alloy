@@ -83,6 +83,7 @@ function parse(node, state, args) {
 		// generate code for proxy property assignments
 		if (isProxyProperty) {
 			proxyProperties[U.proxyPropertyNameFromFullname(fullname)] = parentSymbol;
+			node.removeChild(child);
 
 		// generate code for the attribtuedString
 		} else if (isAttributedString) {
