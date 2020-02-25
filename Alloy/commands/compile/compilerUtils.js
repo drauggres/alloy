@@ -249,28 +249,26 @@ exports.getParserArgs = function(node, state, opts) {
 			}
 			var value = node.getAttribute(attrName);
 			var eventName = U.lcfirst(matches[2]);
+			var eventType = 'any';
 			if (state.outputFormat === 'TS') {
 				if (state.propertyDeclaration && typeof state.propertyDeclaration === 'object') {
 					fullname = state.propertyDeclaration.type;
 				}
-				var eventType;
 				if (CONST.CONTROLLER_NODES.indexOf(fullname) === -1 &&
 						CONST.MODEL_ELEMENTS.indexOf(fullname) === -1 ) {
 					eventType = `${fullname}_${eventName.replace(':', '_')}_Event`;
-				} else {
-					eventType = 'any';
 				}
 				var method = `abstract ${value}(event: ${eventType}): void;\n`;
 				var index = exports.abstractMethods.indexOf(`abstract ${value}(`);
 				if (index === -1) {
 					exports.abstractMethods += method;
 				}
-				value = `this.${value}.bind(this)`;
 			}
 			events.push({
 				name: eventName,
 				createFunc: node.getAttribute('method'),
 				module: node.getAttribute('module'),
+				type: eventType,
 				value: value
 			});
 		} else {
