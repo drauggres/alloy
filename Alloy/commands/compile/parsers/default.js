@@ -95,6 +95,9 @@ function parse(node, state, args) {
 		// add in any events on the ItemTemplate
 		if (args.events && args.events.length > 0) {
 			argsObject.events = '{' + _.reduce(args.events, function(memo, o) {
+				if (tsOutput) {
+					return `${memo}${o.name}: this.${o.value}.bind(this),`;
+				}
 				return memo + o.name + ':' + o.value + ',';
 			}, '') + '}';
 		}

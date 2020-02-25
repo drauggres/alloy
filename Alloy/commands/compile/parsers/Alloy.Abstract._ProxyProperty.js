@@ -37,8 +37,6 @@ function parse(node, state, args) {
 
 		// process children
 		_.each(U.XML.getElementsFromNodes(node.childNodes), function(child) {
-			var childArgs = CU.getParserArgs(child, state);
-
 			// validate children
 			if (def.children.length > 0) {
 				if (!CU.validateNodeName(child, def.children)) {

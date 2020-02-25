@@ -247,11 +247,33 @@ exports.getParserArgs = function(node, state, opts) {
 			if (matches[1] && compilerConfig.alloyConfig.platform !== matches[1]) {
 				return;
 			}
+			var value = node.getAttribute(attrName);
+			var eventName = U.lcfirst(matches[2]);
+			var eventType = 'any';
+			if (state.outputFormat === 'TS' && state.local) {
+				if (state.propertyDeclaration && typeof state.propertyDeclaration === 'object') {
+					fullname = state.propertyDeclaration.type;
+				}
+				if (CONST.CONTROLLER_NODES.indexOf(fullname) === -1 &&
+						CONST.MODEL_ELEMENTS.indexOf(fullname) === -1) {
+					eventType = `${fullname}_${eventName.replace(':', '_')}_Event`;
+				}
+				var method = `abstract ${value}(event: ${eventType}): void;\n`;
+				var index = exports.abstractMethods.indexOf(`abstract ${value}(`);
+				if (index === -1) {
+					exports.abstractMethods += method;
+				} else if (exports.abstractMethods.indexOf(method) === -1) {
+					var before = exports.abstractMethods.substr(0, index);
+					var after = exports.abstractMethods.substr(index, exports.abstractMethods.length);
+					exports.abstractMethods = before + method + after;
+				}
+			}
 			events.push({
-				name: U.lcfirst(matches[2]),
+				name: eventName,
 				createFunc: node.getAttribute('method'),
 				module: node.getAttribute('module'),
-				value: node.getAttribute(attrName)
+				type: eventType,
+				value: value
 			});
 		} else {
 			var theValue = node.getAttribute(attrName);
