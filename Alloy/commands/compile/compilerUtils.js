@@ -532,7 +532,7 @@ exports.generateNode = function(node, state, defaultId, isTopLevel, isModelOrCol
 			var parent = p.node;
 			if (!parent) { return; }
 			for (var i = 0, l = parent.childNodes.length; i < l; i++) {
-				var newState = _.defaults({ parent: p }, state);
+				var newState = _.defaults({ parent: p }, _.omit(state, 'propertyDeclaration'));
 				if (node.hasAttribute('formFactor') || state.parentFormFactor) {
 					// propagate the form factor down through the hierarchy
 					newState.parentFormFactor = (node.getAttribute('formFactor') || state.parentFormFactor);

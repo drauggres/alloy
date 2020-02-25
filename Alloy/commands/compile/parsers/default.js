@@ -50,7 +50,10 @@ function parse(node, state, args) {
 		isCollectionBound = args[CONST.BIND_COLLECTION] ? true : false,
 		code = '';
 	var importCode;
-	var propertyDeclaration;
+	var propertyDeclaration = {
+		name: args.id,
+		type: fullname
+	};
 	var moduleName;
 	var moduleVariableName;
 	if (node.nodeName === 'Annotation' && ( (platform == 'ios' && tiapp.version.gte('3.2.0')) || platform == 'android' && tiapp.version.gte('3.1.0'))) {
