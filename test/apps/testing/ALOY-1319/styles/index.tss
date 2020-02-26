@@ -9,8 +9,8 @@
 }
 
 'CardView': {
-	contentPadding: 20,
-	cardCornerRadius: 10,
-	cardUseCompatPadding: true,
-	cardBackgroundColor: '#e5e4e2'
+	padding: 20,
+	borderRadius: 10,
+	useCompatPadding: true,
+	backgroundColor: '#e5e4e2'
 }
