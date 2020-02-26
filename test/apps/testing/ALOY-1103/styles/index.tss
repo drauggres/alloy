@@ -6,6 +6,5 @@
 "Label":{
 	font:{
 		fontSize:'20dp',
-		color:'black'
 	}
 }
