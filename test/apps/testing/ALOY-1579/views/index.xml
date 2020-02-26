@@ -1,6 +1,7 @@
 <Alloy>
 	<Window class='container'>
 		<ActionBar
+			platform='android'
 			displayHomeAsUp='true'
 			onHomeIconItemSelected='doHomeIcon' />
 		<DrawerLayout id='drawer'>
