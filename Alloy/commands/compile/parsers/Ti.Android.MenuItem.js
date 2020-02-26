@@ -20,23 +20,14 @@ function parse(node, state, args) {
 		var childArgs = CU.getParserArgs(child, state);
 		var parts = CU.getNodeFullname(child).split('.');
 		if (parts[0] === '_ProxyProperty') {
-			actionView = require('./_ProxyProperty.' + parts[1]).parse(node, state);
+			var newState = _.extend({}, state, {parentCondition: true});
+			actionView = require('./_ProxyProperty.' + parts[1]).parse(node, newState);
 		}
 	});
-	var anyTypeString = '';
-	var thisController = '$';
-	if (state.outputFormat === 'TS') {
-		thisController = 'this';
-		anyTypeString = ': any';
-	}
+	var anyTypeString = state.outputFormat === 'TS' ? ': any' : '';
 	if (actionView) {
 		// add the code to the parent
 		code += actionView.code;
-
-		// expose UI id
-		id = actionView.parent && actionView.parent.symbol;
-		newCode = id ? (thisController + '.' + id.split('.').pop() + '=' + id + ';') : '';
-		code += newCode;
 	}
 
 	var styleObjectCode = styler.generateStyleParams(
