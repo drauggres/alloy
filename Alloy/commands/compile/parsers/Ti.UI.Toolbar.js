@@ -27,21 +27,40 @@ exports.parse = function(node, state) {
 		}
 	});
 
-	var tempRes = require('./Alloy.Abstract._ItemContainer').parse(node, state);
-
 	// Only if the Ti.UI.Toolbar is passed as an ActionBar to the activity
-	if (state.parent && state.parent.node && state.parent.node.getAttribute('customToolbar') === node.getAttribute('id')) {
+	var isActionBar = state.parent && state.parent.node && state.parent.node.getAttribute('customToolbar') === node.getAttribute('id');
+	var tempRes;
+	if (isActionBar) {
+		var removed = {};
+		// Create an object holding all the actionBar-related properties set in the XML
+		_.each(inheritedProperties, function(prop) {
+			if (node.hasAttribute(prop)) {
+				xmlStyles[prop] = node.getAttribute(prop);
+				node.removeAttribute(prop);
+			}
+		});
+		inheritedProperties.forEach(prop => {
+			if (node.hasAttribute(prop)) {
+				removed[prop] = node.getAttribute(prop);
+				node.removeAttribute(prop);
+			}
+		});
+		tempRes = require('./Alloy.Abstract._ItemContainer').parse(node, state);
+		inheritedProperties.forEach(prop => {
+			if (typeof xmlStyles[prop] !== 'undefined') {
+				node.setAttribute(prop, xmlStyles[prop]);
+			}
+		});
+	} else {
+		tempRes = require('./Alloy.Abstract._ItemContainer').parse(node, state);
+	}
+
+	if (isActionBar) {
 
 		var activityTssStyles = _.filter(state.styles, function(elem) {
 			// Generates a sorted array of styles filtered to include only elements
 			// associated with the activity (by ID, class, or API name)
 			return elem.key === node.getAttribute('id') || elem.key === node.getAttribute('class') || elem.key === node.nodeName;
-		});
-		// Create an object holding all the actionBar-related properties set in the XML
-		_.each(inheritedProperties, function(prop) {
-			if (node.hasAttribute(prop)) {
-				xmlStyles[prop] = node.getAttribute(prop);
-			}
 		});
 		// To respect proper style hierarchy, take the last element in the array (which will be the highest priority)
 		var activityTssKey = _.isArray(activityTssStyles) ? activityTssStyles.length - 1 : 0;
