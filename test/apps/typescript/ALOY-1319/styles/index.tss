@@ -1,0 +1,16 @@
+'#index': {
+	backgroundColor: '#fff',
+	fullscreen: false,
+	exitOnClose: true
+}
+
+'Label': {
+	color: 'black'
+}
+
+'CardView': {
+	padding: 20,
+	borderRadius: 10,
+	useCompatPadding: true,
+	backgroundColor: '#e5e4e2'
+}

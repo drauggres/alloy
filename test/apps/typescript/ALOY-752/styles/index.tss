@@ -1,0 +1,26 @@
+'#index': {
+	backgroundColor: '#fff',
+	fullscreen: false,
+	exitOnClose: true
+}
+
+"Label": {
+	font: {
+		fontStyle: 'italic'
+	}
+}
+".biglabels": {
+	font: {
+		fontSize: 30
+	}
+}
+"#lbl": {
+	font: {
+		fontWeight: 'bold'
+	}
+}
+"#lbl[platform=ios]": {
+	font: {
+		fontFamily: "HoeflerText-BlackItalic"
+	}
+}
