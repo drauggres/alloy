@@ -918,7 +918,7 @@ function parseAlloyComponent(view, dir, manifest, noView, fileRestriction) {
 
 		// open the model binding handler
 		var handlerVar = CU.generateUniqueId();
-		list = CU.propertiesMap[handlerVar] || [];
+		var list = CU.propertiesMap[handlerVar] || [];
 		list.push({
 			name: handlerVar,
 			access: CU.ACCESS_LEVEL.PROTECTED,
