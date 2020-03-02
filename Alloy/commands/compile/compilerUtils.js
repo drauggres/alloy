@@ -1193,7 +1193,7 @@ exports.generateCollectionBindingTemplate = function(args, state) {
 			transform = `this.${transform}`;
 			transformCode = `${transform}(<%= localModel %>);`;
 		} else {
-			transformCode = '<%= localModel %>.transform();';
+			transformCode = 'typeof <%= localModel %>.transform === "function" ? <%= localModel %>.transform() : <%= localModel %>.toJSON();';
 		}
 		var tiMapName = 'TiMap';
 		var importCode = '';
