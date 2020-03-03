@@ -1,6 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-717/alloy.js')
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-717/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -60,7 +60,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "backgroundColor": "#fff",
       "fullscreen": false,
       "exitOnClose": true,
-      "apiName": "Ti.UI.Window",
       "id": "index",
       "classes": []
     }
@@ -117,7 +116,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "height": "\"{Titanium.UI.SIZE}\"",
       "width": "\"{Titanium.UI.SIZE}\"",
       "textAlign": "center",
-      "apiName": "Ti.UI.Label",
       "id": "tester",
       "classes": []
     }
@@ -162,7 +160,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "width": "100dp",
       "backgroundColor": "#0f0",
       "zIndex": 10,
-      "apiName": "Ti.UI.View",
       "id": "behind",
       "classes": []
     }
@@ -228,7 +225,6 @@ require('/CFG'). Not found. Return ScopeLogger
       },
       "bottom": 0,
       "text": "change classes",
-      "apiName": "Ti.UI.Label",
       "id": "changer",
       "classes": []
     }

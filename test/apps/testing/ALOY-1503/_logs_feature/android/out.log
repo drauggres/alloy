@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1503/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -38,11 +39,11 @@ require('/CFG'). Not found. Return ScopeLogger
   "name": "Titanium.UI",
   "trap": "get",
   "args": [
-    "createView"
+    "createWebView"
   ]
 }
 {
-  "name": "Titanium.UI.createView",
+  "name": "Titanium.UI.createWebView",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
@@ -68,7 +69,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "trap": "apply",
   "args": [
     "(this: \"{[apply](Titanium.UI.createWindow)}\")",
-    "\"{[apply](Titanium.UI.createView)}\""
+    "\"{[apply](Titanium.UI.createWebView)}\""
   ]
 }
 {

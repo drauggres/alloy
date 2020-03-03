@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1584/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -66,9 +67,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "subtitle": "Subtitle",
       "width": "\"{Titanium.UI.FILL}\"",
       "top": 0,
-      "homeButtonEnabled": true,
-      "displayHomeAsUp": true,
-      "onHomeIconItemSelected": "clickAlert",
       "barColor": "#639851"
     }
   ]

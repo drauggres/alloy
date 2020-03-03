@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-657/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -104,18 +105,18 @@ require('/CFG'). Not found. Return ScopeLogger
   "name": "Titanium.UI",
   "trap": "get",
   "args": [
-    "iPhone"
+    "iOS"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone",
+  "name": "Titanium.UI.iOS",
   "trap": "get",
   "args": [
     "SystemButton"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone.SystemButton",
+  "name": "Titanium.UI.iOS.SystemButton",
   "trap": "get",
   "args": [
     "EDIT"
@@ -127,7 +128,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.EDIT}\""
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.EDIT}\""
     }
   ]
 }
@@ -208,18 +209,18 @@ require('/CFG'). Not found. Return ScopeLogger
   "name": "Titanium.UI",
   "trap": "get",
   "args": [
-    "iPhone"
+    "iOS"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone",
+  "name": "Titanium.UI.iOS",
   "trap": "get",
   "args": [
     "SystemButton"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone.SystemButton",
+  "name": "Titanium.UI.iOS.SystemButton",
   "trap": "get",
   "args": [
     "ADD"
@@ -231,7 +232,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.ADD}\""
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.ADD}\""
     }
   ]
 }
@@ -313,18 +314,18 @@ require('/CFG'). Not found. Return ScopeLogger
   "name": "Titanium.UI",
   "trap": "get",
   "args": [
-    "iPhone"
+    "iOS"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone",
+  "name": "Titanium.UI.iOS",
   "trap": "get",
   "args": [
     "SystemButton"
   ]
 }
 {
-  "name": "Titanium.UI.iPhone.SystemButton",
+  "name": "Titanium.UI.iOS.SystemButton",
   "trap": "get",
   "args": [
     "DONE"
@@ -336,7 +337,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "systemButton": "\"{Titanium.UI.iPhone.SystemButton.DONE}\""
+      "systemButton": "\"{Titanium.UI.iOS.SystemButton.DONE}\""
     }
   ]
 }

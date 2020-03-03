@@ -1,0 +1,934 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-961/_generated/ios/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "layout": "vertical",
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createAttributedString"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINES_STYLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINE_STYLE_SINGLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium.UI.createAttributedString",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "attributes": [
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_UNDERLINES_STYLE}\"",
+          "value": "\"{Titanium.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE}\"",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "red",
+          "range": [
+            18,
+            12
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "blue",
+          "range": [
+            31,
+            2
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "yellow",
+          "range": [
+            40,
+            6
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "orange",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "black",
+          "range": [
+            40,
+            6
+          ]
+        }
+      ],
+      "text": "Label - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak."
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "right": 10,
+      "left": 10,
+      "width": "\"{Titanium.UI.FILL}\"",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "attributedString": "\"{[apply](Titanium.UI.createAttributedString)}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createAttributedString"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINES_STYLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINE_STYLE_SINGLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium.UI.createAttributedString",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "attributes": [
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_UNDERLINES_STYLE}\"",
+          "value": "\"{Titanium.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE}\"",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "red",
+          "range": [
+            18,
+            12
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "blue",
+          "range": [
+            31,
+            2
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "yellow",
+          "range": [
+            40,
+            6
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "orange",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "black",
+          "range": [
+            40,
+            6
+          ]
+        }
+      ],
+      "text": "TextField - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak."
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createAttributedString"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINES_STYLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINE_STYLE_SINGLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium.UI.createAttributedString",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "attributes": [
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_UNDERLINES_STYLE}\"",
+          "value": "\"{Titanium.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE}\"",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "red",
+          "range": [
+            18,
+            12
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "blue",
+          "range": [
+            31,
+            2
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "yellow",
+          "range": [
+            40,
+            6
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "orange",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "black",
+          "range": [
+            40,
+            6
+          ]
+        }
+      ],
+      "text": "TextField HintText - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak."
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "right": 10,
+      "left": 10,
+      "width": "\"{Titanium.UI.FILL}\"",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "attributedString": "\"{[apply](Titanium.UI.createAttributedString)<#1>}\"",
+      "attributedHintText": "\"{[apply](Titanium.UI.createAttributedString)<#2>}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTextField)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createAttributedString"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINES_STYLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_UNDERLINE_STYLE_SINGLE"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_BACKGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "ATTRIBUTE_FOREGROUND_COLOR"
+  ]
+}
+{
+  "name": "Titanium.UI.createAttributedString",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "attributes": [
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_UNDERLINES_STYLE}\"",
+          "value": "\"{Titanium.UI.ATTRIBUTE_UNDERLINE_STYLE_SINGLE}\"",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "red",
+          "range": [
+            18,
+            12
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "blue",
+          "range": [
+            31,
+            2
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_BACKGROUND_COLOR}\"",
+          "value": "yellow",
+          "range": [
+            40,
+            6
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "orange",
+          "range": [
+            0,
+            107
+          ]
+        },
+        {
+          "type": "\"{Titanium.UI.ATTRIBUTE_FOREGROUND_COLOR}\"",
+          "value": "black",
+          "range": [
+            40,
+            6
+          ]
+        }
+      ],
+      "text": "TextArea - Bacon ipsum dolor Appcelerator Titanium rocks! sit amet fatback leberkas salami sausage tongue strip steak."
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextArea"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextArea",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 20,
+      "right": 10,
+      "left": 10,
+      "width": "\"{Titanium.UI.FILL}\"",
+      "height": 200,
+      "attributedString": "\"{[apply](Titanium.UI.createAttributedString)<#3>}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTextArea)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

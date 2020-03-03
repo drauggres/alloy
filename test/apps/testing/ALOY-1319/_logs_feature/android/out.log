@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1319/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -54,10 +55,10 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI.Android}\")",
     {
-      "contentPadding": 20,
-      "cardCornerRadius": 10,
-      "cardUseCompatPadding": true,
-      "cardBackgroundColor": "#e5e4e2"
+      "padding": 20,
+      "borderRadius": 10,
+      "useCompatPadding": true,
+      "backgroundColor": "#e5e4e2"
     }
   ]
 }

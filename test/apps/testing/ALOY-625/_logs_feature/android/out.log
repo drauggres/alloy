@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-625/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -77,9 +78,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "width": "\"{Titanium.UI.SIZE}\"",
       "height": "\"{Titanium.UI.SIZE}\"",
       "color": "#fff",
-      "font": {
-        "fontSize": 12
-      },
       "text": "This should be white text with a blue background on a gray window",
       "id": "label"
     }

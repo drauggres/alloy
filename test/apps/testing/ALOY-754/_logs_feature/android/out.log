@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-754/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -54,27 +55,6 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "/CFG",
-  "trap": "get",
-  "args": [
-    "mainConfig"
-  ]
-}
-{
-  "name": "/CFG",
-  "trap": "get",
-  "args": [
-    "bothConfig"
-  ]
-}
-{
-  "name": "/CFG",
-  "trap": "get",
-  "args": [
-    "themeConfig"
-  ]
-}
-{
   "name": "Titanium.UI.createButton",
   "trap": "apply",
   "args": [
@@ -82,10 +62,6 @@ require('/CFG'). Not found. Return ScopeLogger
     {
       "width": "50%",
       "height": "\"{Titanium.UI.SIZE}\"",
-      "randomProp": "OK",
-      "mainConfig": "\"{/CFG.mainConfig}\"",
-      "bothConfig": "\"{/CFG.bothConfig}\"",
-      "themeConfig": "\"{/CFG.themeConfig}\"",
       "title": "click me",
       "id": "b"
     }

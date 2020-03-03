@@ -1,6 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-594/alloy.js')
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-594/_generated/android/app.js')
 {
   "name": "/CFG",
   "trap": "get",
@@ -214,7 +214,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 1",
-      "65c7d249-b017-316b-e086-1a2d8d0ff9bd"
+      "66e15305-2290-ec0c-d398-f5df2260e7e9"
     ]
   ]
 }
@@ -233,7 +233,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 2",
-      "f1107c72-1799-54b3-c384-e25a5a5c70ea"
+      "90115bee-6929-9ea8-e08c-e5e713328202"
     ]
   ]
 }
@@ -252,7 +252,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 3",
-      "77ca52f9-dc07-24bb-de2e-bcc99c50c834"
+      "0a59d08c-ca66-378c-aed5-1b668042290a"
     ]
   ]
 }
@@ -271,7 +271,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 4",
-      "13fc1ca6-d8f6-7934-c57a-9962352bf63e"
+      "7e01f83b-4d60-3634-b847-9fd799bc1a5e"
     ]
   ]
 }
@@ -290,7 +290,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 5",
-      "26f5c343-e83e-ffa0-bfa8-987406cbda8a"
+      "1a7362ad-5851-2d3e-5f47-675c0ae19d0e"
     ]
   ]
 }
@@ -309,7 +309,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 6",
-      "3bfc321e-f617-7273-9a30-638d167fd9ff"
+      "ddf576b8-e287-ea48-e5f0-cbac6d744fbe"
     ]
   ]
 }
@@ -328,7 +328,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 7",
-      "a2086062-c00e-ad9e-c101-cf4bd83a8078"
+      "f275a649-d6c7-e2d1-2d7b-5189cedecb43"
     ]
   ]
 }
@@ -347,7 +347,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 8",
-      "ea78b0d1-c2b9-834a-b522-1ea67038caae"
+      "932adf59-da5b-70dc-8328-959ae8acb13e"
     ]
   ]
 }
@@ -366,7 +366,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 9",
-      "a71ae859-97e4-28a4-6fb6-ec6ef29b640e"
+      "298e89e4-4f93-d8b4-73b1-dc4f977b5b05"
     ]
   ]
 }
@@ -385,7 +385,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 10",
-      "df713c38-b68e-c43f-f01e-736be306f766"
+      "40af5792-96ce-0361-37c1-b225fad53e02"
     ]
   ]
 }
@@ -404,7 +404,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 11",
-      "1f8ff8d6-3e13-fe3b-985b-da26b8f3ef83"
+      "ae8c8085-8c8a-8d39-98aa-b5156955b457"
     ]
   ]
 }
@@ -423,7 +423,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 12",
-      "90fb36b0-0ced-b9e5-e3e9-d0fd9be810f0"
+      "91cd513c-6874-09cd-2f8e-2e56bab60f50"
     ]
   ]
 }
@@ -442,7 +442,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 13",
-      "3d9cc0d7-60e4-bc54-720a-1c5393ce37d3"
+      "9eefc99b-e53e-243e-76de-15282370ae87"
     ]
   ]
 }
@@ -461,7 +461,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 14",
-      "78b88c1f-549a-9104-bbdc-91594885757e"
+      "d387ad31-916b-6386-c7b3-f0c13d05bafe"
     ]
   ]
 }
@@ -480,7 +480,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 15",
-      "889c7914-cae1-86eb-6360-e21052281735"
+      "2bd88fff-2b94-0712-100c-72cc1ea8acb8"
     ]
   ]
 }
@@ -499,7 +499,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 16",
-      "f2ff5cb1-46a6-8d5a-ea9a-6b0257774e8c"
+      "8c49e664-5801-56ae-ca87-3fa109c204bc"
     ]
   ]
 }
@@ -518,7 +518,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 17",
-      "90d1f895-c2ea-9771-11bb-b96f4f157e23"
+      "f8edb253-2f99-4b57-c22c-8de8433f034f"
     ]
   ]
 }
@@ -537,7 +537,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 18",
-      "e203e8db-4cb7-7d88-454c-745a04b452ab"
+      "5d6d14a7-f078-46bb-be77-df7177d7c39d"
     ]
   ]
 }
@@ -556,7 +556,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 19",
-      "7d8edb50-a178-23fe-f8ad-7d323b17379d"
+      "d31eadb7-6b43-a1d4-0738-8f5604e37b86"
     ]
   ]
 }
@@ -575,7 +575,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "INSERT INTO collection (text,alloy_id) VALUES (?,?);",
     [
       "label 20",
-      "0c7a61b1-82b6-2427-47ee-ac24b469371c"
+      "74c9a4b1-a367-f117-d263-a1beb2d93d68"
     ]
   ]
 }

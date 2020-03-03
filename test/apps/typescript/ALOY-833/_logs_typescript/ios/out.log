@@ -1,0 +1,328 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-833/_generated/ios/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "widget"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "row 1"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    "\"{[apply](Titanium.UI.createTableViewRow)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "row 2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    "\"{[apply](Titanium.UI.createTableViewRow)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "row 3"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    "\"{[apply](Titanium.UI.createTableViewRow)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "row 4"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    "\"{[apply](Titanium.UI.createTableViewRow)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "title": "row 5"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    "\"{[apply](Titanium.UI.createTableViewRow)<#4>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection)",
+  "trap": "get",
+  "args": [
+    "getViewEx"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewSection).getViewEx",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewSection)}\")",
+    {
+      "recurse": true
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "data": [
+        "\"{[apply]([apply](Titanium.UI.createTableViewSection).getViewEx)}\""
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

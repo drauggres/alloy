@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-709/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -24,7 +25,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "fullscreen": false,
       "exitOnClose": true,
       "layout": "vertical",
-      "apiName": "Ti.UI.Window",
       "id": "index",
       "classes": []
     }
@@ -91,7 +91,6 @@ require('/CFG'). Not found. Return ScopeLogger
         "y": 3
       },
       "text": "some text",
-      "apiName": "Ti.UI.Label",
       "id": "label",
       "classes": [
         "main",
@@ -149,7 +148,6 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "apiName": "Ti.UI.View",
       "backgroundColor": "#fcc",
       "height": "\"{Titanium.UI.SIZE}\"",
       "layout": "vertical",
@@ -212,7 +210,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "top": 15,
       "backgroundColor": "#ccf",
       "text": "label 1",
-      "apiName": "Ti.UI.Label",
       "classes": [
         "someClass"
       ]
@@ -288,7 +285,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "top": 15,
       "backgroundColor": "#ccf",
       "text": "label 2",
-      "apiName": "Ti.UI.Label",
       "classes": [
         "someClass"
       ]
@@ -364,7 +360,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "top": 15,
       "backgroundColor": "#ccf",
       "text": "label 3",
-      "apiName": "Ti.UI.Label",
       "classes": [
         "someClass"
       ]
@@ -405,7 +400,6 @@ require('specs/labels'). Not found. Return ScopeLogger
       "UI": {},
       "__controllerPath": "labels",
       "args": {
-        "apiName": "Alloy.Require",
         "classes": [],
         "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
       },
@@ -473,7 +467,6 @@ require('specs/labels'). Not found. Return ScopeLogger
     "(this: \"{Titanium.UI}\")",
     {
       "title": "button 1",
-      "apiName": "Ti.UI.Button",
       "id": "button1",
       "classes": [
         "bob",
@@ -503,7 +496,6 @@ require('specs/labels'). Not found. Return ScopeLogger
     "(this: \"{Titanium.UI}\")",
     {
       "title": "button 2",
-      "apiName": "Ti.UI.Button",
       "id": "button2",
       "classes": [
         "bob",
@@ -555,7 +547,6 @@ require('specs/buttons'). Not found. Return ScopeLogger
       "UI": {},
       "__controllerPath": "buttons",
       "args": {
-        "apiName": "Alloy.Require",
         "classes": [],
         "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
       },
@@ -683,7 +674,6 @@ require('specs/index'). Not found. Return ScopeLogger
           "UI": {},
           "__controllerPath": "labels",
           "args": {
-            "apiName": "Alloy.Require",
             "classes": [],
             "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
           },
@@ -705,7 +695,6 @@ require('specs/index'). Not found. Return ScopeLogger
           "UI": {},
           "__controllerPath": "buttons",
           "args": {
-            "apiName": "Alloy.Require",
             "classes": [],
             "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
           },
@@ -735,7 +724,6 @@ require('specs/index'). Not found. Return ScopeLogger
         "UI": {},
         "__controllerPath": "labels",
         "args": {
-          "apiName": "Alloy.Require",
           "classes": [],
           "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
         },
@@ -757,7 +745,6 @@ require('specs/index'). Not found. Return ScopeLogger
         "UI": {},
         "__controllerPath": "buttons",
         "args": {
-          "apiName": "Alloy.Require",
           "classes": [],
           "__parentSymbol": "\"{[apply](Titanium.UI.createWindow)}\""
         },

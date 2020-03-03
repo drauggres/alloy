@@ -1,0 +1,4417 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-716/_generated/ios/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #1"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/0.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)}\")",
+    "\"{[apply](Titanium.UI.createImageView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/1.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #3"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#2>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#4>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#2>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#5>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/2.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#2>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #4"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#3>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#6>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#3>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#7>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/3.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#3>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #5"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#4>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#8>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#4>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#9>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/4.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#4>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#4>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #6"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#5>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#10>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#5>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#11>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/5.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#5>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#5>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#5>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #7"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#6>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#12>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#6>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#13>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/6.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#6>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#6>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#6>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #8"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#7>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#14>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#7>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#15>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/7.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#7>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#7>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#7>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #9"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#8>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#16>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#8>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#17>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/8.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#8>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#8>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#8>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #10"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#9>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#18>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#9>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#19>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/9.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#9>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#9>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#9>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #11"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#10>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#20>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#10>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#21>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/10.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#10>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#10>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#10>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #12"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#11>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#22>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#11>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#23>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/11.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#11>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#11>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#11>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #13"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#12>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#24>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#12>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#25>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/12.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#12>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#12>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#12>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #14"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#13>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#26>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#13>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#27>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/13.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#13>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#13>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#13>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #15"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#14>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#28>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#14>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#29>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/14.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#14>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#14>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#14>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #16"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#15>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#30>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#15>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#31>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/15.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#15>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#15>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#15>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #17"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#16>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#32>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#16>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#33>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/16.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#16>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#16>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#16>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #18"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#17>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#34>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#17>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#35>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/17.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#17>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#17>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#17>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #19"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#18>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#36>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#18>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#37>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/18.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#18>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#18>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#18>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "API"
+  ]
+}
+{
+  "name": "Titanium.API",
+  "trap": "get",
+  "args": [
+    "info"
+  ]
+}
+{
+  "name": "Titanium.API.info",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.API}\")",
+    ">>> transforming the title"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#efefef",
+      "height": "60dp"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "top": "3dp",
+      "left": "10dp",
+      "color": "#181818",
+      "font": {
+        "fontSize": "28dp",
+        "fontWeight": "bold"
+      },
+      "text": "\tTITLE #20"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#19>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#38>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "68dp",
+      "textAlign": "left",
+      "height": "\"{Titanium.UI.SIZE}\"",
+      "bottom": "5dp",
+      "left": "15dp",
+      "color": "#777",
+      "font": {
+        "fontSize": "16dp",
+        "fontWeight": "normal"
+      },
+      "text": "\t\t  this is a boring subtitle"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#19>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#39>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "right": "10dp",
+      "height": "48dp",
+      "width": "48dp",
+      "image": "/19.png"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#19>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#19>}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#19>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "setData"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView).setData",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableView)}\")",
+    [
+      "\"{[apply](Titanium.UI.createTableViewRow)}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#1>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#2>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#3>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#4>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#5>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#6>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#7>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#8>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#9>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#10>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#11>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#12>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#13>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#14>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#15>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#16>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#17>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#18>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#19>}\""
+    ]
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

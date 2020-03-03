@@ -1,6 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-440/alloy.js')
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-440/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -347,7 +347,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
     [
       "banana",
-      "f64f3fdf-d218-91fe-28d9-702348e7d9d2"
+      "8f9922d4-bc5f-7914-1f5f-c659cf7083e8"
     ]
   ]
 }
@@ -366,7 +366,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
     [
       "yellow",
-      "acb90cd3-a329-9d97-7f57-a25a413fd8f9"
+      "3d3cf4c5-ee39-a5cd-4615-935a5f4dcd02"
     ]
   ]
 }
@@ -385,7 +385,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
     [
       "cherry",
-      "5ccd219c-3350-0e61-975d-2e9d05c0c000"
+      "b4f14aea-98dc-e5c4-7c09-bd1a0351b0f0"
     ]
   ]
 }
@@ -404,7 +404,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
     [
       "blue",
-      "50953b42-da9d-2e66-77d6-72e01a4e1c80"
+      "1744caa7-cdee-f424-1226-0d35c9b3901f"
     ]
   ]
 }
@@ -423,7 +423,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
     [
       "blueberry",
-      "6460b9af-eec5-0621-0ade-e68839c9ce98"
+      "0c34f10a-e9e0-7f9e-cce9-b81a561c7995"
     ]
   ]
 }
@@ -442,7 +442,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
     [
       "orange",
-      "ae0c4aef-4db4-be04-d7e6-85ed379e3d6f"
+      "6e1a593f-113d-ec46-f169-033b9abe55bd"
     ]
   ]
 }
@@ -461,7 +461,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
     [
       "orange",
-      "bcde3bdf-217b-3e10-f98f-d91fc0cba8be"
+      "d9949e8c-6ee9-18a2-89d7-33c4dafaffda"
     ]
   ]
 }
@@ -480,7 +480,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
     [
       "green",
-      "1fda1b4c-cd12-7c49-2d74-6d7f472227eb"
+      "8b000fea-bb65-aca0-c041-7f7e97b9aab6"
     ]
   ]
 }
@@ -499,7 +499,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO fruits (name,alloy_id) VALUES (?,?);",
     [
       "pear",
-      "23fde613-8a08-6234-a264-d594afd39e68"
+      "83d42a11-ee70-672a-e8d4-9604752c3338"
     ]
   ]
 }
@@ -518,7 +518,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "REPLACE INTO colors (color,alloy_id) VALUES (?,?);",
     [
       "white",
-      "c035fcab-e61b-3c39-6707-34d34235d509"
+      "096546fd-97b3-ccca-ec56-785e3b02f2ea"
     ]
   ]
 }

@@ -1,0 +1,19 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-920/_generated/ios/app.js')
+require('should'). Not found. Return ScopeLogger
+{
+  "name": "should",
+  "trap": "get",
+  "args": [
+    "exist"
+  ]
+}
+{
+  "name": "should.exist",
+  "trap": "apply",
+  "args": [
+    "(this: \"{should}\")",
+    123
+  ]
+}

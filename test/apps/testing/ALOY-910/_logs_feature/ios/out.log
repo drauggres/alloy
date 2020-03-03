@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-910/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -46,9 +47,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
-    {
-      "filterAttribute": "title"
-    }
+    {}
   ]
 }
 {
@@ -212,7 +211,8 @@ require('/CFG'). Not found. Return ScopeLogger
       ],
       "search": "\"{[apply](Titanium.UI.createSearchBar)}\"",
       "refreshControl": "\"{[apply](Titanium.UI.createRefreshControl)}\"",
-      "id": "jobList"
+      "id": "jobList",
+      "filterAttribute": "title"
     }
   ]
 }

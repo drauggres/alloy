@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-752/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -47,7 +48,6 @@ require('/CFG'). Not found. Return ScopeLogger
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "fontStyle": "italic",
       "font": {
         "fontStyle": "italic",
         "fontSize": 30,

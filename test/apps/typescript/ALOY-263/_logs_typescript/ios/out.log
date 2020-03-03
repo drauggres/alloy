@@ -1,0 +1,170 @@
+require('/home/s.volkov/Proj/alloy/Alloy/template/lib/alloy.js')
+require('/home/s.volkov/Proj/alloy/Alloy/lib/underscore')
+require('/home/s.volkov/Proj/alloy/Alloy/lib/backbone/1.4.0/backbone')
+require('/home/s.volkov/Proj/alloy/tools/jquery')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/jquery')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/jquery/jquery')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/jquery/index')
+require('jquery')
+require('/home/s.volkov/Proj/alloy/Alloy/lib/backbone/1.4.0/backbone.js/jquery')
+require('jquery'). Not found. Return ScopeLogger
+require('/home/s.volkov/Proj/alloy/Alloy/common/constants')
+require('/home/s.volkov/Proj/alloy/tools/CFG')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/CFG')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/CFG/CFG')
+require('/home/s.volkov/Proj/alloy/tools/node_modules/CFG/index')
+require('/CFG')
+require('/CFG')
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/node_modules/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/node_modules/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/node_modules/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js/index')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/app.js')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/alloy/controllers/index')
+require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-263/_generated/ios/alloy/controllers/indexAbstract')
+require('/home/s.volkov/Proj/alloy/Alloy/lib/controllers/BaseController')
+require('/home/s.volkov/Proj/alloy/Alloy/template/lib/alloy.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTextField"
+  ]
+}
+{
+  "name": "Titanium.UI.createTextField",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "value": "July 4, 2014",
+      "id": "txt",
+      "top": 20
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTextField)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createPicker"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "PICKER_TYPE_DATE"
+  ]
+}
+{
+  "name": "Titanium.UI.createPicker",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "value": "2014-12-17T00:24:00.000Z",
+      "minDate": "2013-02-08T09:30:26.000Z",
+      "maxDate": "2015-11-16T21:00:00.000Z",
+      "format24": false,
+      "calendarViewShown": false,
+      "id": "picker",
+      "top": 50,
+      "type": "\"{Titanium.UI.PICKER_TYPE_DATE}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createPicker)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

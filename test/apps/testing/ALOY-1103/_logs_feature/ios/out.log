@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1103/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -69,8 +70,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "(this: \"{Titanium.UI}\")",
     {
       "font": {
-        "fontSize": "20dp",
-        "color": "black"
+        "fontSize": "20dp"
       },
       "text": "HeaderView Handheld"
     }
@@ -189,8 +189,7 @@ require('/CFG'). Not found. Return ScopeLogger
     "(this: \"{Titanium.UI}\")",
     {
       "font": {
-        "fontSize": "20dp",
-        "color": "black"
+        "fontSize": "20dp"
       },
       "text": "View Handheld"
     }

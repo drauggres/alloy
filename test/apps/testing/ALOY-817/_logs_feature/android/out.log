@@ -1,7 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-817/alloy.js')
-require('ti.map'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-817/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -66,6 +65,7 @@ require('ti.map'). Not found. Return ScopeLogger
     "id"
   ]
 }
+require('ti.map'). Not found. Return ScopeLogger
 {
   "name": "ti.map",
   "trap": "get",

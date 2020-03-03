@@ -1,0 +1,578 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-911/_generated/android/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "FILL"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#3498db",
+      "height": "50dp",
+      "width": "\"{Titanium.UI.FILL}\"",
+      "color": "#fff",
+      "font": {
+        "fontSize": "32dp",
+        "fontWeight": "bold"
+      },
+      "textAlign": "center",
+      "text": "header view",
+      "id": "headerView"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "left": "15dp",
+      "height": "46dp",
+      "font": {
+        "fontSize": "24dp",
+        "fontWeight": "bold"
+      },
+      "color": "#2c3e50",
+      "text": "row 1"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "left": "15dp",
+      "height": "46dp",
+      "font": {
+        "fontSize": "24dp",
+        "fontWeight": "bold"
+      },
+      "color": "#2c3e50",
+      "text": "row 2"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#1>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "left": "15dp",
+      "height": "46dp",
+      "font": {
+        "fontSize": "24dp",
+        "fontWeight": "bold"
+      },
+      "color": "#2c3e50",
+      "text": "row 3"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#2>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "left": "15dp",
+      "height": "46dp",
+      "font": {
+        "fontSize": "24dp",
+        "fontWeight": "bold"
+      },
+      "color": "#2c3e50",
+      "text": "row 4"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>.add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableViewRow)<#3>}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#4>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "top": 0,
+      "bottom": "100dp",
+      "separatorColor": "#95a5a6",
+      "data": [
+        "\"{[apply](Titanium.UI.createTableViewRow)}\"",
+        "\"{[apply](Titanium.UI.createTableViewRow)<#1>}\"",
+        "\"{[apply](Titanium.UI.createTableViewRow)<#2>}\"",
+        "\"{[apply](Titanium.UI.createTableViewRow)<#3>}\""
+      ],
+      "headerView": "\"{[apply](Titanium.UI.createLabel)}\"",
+      "touchEnabled": true,
+      "id": "table"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createTableView)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "100dp",
+      "backgroundColor": "red",
+      "bottom": 0,
+      "touchEnabled": false,
+      "id": "untouchable"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "font": {
+        "fontSize": "24dp",
+        "fontWeight": "normal"
+      },
+      "color": "#fff",
+      "textAlign": "center",
+      "text": "i won't respond to clicks",
+      "touchEnabled": false,
+      "id": "untouchableLabel"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)<#5>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

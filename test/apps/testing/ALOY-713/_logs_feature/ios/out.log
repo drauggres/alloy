@@ -1,6 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-713/alloy.js')
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-713/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -46,9 +46,7 @@ require('/CFG'). Not found. Return ScopeLogger
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
-    {
-      "backgroundColor": "white"
-    }
+    {}
   ]
 }
 {
@@ -160,44 +158,12 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "first",
-      "align": "left",
       "left": 10
     }
   ]
@@ -305,42 +271,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "second"
     }
   ]
@@ -397,42 +332,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "third"
     }
   ]
@@ -489,42 +393,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "fourth"
     }
   ]
@@ -583,44 +456,12 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "first",
-      "align": "left",
       "left": 10
     }
   ]
@@ -728,42 +569,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "second"
     }
   ]
@@ -820,42 +630,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "third"
     }
   ]
@@ -912,42 +691,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "fourth"
     }
   ]
@@ -1006,44 +754,12 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "first",
-      "align": "left",
       "left": 10
     }
   ]
@@ -1151,42 +867,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "second"
     }
   ]
@@ -1243,42 +928,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "third"
     }
   ]
@@ -1335,42 +989,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "fourth"
     }
   ]
@@ -1429,44 +1052,12 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "first",
-      "align": "left",
       "left": 10
     }
   ]
@@ -1574,42 +1165,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "second"
     }
   ]
@@ -1666,42 +1226,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "third"
     }
   ]
@@ -1758,42 +1287,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "fourth"
     }
   ]
@@ -1852,44 +1350,12 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "first",
-      "align": "left",
       "left": 10
     }
   ]
@@ -1997,42 +1463,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "second"
     }
   ]
@@ -2089,42 +1524,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "third"
     }
   ]
@@ -2181,42 +1585,11 @@ require('/CFG'). Not found. Return ScopeLogger
   ]
 }
 {
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
-  ]
-}
-{
   "name": "Titanium.UI.createLabel",
   "trap": "apply",
   "args": [
     "(this: \"{Titanium.UI}\")",
     {
-      "width": "\"{Titanium.UI.SIZE}\"",
-      "height": "\"{Titanium.UI.SIZE}\"",
-      "color": "#000",
       "text": "fourth"
     }
   ]

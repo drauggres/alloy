@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-678/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -22,20 +23,6 @@ require('/CFG'). Not found. Return ScopeLogger
     {
       "id": "index"
     }
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
   ]
 }
 {
@@ -167,10 +154,8 @@ require('/CFG'). Not found. Return ScopeLogger
                       "type": "Ti.UI.Label",
                       "bindId": "label",
                       "properties": {
-                        "width": "\"{Titanium.UI.SIZE}\"",
-                        "height": "\"{Titanium.UI.SIZE}\"",
-                        "color": "#000",
-                        "bindId": "label"
+                        "bindId": "label",
+                        "width": "\"{Titanium.UI.SIZE}\""
                       }
                     }
                   ],

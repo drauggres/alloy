@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-613/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -175,7 +176,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "textAlign": "center",
       "backgroundColor": "#999",
       "text": "[\"red\",\"greyBg\"]",
-      "apiName": "Ti.UI.Label",
       "id": "labelAutoStyle",
       "classes": [
         "red",

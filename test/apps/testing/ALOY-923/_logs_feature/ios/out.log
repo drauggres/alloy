@@ -1,5 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-923/_generated/ios/app.js')
 {
   "name": "Titanium",
   "trap": "get",
@@ -23,20 +24,6 @@ require('/CFG'). Not found. Return ScopeLogger
       "backgroundColor": "#fff",
       "id": "index"
     }
-  ]
-}
-{
-  "name": "Titanium",
-  "trap": "get",
-  "args": [
-    "UI"
-  ]
-}
-{
-  "name": "Titanium.UI",
-  "trap": "get",
-  "args": [
-    "SIZE"
   ]
 }
 {
@@ -168,18 +155,6 @@ require('/CFG'). Not found. Return ScopeLogger
             {
               "type": "Ti.UI.TextField",
               "bindId": "textfield",
-              "childTemplates": [
-                {
-                  "type": "Ti.UI.Button",
-                  "properties": {
-                    "height": "50dp",
-                    "width": "\"{Titanium.UI.SIZE}\"",
-                    "right": 0,
-                    "title": "Right"
-                  },
-                  "events": {}
-                }
-              ],
               "properties": {
                 "width": "\"{Titanium.UI.FILL}\"",
                 "bottom": 0,

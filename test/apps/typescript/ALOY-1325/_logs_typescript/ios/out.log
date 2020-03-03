@@ -1,0 +1,560 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-1325/_generated/ios/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "#fff",
+      "fullscreen": false,
+      "exitOnClose": true,
+      "id": "index"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createLabel"
+  ]
+}
+{
+  "name": "Titanium.UI.createLabel",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "text": "Hello Preview"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createLabel)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createPreviewAction"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "PREVIEW_ACTION_STYLE_DESTRUCTIVE"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createPreviewAction",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "title": "Email",
+      "style": "\"{Titanium.UI.iOS.PREVIEW_ACTION_STYLE_DESTRUCTIVE}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.iOS.createPreviewAction)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createPreviewAction"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "PREVIEW_ACTION_STYLE_SELECTED"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createPreviewAction",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "title": "Confirm",
+      "style": "\"{Titanium.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#1>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#1>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.iOS.createPreviewAction)<#1>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#1>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createPreviewAction"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "PREVIEW_ACTION_STYLE_SELECTED"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createPreviewAction",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "title": "Cancel",
+      "style": "\"{Titanium.UI.iOS.PREVIEW_ACTION_STYLE_SELECTED}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#2>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#2>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.iOS.createPreviewAction)<#2>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewAction)<#2>",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createPreviewActionGroup"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createPreviewActionGroup",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "actions": [
+        "\"{[apply](Titanium.UI.iOS.createPreviewAction)<#1>}\"",
+        "\"{[apply](Titanium.UI.iOS.createPreviewAction)<#2>}\""
+      ],
+      "title": "Delete"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "iOS"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS",
+  "trap": "get",
+  "args": [
+    "createPreviewContext"
+  ]
+}
+{
+  "name": "Titanium.UI.iOS.createPreviewContext",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI.iOS}\")",
+    {
+      "preview": "\"{[apply](Titanium.UI.createView)}\"",
+      "actions": [
+        "\"{[apply](Titanium.UI.iOS.createPreviewAction)}\"",
+        "\"{[apply](Titanium.UI.iOS.createPreviewActionGroup)}\""
+      ]
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewContext)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewContext)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewContext).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.iOS.createPreviewContext)}\")",
+    "peek",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewContext)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.iOS.createPreviewContext)",
+  "trap": "get",
+  "args": [
+    "id"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListSection"
+  ]
+}
+{
+  "name": "Titanium.UI.createListSection",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {}
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createListSection)",
+  "trap": "set",
+  "args": [
+    "items",
+    [
+      {
+        "properties": {
+          "title": "Hello"
+        }
+      }
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createListView"
+  ]
+}
+{
+  "name": "Titanium.UI.createListView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "sections": [
+        "\"{[apply](Titanium.UI.createListSection)}\""
+      ],
+      "previewContext": "\"{[apply](Titanium.UI.iOS.createPreviewContext)}\""
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createListView)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}

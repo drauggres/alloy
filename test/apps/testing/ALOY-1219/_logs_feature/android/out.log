@@ -1,6 +1,6 @@
 require('jquery'). Not found. Return ScopeLogger
 require('/CFG'). Not found. Return ScopeLogger
-> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1219/alloy.js')
+> require('/home/s.volkov/Proj/alloy/test/apps/testing/ALOY-1219/_generated/android/app.js')
 {
   "name": "Titanium",
   "trap": "get",

@@ -1,0 +1,755 @@
+require('jquery'). Not found. Return ScopeLogger
+require('/CFG'). Not found. Return ScopeLogger
+> require('/home/s.volkov/Proj/alloy/test/apps/typescript/ALOY-378/_generated/ios/app.js')
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "Platform"
+  ]
+}
+{
+  "name": "Titanium.Platform",
+  "trap": "get",
+  "args": [
+    "version"
+  ]
+}
+{
+  "name": "Titanium.Platform.version",
+  "trap": "get",
+  "args": [
+    null
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "set",
+  "args": [
+    "backgroundColor",
+    "#fff"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createWindow"
+  ]
+}
+{
+  "name": "Titanium.UI.createWindow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "backgroundColor": "white",
+      "id": "index",
+      "title": "Books"
+    }
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createView"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "SIZE"
+  ]
+}
+{
+  "name": "Titanium.UI.createView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "layout": "horizontal",
+      "width": "\"{Titanium.UI.SIZE}\"",
+      "backgroundColor": "transparent",
+      "id": "starrating"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "parent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "__iamalloy"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "setParent"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).setParent",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createWindow).parent}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableView"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "id": "table",
+      "top": 50
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")",
+    "\"{[apply](Titanium.UI.createTableView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "blue",
+      "height": "50dp",
+      "id": "row"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)",
+  "trap": "set",
+  "args": [
+    "title",
+    "Lord of the Rings"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "blue",
+      "height": "50dp",
+      "id": "row"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#1>",
+  "trap": "set",
+  "args": [
+    "title",
+    "Harry Potter"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "blue",
+      "height": "50dp",
+      "id": "row"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#2>",
+  "trap": "set",
+  "args": [
+    "title",
+    "Eragon"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "blue",
+      "height": "50dp",
+      "id": "row"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#3>",
+  "trap": "set",
+  "args": [
+    "title",
+    "Wheel of Time"
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createTableViewRow"
+  ]
+}
+{
+  "name": "Titanium.UI.createTableViewRow",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "color": "blue",
+      "height": "50dp",
+      "id": "row"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableViewRow)<#4>",
+  "trap": "set",
+  "args": [
+    "title",
+    "Narnia"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createTableView)",
+  "trap": "set",
+  "args": [
+    "data",
+    [
+      "\"{[apply](Titanium.UI.createTableViewRow)}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#1>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#2>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#3>}\"",
+      "\"{[apply](Titanium.UI.createTableViewRow)<#4>}\""
+    ]
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "32dp",
+      "width": "10dp",
+      "left": "8dp",
+      "backgroundColor": "#ffffcc",
+      "id": "star"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView).addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createImageView)}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createImageView)}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "32dp",
+      "width": "10dp",
+      "left": "8dp",
+      "backgroundColor": "#ffffcc",
+      "id": "star"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#1>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#1>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createImageView)<#1>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#1>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "32dp",
+      "width": "10dp",
+      "left": "8dp",
+      "backgroundColor": "#ffffcc",
+      "id": "star"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#2>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#2>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createImageView)<#2>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#2>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "32dp",
+      "width": "10dp",
+      "left": "8dp",
+      "backgroundColor": "#ffffcc",
+      "id": "star"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#3>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#3>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createImageView)<#3>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#3>}\""
+  ]
+}
+{
+  "name": "Titanium",
+  "trap": "get",
+  "args": [
+    "UI"
+  ]
+}
+{
+  "name": "Titanium.UI",
+  "trap": "get",
+  "args": [
+    "createImageView"
+  ]
+}
+{
+  "name": "Titanium.UI.createImageView",
+  "trap": "apply",
+  "args": [
+    "(this: \"{Titanium.UI}\")",
+    {
+      "height": "32dp",
+      "width": "10dp",
+      "left": "8dp",
+      "backgroundColor": "#ffffcc",
+      "id": "star"
+    }
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#4>",
+  "trap": "get",
+  "args": [
+    "addEventListener"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#4>.addEventListener",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createImageView)<#4>}\")",
+    "click",
+    "[object Function]"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "get",
+  "args": [
+    "add"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView).add",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createView)}\")",
+    "\"{[apply](Titanium.UI.createImageView)<#4>}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)",
+  "trap": "set",
+  "args": [
+    "image",
+    "/starrating/star.png"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#1>",
+  "trap": "set",
+  "args": [
+    "image",
+    "/starrating/star.png"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#2>",
+  "trap": "set",
+  "args": [
+    "image",
+    "/starrating/star_half.png"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#3>",
+  "trap": "set",
+  "args": [
+    "image",
+    "/starrating/star_off.png"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createImageView)<#4>",
+  "trap": "set",
+  "args": [
+    "image",
+    "/starrating/star_off.png"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "set",
+  "args": [
+    "id",
+    "starwidget"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "set",
+  "args": [
+    "max",
+    5
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "set",
+  "args": [
+    "initialRating",
+    2.5
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "set",
+  "args": [
+    "top",
+    20
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createView)",
+  "trap": "set",
+  "args": [
+    "__parentSymbol",
+    "\"{[apply](Titanium.UI.createWindow)}\""
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow)",
+  "trap": "get",
+  "args": [
+    "open"
+  ]
+}
+{
+  "name": "[apply](Titanium.UI.createWindow).open",
+  "trap": "apply",
+  "args": [
+    "(this: \"{[apply](Titanium.UI.createWindow)}\")"
+  ]
+}
