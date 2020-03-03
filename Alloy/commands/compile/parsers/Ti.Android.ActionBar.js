@@ -23,12 +23,17 @@ function parse(node, state, args) {
 				'<Activity> is only available in Android',
 				'To get rid of this warning, add platform="android" to your <Activity> element'
 			]);
+			if (!node.hasAttribute('platform')) {
+				node.setAttribute('platform', 'android');
+			}
 		}
-		return {
-			parent: {},
-			styles: state.styles,
-			code: ''
-		};
+		if (state.outputFormat !== 'TS') {
+			return {
+				parent: {},
+				styles: state.styles,
+				code: ''
+			};
+		}
 	}
 
 	var activityTssStyles = _.filter(state.styles, function(elem) {
@@ -86,17 +91,20 @@ function parse(node, state, args) {
 			type: args.fullname
 		};
 	}
+
+	code = CU.isNodeForCurrentPlatform(node) ? U.evaluateTemplate('Ti.Android.ActionBar.js', {
+		returnType: state.outputFormat === 'TS' ? ': void' : '',
+		parent: state.parent.symbol || CU.getParentSymbol(state),
+		code: code,
+		eventObject: eventObject,
+		openFunc: CU.generateUniqueId()
+	}) : '';
+
 	// Update the parsing state, and process the template
 	return {
 		propertyDeclaration: propertyDeclaration,
 		parent: {},
 		styles: state.styles,
-		code: U.evaluateTemplate('Ti.Android.ActionBar.js', {
-			returnType: state.outputFormat === 'TS' ? ': void' : '',
-			parent: state.parent.symbol || CU.getParentSymbol(state),
-			code: code,
-			eventObject: eventObject,
-			openFunc: CU.generateUniqueId()
-		})
+		code: code
 	};
 }

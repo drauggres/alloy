@@ -22,6 +22,9 @@ function parse(node, state, args) {
 				'<Menu> is only available in Android',
 				'To get rid of this warning, add platform="android" to your <Menu> element'
 			]);
+			if (!node.hasAttribute('platform')) {
+				node.setAttribute('platform', 'android');
+			}
 		}
 		if (state.outputFormat !== 'TS') {
 			return {
@@ -104,18 +107,19 @@ function parse(node, state, args) {
 		if (xmlStyles.onHomeIconItemSelected)  { code += state.parent.symbol + '.activity.actionBar.onHomeIconItemSelected = ' + xmlStyles.onHomeIconItemSelected + ';'; }
 	}
 	var templateName = tsOutput ? 'ts_Ti.Android.Menu.ts' : 'Ti.Android.Menu.js';
+	code = CU.isNodeForCurrentPlatform(node) ? U.evaluateTemplate(templateName, {
+		returnType: tsOutput ? ': void' : '',
+		parent: state.parent.symbol || CU.getParentSymbol(state),
+		code: code,
+		eventObject: eventObject,
+		openFunc: CU.generateUniqueId()
+	}) : '';
 	// Update the parsing state
 	return {
 		// we don't need it
 		propertyDeclaration: '',
 		parent: {},
 		styles: state.styles,
-		code: U.evaluateTemplate(templateName, {
-			returnType: tsOutput ? ': void' : '',
-			parent: state.parent.symbol || CU.getParentSymbol(state),
-			code: code,
-			eventObject: eventObject,
-			openFunc: CU.generateUniqueId()
-		})
+		code: code
 	};
 }
